@@ -556,6 +556,10 @@ function vape:Load(skipgui, profile)
 		)
 	end
 
+	if self.HideDefaultCategories then
+		self:HideDefaultCategories()
+	end
+
 	if self.Downloader then
 		self.Downloader:Destroy()
 		self.Downloader = nil

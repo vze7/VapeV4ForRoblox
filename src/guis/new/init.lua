@@ -109,13 +109,17 @@ vape.Categories.Main:CreateDivider({
 
 -- Keep utility categories available to existing modules, but do not show them by default.
 -- Script-created Orion tabs are still visible when their first module is added.
-for _, name in {'Combat', 'Blatant', 'Render', 'Utility', 'World', 'Inventory'} do
-	local category = vape.Categories[name]
-	if category then
-		category.Object.Visible = false
-		category.Button.Object.Visible = false
+function vape:HideDefaultCategories()
+	for _, name in {'Combat', 'Blatant', 'Render', 'Utility', 'World', 'Inventory'} do
+		local category = self.Categories[name]
+		if category then
+			category.Object.Visible = false
+			category.Button.Object.Visible = false
+		end
 	end
 end
+
+vape:HideDefaultCategories()
 
 --[[
 	Friends
