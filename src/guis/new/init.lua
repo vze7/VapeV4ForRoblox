@@ -663,17 +663,32 @@ vape:Clean(vape.GUIBind.Triggered:Connect(function()
 	vape:BlurCheck()
 end))
 
+local function inputName(input)
+	if input.KeyCode ~= Enum.KeyCode.Unknown then
+		return input.KeyCode.Name
+	end
+	if input.UserInputType == Enum.UserInputType.MouseButton1
+		or input.UserInputType == Enum.UserInputType.MouseButton2
+		or input.UserInputType == Enum.UserInputType.MouseButton3
+		or input.UserInputType == Enum.UserInputType.Touch
+	then
+		return input.UserInputType.Name
+	end
+	return nil
+end
+
 vape:Clean(inputService.InputBegan:Connect(function(input)
 	if vape.CurrentTooltip and input.KeyCode == Enum.KeyCode.LeftShift then
 		vape.CurrentTooltip()
 	end
 
-	if not inputService:GetFocusedTextBox() and input.KeyCode ~= Enum.KeyCode.Unknown then
-		table.insert(vape.HeldKeybinds, input.KeyCode.Name)
+	local name = inputName(input)
+	if not inputService:GetFocusedTextBox() and name then
+		table.insert(vape.HeldKeybinds, name)
 		if vape.Binding then return end
 
 		for _, bind in vape.ActiveBinds do
-			if checkKeybinds(vape.HeldKeybinds, bind.Keys, input.KeyCode.Name) then
+			if checkKeybinds(vape.HeldKeybinds, bind.Keys, name) then
 				bind.Triggered:Fire(true)
 			end
 		end
@@ -685,24 +700,25 @@ vape:Clean(inputService.InputEnded:Connect(function(input)
 		vape.CurrentTooltip()
 	end
 
-	if not inputService:GetFocusedTextBox() and input.KeyCode ~= Enum.KeyCode.Unknown then
+	local name = inputName(input)
+	if not inputService:GetFocusedTextBox() and name then
 		if vape.Binding then
 			if not vape.MultiKeybind.Enabled then
-				vape.HeldKeybinds = {input.KeyCode.Name}
+				vape.HeldKeybinds = {name}
 			end
 
 			vape.Binding:SetBind(vape.HeldKeybinds, true)
 			vape.Binding = nil
 		else
 			for _, bind in vape.ActiveBinds do
-				if bind.Hold and checkKeybinds(vape.HeldKeybinds, bind.Keys, input.KeyCode.Name) then
+				if bind.Hold and checkKeybinds(vape.HeldKeybinds, bind.Keys, name) then
 					bind.Triggered:Fire(false)
 				end
 			end
 		end
 	end
 
-	local index = table.find(vape.HeldKeybinds, input.KeyCode.Name)
+	local index = name and table.find(vape.HeldKeybinds, name)
 	if index then
 		table.remove(vape.HeldKeybinds, index)
 	end

@@ -173,9 +173,10 @@ return function(vape)
 		end
 
 		function section:AddUiBind()
+			local openKey = tab.Window.Config.Openkey or Enum.KeyCode.RightShift
 			return self:AddBind({
 				Name = 'Orion Bind',
-				Default = Enum.KeyCode.RightShift,
+				Default = openKey,
 				Callback = function() end
 			})
 		end
@@ -234,7 +235,14 @@ return function(vape)
 			})
 		end
 
-		section.FreeMouseDrp = function() end
+		function section:FreeMouseDrp()
+			return self:AddDropdown({
+				Name = 'Unlock Mouse Mode',
+				Options = {'ThirdPerson', 'FreeMouse'},
+				Default = compat.UMouseMode,
+				Callback = function(value) compat.UMouseMode = value end
+			})
+		end
 		return section
 	end
 
@@ -244,7 +252,7 @@ return function(vape)
 		function window:MakeTab(tabConfig)
 			tabConfig = tabConfig or {}
 			local name = tabConfig.Name or 'Tab'
-			local tab = {Name = name, Sections = {}}
+			local tab = {Name = name, Sections = {}, Window = window}
 			tab.Category = vape.Categories[name] or vape:CreateCategory({
 				Name = name,
 				Icon = tabConfig.Icon or 'rbxasset://textures/ui/GuiImagePlaceholder.png',
