@@ -37,6 +37,7 @@ loadstring(game:HttpGet(
 | `src/games/universal - base` | Módulos disponíveis em qualquer experiência |
 | `src/games/<jogo>` | Integrações específicas por `PlaceId` |
 | `src/libraries/orioncompat.lua` | Ponte da API Orion para componentes Vape |
+| `OrionLoader.lua` | Entrypoint drop-in que retorna a ponte Orion do Vape |
 
 ## Melhorias desta versão
 
@@ -52,6 +53,16 @@ loadstring(game:HttpGet(
 ## Desenvolvimento
 
 O fonte é montado pelo [VapeBundler](https://github.com/7GrandDadPGN/VapeBundler). Arquivos parciais em `src/` não são necessariamente executáveis sozinhos. Leia a [arquitetura](docs/ARCHITECTURE.md) antes de alterar a publicação.
+
+### Usar script Orion existente
+
+Carregue o Vape primeiro. Depois, no script Orion, substitua somente a URL do `Loader.lua` por:
+
+```text
+https://raw.githubusercontent.com/vze7/VapeV4ForRoblox/codex/orion-compat/OrionLoader.lua
+```
+
+Todo o restante (`MakeWindow`, tabs, sections e controles) permanece igual. Script que aponta para a URL fixa de outro repositório não pode ser redirecionado pelo Vape de forma segura.
 
 Para contribuir, consulte [CONTRIBUTING.md](CONTRIBUTING.md).
 

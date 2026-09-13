@@ -12,6 +12,16 @@ local OrionLib = shared.OrionLib
 local OrionLib = shared.vape.Libraries.orioncompat
 ```
 
+Entrypoint drop-in publicado:
+
+```lua
+local OrionLib = loadstring(game:HttpGet(
+    'https://raw.githubusercontent.com/vze7/VapeV4ForRoblox/codex/orion-compat/OrionLoader.lua', true
+))()
+```
+
+Carregue `NewMainScript.lua` antes. A única alteração necessária em um script Orion existente é trocar a URL do loader; a lógica restante permanece intacta.
+
 Não execute o `Loader.lua` Orion junto. Ele criaria outro `ScreenGui`, sistema de input, tema e salvamento.
 
 ## Mapeamento
