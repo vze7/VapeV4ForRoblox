@@ -27,7 +27,7 @@ Passos:
 
 1. Define fallbacks para `isfile` e `delfile`.
 2. Cria pastas `newvape`, `games`, `profiles`, `assets`, `libraries` e `guis`.
-3. Consulta API de commits do GitHub para obter SHA atual de `VapeCompiled/main`.
+3. Consulta API de commits do GitHub para obter SHA atual de `shared.VapeRepository` (padrão `vze7/VapeCompiled`).
 4. Se consulta falhar, usa último SHA válido salvo. Cache funcional não é apagado.
 5. Quando GitHub confirma SHA diferente, remove somente arquivos que começam com watermark gerenciado.
 6. Mantém arquivos personalizados sem watermark.
@@ -164,4 +164,3 @@ Nesse formato, download de código desaparece. Roblox entrega scripts junto com 
 7. Pausar rainbow sem elemento visível.
 8. Remover hack que alterna `Visible` de todos os descendentes ao mudar escala.
 9. Medir cold start, warm start, memória e tempo por frame antes/depois.
-

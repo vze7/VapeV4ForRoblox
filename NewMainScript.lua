@@ -10,7 +10,7 @@ local delfile = delfile or function(file)
 end
 
 local httpService = game:GetService("HttpService")
-local compiledRepository = "7GrandDadPGN/VapeCompiled"
+local compiledRepository = shared.VapeRepository or "vze7/VapeCompiled"
 local compiledRaw = "https://raw.githubusercontent.com/" .. compiledRepository .. "/"
 local cacheWatermark =
 	"--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates."

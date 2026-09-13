@@ -25,6 +25,8 @@ local cloneref = cloneref or function(obj)
 	return obj
 end
 local playersService = cloneref(game:GetService("Players"))
+local compiledRepository = shared.VapeRepository or "vze7/VapeCompiled"
+local compiledRaw = "https://raw.githubusercontent.com/" .. compiledRepository .. "/"
 
 local function downloadFile(path, func)
 	if shared.VapeFileCache and type(shared.VapeFileCache.Download) == "function" then
@@ -34,7 +36,7 @@ local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
 			return game:HttpGet(
-				"https://raw.githubusercontent.com/7GrandDadPGN/VapeCompiled/"
+				compiledRaw
 					.. readfile("newvape/profiles/commit.txt")
 					.. "/"
 					.. select(1, path:gsub("newvape/", "")),
@@ -93,7 +95,7 @@ local function finishLoading()
 				if shared.VapeDeveloper then
 					loadstring(readfile('newvape/loader.lua'), 'loader')()
 				else
-					loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeCompiled/'..readfile('newvape/profiles/commit.txt')..'/loader.lua', true), 'loader')()
+					loadstring(game:HttpGet(compiledRaw..readfile('newvape/profiles/commit.txt')..'/loader.lua', true), 'loader')()
 				end
 			]]
 			if shared.VapeDeveloper then

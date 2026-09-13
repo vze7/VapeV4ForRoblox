@@ -25,7 +25,7 @@ loadstring(game:HttpGet(
 ))()
 ```
 
-> Este endereço carrega a distribuição original. Uma distribuição personalizada também precisa publicar seus arquivos compilados e apontar `shared.VapeGithub` para esse destino.
+> Este fork aponta para `vze7/VapeCompiled`. Para trocar o destino, defina `shared.VapeRepository = 'usuario/repositorio'` antes do loader.
 
 ## Estrutura
 
