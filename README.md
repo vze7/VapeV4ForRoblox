@@ -20,7 +20,7 @@
 
 ```luau
 loadstring(game:HttpGet(
-	'https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua',
+	'https://raw.githubusercontent.com/vze7/VapeV4ForRoblox/codex/orion-compat/NewMainScript.lua',
 	true
 ))()
 ```
@@ -39,7 +39,7 @@ loadstring(game:HttpGet(
 | `src/libraries/orioncompat.lua` | Ponte da API Orion para componentes Vape |
 | `OrionLoader.lua` | Entrypoint drop-in que retorna a ponte Orion do Vape |
 
-Exemplo executável: [`examples/OrionVapeSmokeTest.lua`](examples/OrionVapeSmokeTest.lua).
+Exemplos executáveis: [`examples/OrionVapeSmokeTest.lua`](examples/OrionVapeSmokeTest.lua) e [`examples/FireHubUiCompatibilityTest.lua`](examples/FireHubUiCompatibilityTest.lua).
 
 ## Melhorias desta versão
 
@@ -58,13 +58,15 @@ O fonte é montado pelo [VapeBundler](https://github.com/7GrandDadPGN/VapeBundle
 
 ### Usar script Orion existente
 
-Carregue o Vape primeiro. Depois, no script Orion, substitua somente a URL do `Loader.lua` por:
+Carregue o Vape primeiro usando o link acima. Depois, no script Orion, substitua somente a URL do `Loader.lua` por:
 
 ```text
 https://raw.githubusercontent.com/vze7/VapeV4ForRoblox/codex/orion-compat/OrionLoader.lua
 ```
 
 Todo o restante (`MakeWindow`, tabs, sections e controles) permanece igual. Script que aponta para a URL fixa de outro repositório não pode ser redirecionado pelo Vape de forma segura.
+
+`OrionVapeSmokeTest.lua` e `FireHubUiCompatibilityTest.lua` são testes de UI; não use URL de teste como loader do script principal. Para o Fire Hub, use `OrionLoader.lua`, que retorna `shared.OrionLib` sem criar uma segunda janela.
 
 Para contribuir, consulte [CONTRIBUTING.md](CONTRIBUTING.md).
 
