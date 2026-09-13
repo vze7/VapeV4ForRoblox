@@ -134,6 +134,21 @@ return function(vape)
 				self.Min = value
 			end
 			function native:SetName() end
+			if type(config.Block) == 'table' and type(config.varFunc) == 'function' then
+				local alive = true
+				module:Clean(function() alive = false end)
+				task.spawn(function()
+					while alive and native.Object and native.Object.Parent do
+						local blocked = false
+						local ok, values = pcall(config.varFunc, config.Block[1])
+						if ok and type(values) == 'table' then
+							blocked = values[config.Block[2]] == true
+						end
+						native.Object.Active = not blocked
+						task.wait(0.1)
+					end
+				end)
+			end
 			return bindFlag(config, native)
 		end
 
@@ -185,12 +200,23 @@ return function(vape)
 		end
 
 		function section:AddUiBind()
-			local openKey = tab.Window.Config.Openkey or Enum.KeyCode.RightShift
-			return self:AddBind({
+			local openKey = tab.Window.Config.Openkey
+				or (vape.GUIBind and vape.GUIBind.Keys[1])
+				or Enum.KeyCode.RightShift
+			local native = self:AddBind({
 				Name = 'Orion Bind',
 				Default = openKey,
 				Callback = function() end
 			})
+			local setBind = native.Set
+			function native:Set(value)
+				setBind(self, value)
+				if vape.GUIBind then
+					vape.GUIBind:SetBind({keyName(value)})
+				end
+				tab.Window.Config.Openkey = value
+			end
+			return native
 		end
 
 		function section:AddTextbox(config)
