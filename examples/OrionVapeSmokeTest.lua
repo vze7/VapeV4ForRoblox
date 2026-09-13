@@ -138,6 +138,8 @@ Feedback:AddButton({
 })
 
 Feedback:AddSmartTheme()
+local Config = Window:MakeTab({Name = 'Config'})
+Config:AddSection():AddUiBind()
 OrionLib:MakeNotification({Name = 'Smoke test', Content = 'UI carregada com sucesso.', Time = 3})
 OrionLib:Init()
 

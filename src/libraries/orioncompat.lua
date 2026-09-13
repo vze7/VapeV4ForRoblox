@@ -1,6 +1,6 @@
 return function(vape)
 	local players = game:GetService('Players')
-	local compat = {Flags = {}, Windows = {}}
+	local compat = {Flags = {}, Windows = {}, UMouseMode = 'FreeMouse', maxds = 300, minds = 10}
 	local serial = 0
 
 	local function nextName(tab, name)
@@ -138,6 +138,14 @@ return function(vape)
 			function native:Set(value) self:SetBind({keyName(value)}) end
 			native.Value = config.Default
 			return bindFlag(config, native)
+		end
+
+		function section:AddUiBind()
+			return self:AddBind({
+				Name = 'Orion Bind',
+				Default = Enum.KeyCode.RightShift,
+				Callback = function() end
+			})
 		end
 
 		function section:AddTextbox(config)
