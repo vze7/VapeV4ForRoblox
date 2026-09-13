@@ -4,7 +4,13 @@
 local VAPE_LOADER = 'https://raw.githubusercontent.com/vze7/VapeV4ForRoblox/codex/orion-compat/NewMainScript.lua'
 local ORION_LOADER = 'https://raw.githubusercontent.com/vze7/VapeV4ForRoblox/codex/orion-compat/OrionLoader.lua'
 
-if not shared.vape then
+
+-- If another Vape build is already running, reload the fork that includes Orion support.
+if not shared.OrionLib then
+	if shared.vape then
+		pcall(function() shared.vape:Uninject() end)
+		task.wait(0.2)
+	end
 	loadstring(game:HttpGet(VAPE_LOADER, true))()
 end
 
