@@ -627,11 +627,6 @@ end))
 
 vape:Clean(scale:GetPropertyChangedSignal('Scale'):Connect(function()
 	scaledgui.Size = UDim2.fromScale(1 / scale.Scale, 1 / scale.Scale)
-
-	for _, obj in scaledgui:QueryDescendants('GuiObject >> [Visible = true]') do
-		obj.Visible = false
-		obj.Visible = true
-	end
 end))
 
 vape:Clean(vape.GUIBind.Triggered:Connect(function()

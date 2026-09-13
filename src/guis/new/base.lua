@@ -4,21 +4,21 @@ local vape = {
 	GUIColor = {
 		Hue = 0.46,
 		Sat = 0.96,
-		Value = 0.52
+		Value = 0.52,
 	},
 	HeldKeybinds = {},
 	Loaded = false,
 	Libraries = {},
 	Modules = {},
 	Place = game.PlaceId,
-	Profile = 'default',
+	Profile = "default",
 	RainbowSliders = {},
 	Settings = {},
 	SettingToggleNotifications = {},
 	ThreadFix = setthreadidentity and true or false,
 	ToggleNotifications = {},
-	Version = '4.22',
-	Windows = {}
+	Version = "4.22",
+	Windows = {},
 }
 
 local run = function(func)
@@ -27,14 +27,14 @@ end
 local cloneref = cloneref or function(obj)
 	return obj
 end
-local tweenService = cloneref(game:GetService('TweenService'))
-local inputService = cloneref(game:GetService('UserInputService'))
-local textService = cloneref(game:GetService('TextService'))
-local guiService = cloneref(game:GetService('GuiService'))
-local runService = cloneref(game:GetService('RunService'))
-local httpService = cloneref(game:GetService('HttpService'))
+local tweenService = cloneref(game:GetService("TweenService"))
+local inputService = cloneref(game:GetService("UserInputService"))
+local textService = cloneref(game:GetService("TextService"))
+local guiService = cloneref(game:GetService("GuiService"))
+local runService = cloneref(game:GetService("RunService"))
+local httpService = cloneref(game:GetService("HttpService"))
 
-local fontsize = Instance.new('GetTextBoundsParams')
+local fontsize = Instance.new("GetTextBoundsParams")
 fontsize.Width = math.huge
 local notifications
 local getvapeasset
@@ -44,23 +44,39 @@ local scaledgui
 local toolblur
 local tooltip
 local TextGUI
-local scale = {Scale = 1}
+local scale = { Scale = 1 }
 local gui
 
-local isfile = isfile or function(file)
+local isfile = isfile
+	or function(file)
+		local success, data = pcall(function()
+			return readfile(file)
+		end)
+
+		return success and data ~= nil and data ~= ""
+	end
+
+local savedFileContents = {}
+local function loadJson(path)
+	local source
 	local success, data = pcall(function()
-		return readfile(file)
+		source = readfile(path)
+		return httpService:JSONDecode(source)
 	end)
 
-	return success and data ~= nil and data ~= ''
+	if success and type(data) == "table" then
+		savedFileContents[path] = source
+		return data
+	end
+	return nil
 end
 
-local function loadJson(path)
-	local success, data = pcall(function()
-		return httpService:JSONDecode(readfile(path))
-	end)
-
-	return success and type(data) == 'table' and data or nil
+local function writeJsonIfChanged(path, data)
+	if savedFileContents[path] == data then
+		return
+	end
+	writefile(path, data)
+	savedFileContents[path] = data
 end
 
 --Libraries
@@ -68,17 +84,17 @@ end
 local function addBlur(parent, notif, old)
 	local blur
 	if old then
-		blur = Instance.new('ImageLabel')
-		blur.Name = 'Blur'
+		blur = Instance.new("ImageLabel")
+		blur.Name = "Blur"
 		blur.Size = UDim2.new(1, 89, 1, 52)
 		blur.Position = UDim2.fromOffset(-48, -31)
 		blur.BackgroundTransparency = 1
-		blur.Image = getvapeasset('newvape/assets/new/'..(notif and 'blurnoti' or 'blur')..'.png')
+		blur.Image = getvapeasset("newvape/assets/new/" .. (notif and "blurnoti" or "blur") .. ".png")
 		blur.ScaleType = Enum.ScaleType.Slice
 		blur.SliceCenter = Rect.new(52, 31, 261, 502)
 		blur.Parent = parent
 	else
-		blur = Instance.new('UIShadow')
+		blur = Instance.new("UIShadow")
 		blur.BlurRadius = UDim.new(0, 13)
 		blur.Transparency = 0.25
 		blur.Parent = parent
@@ -88,7 +104,7 @@ local function addBlur(parent, notif, old)
 end
 
 local function addCorner(parent, radius)
-	local corner = Instance.new('UICorner')
+	local corner = Instance.new("UICorner")
 	corner.CornerRadius = radius or UDim.new(0, 5)
 	corner.Parent = parent
 
@@ -96,14 +112,14 @@ local function addCorner(parent, radius)
 end
 
 local function addCloseButton(parent, mini, offset)
-	local close = Instance.new('ImageButton')
+	local close = Instance.new("ImageButton")
 	close.AutoButtonColor = false
 	close.BackgroundColor3 = Color3.new(1, 1, 1)
 	close.BackgroundTransparency = 1
-	close.Image = getvapeasset('newvape/assets/new/'..(mini and 'closemini' or 'close')..'.png')
+	close.Image = getvapeasset("newvape/assets/new/" .. (mini and "closemini" or "close") .. ".png")
 	close.ImageColor3 = color.Light(uipallet.Text, 0.2)
 	close.ImageTransparency = 0.5
-	close.Name = 'Close'
+	close.Name = "Close"
 	close.Position = offset or (mini and UDim2.new(1, -28, 0, 11) or UDim2.new(1, -35, 0, 9))
 	close.Size = mini and UDim2.fromOffset(20, 20) or UDim2.fromOffset(24, 24)
 	close.Parent = parent
@@ -112,14 +128,14 @@ local function addCloseButton(parent, mini, offset)
 	close.MouseEnter:Connect(function()
 		close.ImageTransparency = 0.3
 		tween:Tween(close, uipallet.Tween, {
-			BackgroundTransparency = 0.6
+			BackgroundTransparency = 0.6,
 		})
 	end)
 
 	close.MouseLeave:Connect(function()
 		close.ImageTransparency = 0.5
 		tween:Tween(close, uipallet.Tween, {
-			BackgroundTransparency = 1
+			BackgroundTransparency = 1,
 		})
 	end)
 
@@ -128,7 +144,9 @@ end
 
 local function addDragHandler(gui, window)
 	gui.InputBegan:Connect(function(input)
-		if window and not window.Visible then return end
+		if window and not window.Visible then
+			return
+		end
 
 		if
 			(input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch)
@@ -141,14 +159,23 @@ local function addDragHandler(gui, window)
 
 			local releaseConnection
 			local moveConnection = inputService.InputChanged:Connect(function(newInput)
-				if newInput.UserInputType == (input.UserInputType == Enum.UserInputType.MouseButton1 and Enum.UserInputType.MouseMovement or Enum.UserInputType.Touch) then
+				if
+					newInput.UserInputType
+					== (
+						input.UserInputType == Enum.UserInputType.MouseButton1 and Enum.UserInputType.MouseMovement
+						or Enum.UserInputType.Touch
+					)
+				then
 					local position = newInput.Position
 					if inputService:IsKeyDown(Enum.KeyCode.LeftShift) then
 						dragPosition = (dragPosition // 3) * 3
 						position = (position // 3) * 3
 					end
 
-					gui.Position = UDim2.fromOffset((position.X / scale.Scale) + dragPosition.X, (position.Y / scale.Scale) + dragPosition.Y)
+					gui.Position = UDim2.fromOffset(
+						(position.X / scale.Scale) + dragPosition.X,
+						(position.Y / scale.Scale) + dragPosition.Y
+					)
 				end
 			end)
 
@@ -166,24 +193,24 @@ local function addMaid(obj)
 	obj.Connections = {}
 
 	function obj:Clean(callback)
-		if typeof(callback) == 'Instance' then
+		if typeof(callback) == "Instance" then
 			table.insert(self.Connections, {
 				Disconnect = function()
 					callback:ClearAllChildren()
 					callback:Destroy()
-				end
+				end,
 			})
-		elseif type(callback) == 'thread' then
+		elseif type(callback) == "thread" then
 			table.insert(self.Connections, {
 				Disconnect = function()
-					if coroutine.status(callback) ~= 'dead' then
+					if coroutine.status(callback) ~= "dead" then
 						task.cancel(callback)
 					end
-				end
+				end,
 			})
-		elseif type(callback) == 'function' then
+		elseif type(callback) == "function" then
 			table.insert(self.Connections, {
-				Disconnect = callback
+				Disconnect = callback,
 			})
 		else
 			table.insert(self.Connections, callback)
@@ -192,7 +219,9 @@ local function addMaid(obj)
 end
 
 local function addTooltip(gui, text, customText, visCheck)
-	if not text then return end
+	if not text then
+		return
+	end
 
 	local function tooltipMoved(x, y)
 		if visCheck and visCheck() then
@@ -243,7 +272,7 @@ end
 
 local function createSignal()
 	local signal = {
-		Connections = {}
+		Connections = {},
 	}
 
 	function signal:Connect(callback)
@@ -255,7 +284,7 @@ local function createSignal()
 				if index then
 					table.remove(signal.Connections, index)
 				end
-			end
+			end,
 		}
 	end
 
@@ -269,7 +298,7 @@ local function createSignal()
 end
 
 local function checkKeybinds(compare, target, key)
-	if type(target) == 'table' then
+	if type(target) == "table" then
 		if table.find(target, key) then
 			for _, key in target do
 				if not table.find(compare, key) then
@@ -295,7 +324,7 @@ end
 
 local function loopClean(obj)
 	for index, value in obj do
-		if type(value) == 'table' then
+		if type(value) == "table" then
 			loopClean(value)
 		end
 
@@ -313,14 +342,16 @@ local function randomString()
 end
 
 local function removeTags(text)
-	text = text:gsub('<br%s*/>', '\n')
-	return text:gsub('<[^<>]->', '')
+	text = text:gsub("<br%s*/>", "\n")
+	return text:gsub("<[^<>]->", "")
 end
 
 function vape:BlurCheck()
 	if self.ThreadFix then
 		setthreadidentity(8)
-		runService:SetRobloxGuiFocused((clickgui.Visible or guiService:GetErrorType() ~= Enum.ConnectionError.OK) and self.Blur.Enabled)
+		runService:SetRobloxGuiFocused(
+			(clickgui.Visible or guiService:GetErrorType() ~= Enum.ConnectionError.OK) and self.Blur.Enabled
+		)
 	end
 end
 
@@ -343,18 +374,18 @@ function vape:CreateNotification(title, text, duration, type)
 		end
 
 		local index = #notifications:GetChildren() + 1
-		local notification = Instance.new('ImageLabel')
+		local notification = Instance.new("ImageLabel")
 		notification.BackgroundTransparency = 1
 		notification.Position = UDim2.new(1, 0, 1, -(29 + (78 * index)))
-		notification.Image = getvapeasset('newvape/assets/new/notification.png')
+		notification.Image = getvapeasset("newvape/assets/new/notification.png")
 		notification.ScaleType = Enum.ScaleType.Slice
 		notification.SliceCenter = Rect.new(7, 7, 9, 9)
 		notification.ZIndex = 5
 		notification.Parent = notifications
 		addBlur(notification, true, true)
-		local iconshadow = Instance.new('ImageLabel')
+		local iconshadow = Instance.new("ImageLabel")
 		iconshadow.BackgroundTransparency = 1
-		iconshadow.Image = getvapeasset('newvape/assets/new/noti_'..(type or 'info')..'.png')
+		iconshadow.Image = getvapeasset("newvape/assets/new/noti_" .. (type or "info") .. ".png")
 		iconshadow.ImageColor3 = Color3.new()
 		iconshadow.ImageTransparency = 0.5
 		iconshadow.Position = UDim2.fromOffset(-5, -8)
@@ -366,14 +397,14 @@ function vape:CreateNotification(title, text, duration, type)
 		icon.ImageTransparency = 0
 		icon.Position = UDim2.fromOffset(-1, -1)
 		icon.Parent = iconshadow
-		local label = Instance.new('TextLabel')
+		local label = Instance.new("TextLabel")
 		label.BackgroundTransparency = 1
 		label.FontFace = uipallet.FontSemiBold
 		label.Position = UDim2.fromOffset(46, 16)
 		label.RichText = true
 		label.Size = UDim2.new(1, -56, 0, 20)
-		label.Text = "<stroke joins='round' thickness='0.3' transparency='0.5'>"..title..'</stroke>'
-		label.TextColor3 = type == 'alert' and Color3.fromRGB(250, 50, 56) or Color3.new(1, 1, 1)
+		label.Text = "<stroke joins='round' thickness='0.3' transparency='0.5'>" .. title .. "</stroke>"
+		label.TextColor3 = type == "alert" and Color3.fromRGB(250, 50, 56) or Color3.new(1, 1, 1)
 		label.TextSize = 14
 		label.TextXAlignment = Enum.TextXAlignment.Left
 		label.TextYAlignment = Enum.TextYAlignment.Top
@@ -387,7 +418,8 @@ function vape:CreateNotification(title, text, duration, type)
 		textshadow.TextColor3 = Color3.new()
 		textshadow.TextTransparency = 0.5
 		textshadow.Parent = notification
-		notification.Size = UDim2.fromOffset(math.max(getfontbounds(textshadow.Text, 14, uipallet.Font).X + 80, 266), 75)
+		notification.Size =
+			UDim2.fromOffset(math.max(getfontbounds(textshadow.Text, 14, uipallet.Font).X + 80, 266), 75)
 		local textlabel = textshadow:Clone()
 		textlabel.Position = UDim2.fromOffset(-1, -1)
 		textlabel.RichText = true
@@ -395,10 +427,9 @@ function vape:CreateNotification(title, text, duration, type)
 		textlabel.TextColor3 = Color3.fromRGB(170, 170, 170)
 		textlabel.TextTransparency = 0
 		textlabel.Parent = textshadow
-		local progress = Instance.new('Frame')
-		progress.BackgroundColor3 =
-			type == 'alert' and Color3.fromRGB(250, 50, 56)
-			or type == 'warning' and Color3.fromRGB(236, 129, 44)
+		local progress = Instance.new("Frame")
+		progress.BackgroundColor3 = type == "alert" and Color3.fromRGB(250, 50, 56)
+			or type == "warning" and Color3.fromRGB(236, 129, 44)
 			or Color3.new(1, 1, 1)
 		progress.BorderSizePixel = 0
 		progress.Position = UDim2.new(0, 3, 1, -4)
@@ -408,19 +439,19 @@ function vape:CreateNotification(title, text, duration, type)
 
 		if tween.Tween then
 			tween:Tween(notification, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {
-				AnchorPoint = Vector2.new(1, 0)
-			}, 'tweenstwo')
+				AnchorPoint = Vector2.new(1, 0),
+			}, "tweenstwo")
 
 			tween:Tween(progress, TweenInfo.new(duration, Enum.EasingStyle.Linear), {
-				Size = UDim2.fromOffset(0, 1)
+				Size = UDim2.fromOffset(0, 1),
 			})
 		end
 
 		task.delay(duration, function()
 			if tween.Tween then
 				tween:Tween(notification, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {
-					AnchorPoint = Vector2.new(0, 0)
-				}, 'tweenstwo')
+					AnchorPoint = Vector2.new(0, 0),
+				}, "tweenstwo")
 			end
 
 			task.wait(0.2)
@@ -435,16 +466,16 @@ function vape:CreateOverlay(props)
 end
 
 function vape:Load(skipgui, profile)
-	local guiData = {Categories = {}}
+	local guiData = { Categories = {} }
 	local oldProfile = self.Profile
 	local canSave = true
 	local toggleCount = 0
 
-	if isfile('newvape/profiles/'..game.GameId..'.gui.txt') then
-		guiData = loadJson('newvape/profiles/'..game.GameId..'.gui.txt')
+	if isfile("newvape/profiles/" .. game.GameId .. ".gui.txt") then
+		guiData = loadJson("newvape/profiles/" .. game.GameId .. ".gui.txt")
 		if not guiData then
-			guiData = {Categories = {}}
-			self:CreateNotification('Vape', 'Failed to load GUI settings.', 10, 'alert')
+			guiData = { Categories = {} }
+			self:CreateNotification("Vape", "Failed to load GUI settings.", 10, "alert")
 			canSave = false
 		end
 
@@ -452,10 +483,13 @@ function vape:Load(skipgui, profile)
 			guiData.Categories.Main = nil
 		end
 
-		self.Profile = profile or guiData.Profile or 'default'
+		self.Profile = profile or guiData.Profile or "default"
 		if self.ProfileLabel then
-			self.ProfileLabel.Text = #self.Profile > 10 and self.Profile:sub(1, 10)..'...' or self.Profile
-			self.ProfileLabel.Size = UDim2.fromOffset(getfontbounds(self.ProfileLabel.Text, self.ProfileLabel.TextSize, self.ProfileLabel.Font).X + 16, 24)
+			self.ProfileLabel.Text = #self.Profile > 10 and self.Profile:sub(1, 10) .. "..." or self.Profile
+			self.ProfileLabel.Size = UDim2.fromOffset(
+				getfontbounds(self.ProfileLabel.Text, self.ProfileLabel.TextSize, self.ProfileLabel.Font).X + 16,
+				24
+			)
 		end
 
 		if not skipgui then
@@ -468,21 +502,21 @@ function vape:Load(skipgui, profile)
 		end
 	end
 
-	if not self.Categories.Profiles:GetValue('default') then
-		self.Categories.Profiles:ChangeValue('default', true)
+	if not self.Categories.Profiles:GetValue("default") then
+		self.Categories.Profiles:ChangeValue("default", true)
 	end
 
-	if isfile('newvape/profiles/'..self.Profile..self.Place..'.txt') then
-		local mainData = loadJson('newvape/profiles/'..self.Profile..self.Place..'.txt')
+	if isfile("newvape/profiles/" .. self.Profile .. self.Place .. ".txt") then
+		local mainData = loadJson("newvape/profiles/" .. self.Profile .. self.Place .. ".txt")
 		if not mainData then
-			mainData = {Categories = {}, Modules = {}, Legit = {}}
-			self:CreateNotification('Vape', 'Failed to load '..self.Profile..' profile.', 10, 'alert')
+			mainData = { Categories = {}, Modules = {}, Legit = {} }
+			self:CreateNotification("Vape", "Failed to load " .. self.Profile .. " profile.", 10, "alert")
 			canSave = false
 		end
 
 		if mainData.v ~= 1 then
 			for _, data in mainData.Modules do
-				data.Bind = {Keys = data.Bind}
+				data.Bind = { Keys = data.Bind }
 				data.Visible = true
 			end
 		end
@@ -515,7 +549,11 @@ function vape:Load(skipgui, profile)
 	end
 
 	if self.Profile ~= oldProfile and skipgui then
-		self:CreateNotification('Profile swap to <font color="#FFAA00">'..self.Profile..'</font>', toggleCount..' modules enabled', 3)
+		self:CreateNotification(
+			'Profile swap to <font color="#FFAA00">' .. self.Profile .. "</font>",
+			toggleCount .. " modules enabled",
+			3
+		)
 	end
 
 	if self.Downloader then
@@ -526,16 +564,16 @@ function vape:Load(skipgui, profile)
 	self.Loaded = canSave
 
 	if inputService.TouchEnabled and not skipgui then
-		local button = Instance.new('TextButton')
+		local button = Instance.new("TextButton")
 		button.BackgroundColor3 = Color3.new()
 		button.BackgroundTransparency = 0.2
 		button.Position = UDim2.new(1, -90, 0, 4)
 		button.Size = UDim2.fromOffset(32, 32)
-		button.Text = ''
+		button.Text = ""
 		button.Parent = gui
-		local image = Instance.new('ImageLabel')
+		local image = Instance.new("ImageLabel")
 		image.BackgroundTransparency = 1
-		image.Image = getvapeasset('newvape/assets/new/vape.png')
+		image.Image = getvapeasset("newvape/assets/new/vape.png")
 		image.Position = UDim2.fromOffset(6, 6)
 		image.Size = UDim2.fromOffset(20, 20)
 		image.Parent = button
@@ -560,14 +598,18 @@ function vape:LoadOptions(obj, data)
 end
 
 function vape:LoadGUI()
---Init
+	--Init
 end
 
 function vape:Remove(obj)
-	local container = (self.Modules[obj] and self.Modules or self.Legit.Modules[obj] and self.Legit.Modules or self.Categories)
+	local container = (
+		self.Modules[obj] and self.Modules
+		or self.Legit.Modules[obj] and self.Legit.Modules
+		or self.Categories
+	)
 	if container and container[obj] then
 		local component = container[obj]
-		local isModule = component.Type == 'Module'
+		local isModule = component.Type == "Module"
 		if self.ThreadFix then
 			setthreadidentity(8)
 		end
@@ -576,10 +618,10 @@ function vape:Remove(obj)
 			component:Destroy()
 		end
 
-		for _, child in {'Object', 'Children', 'Toggle', 'Button'} do
-			child = typeof(component[child]) == 'table' and component[child].Object or component[child]
+		for _, child in { "Object", "Children", "Toggle", "Button" } do
+			child = typeof(component[child]) == "table" and component[child].Object or component[child]
 
-			if typeof(child) == 'Instance' then
+			if typeof(child) == "Instance" then
 				child:Destroy()
 				child:ClearAllChildren()
 			end
@@ -602,18 +644,18 @@ function vape:Save(newProfile)
 	local guiData = {
 		Categories = {},
 		Profile = newProfile or self.Profile,
-		v = 1
+		v = 1,
 	}
 
 	local mainData = {
 		Modules = {},
 		Categories = {},
 		Legit = {},
-		v = 1
+		v = 1,
 	}
 
 	for name, category in self.Categories do
-		category:Save((category.Type == 'Overlay' and mainData or guiData).Categories)
+		category:Save((category.Type == "Overlay" and mainData or guiData).Categories)
 	end
 
 	for _, module in self.Modules do
@@ -624,8 +666,10 @@ function vape:Save(newProfile)
 		module:Save(mainData.Legit)
 	end
 
-	writefile('newvape/profiles/'..game.GameId..'.gui.txt', httpService:JSONEncode(guiData))
-	writefile('newvape/profiles/'..self.Profile..self.Place..'.txt', httpService:JSONEncode(mainData))
+	local guiPath = "newvape/profiles/" .. game.GameId .. ".gui.txt"
+	local profilePath = "newvape/profiles/" .. self.Profile .. self.Place .. ".txt"
+	writeJsonIfChanged(guiPath, httpService:JSONEncode(guiData))
+	writeJsonIfChanged(profilePath, httpService:JSONEncode(mainData))
 end
 
 function vape:SaveOptions(obj)
@@ -678,7 +722,7 @@ function vape:Uninject()
 	end
 
 	for _, category in self.Categories do
-		if category.Type == 'Overlay' and category.Button.Enabled then
+		if category.Type == "Overlay" and category.Button.Enabled then
 			category.Button:Toggle()
 		end
 	end
@@ -726,8 +770,10 @@ function vape:UpdateGUIQueue(hue, sat, val)
 		TextGUI:UpdateColor(hue, sat, val, default)
 	end
 
-	if not clickgui.Visible and not vape.Legit.Window.Visible then return end
-	local isRainbow = vape.GUIColor.Rainbow and vape.RainbowMode.Value ~= 'Retro'
+	if not clickgui.Visible and not vape.Legit.Window.Visible then
+		return
+	end
+	local isRainbow = vape.GUIColor.Rainbow and vape.RainbowMode.Value ~= "Retro"
 
 	for name, component in vape.Categories do
 		component:Color(hue, sat, val, isRainbow)
@@ -763,21 +809,21 @@ end
 vape.Components = setmetatable(components, {
 	__newindex = function(_, index, callback)
 		for _, module in vape.Modules do
-			rawset(module, 'Create'..index, function(_, props)
+			rawset(module, "Create" .. index, function(_, props)
 				return callback(props, module.Children, module)
 			end)
 		end
 
 		if vape.Legit then
 			for _, module in vape.Legit.Modules do
-				rawset(module, 'Create'..index, function(_, props)
+				rawset(module, "Create" .. index, function(_, props)
 					return callback(props, module.Children, module)
 				end)
 			end
 		end
 
 		rawset(components, index, callback)
-	end
+	end,
 })
 
 vape:LoadGUI()
