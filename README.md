@@ -39,6 +39,8 @@ loadstring(game:HttpGet(
 | `src/libraries/orioncompat.lua` | Ponte da API Orion para componentes Vape |
 | `OrionLoader.lua` | Entrypoint drop-in que retorna a ponte Orion do Vape |
 
+Exemplo executável: [`examples/OrionVapeSmokeTest.lua`](examples/OrionVapeSmokeTest.lua).
+
 ## Melhorias desta versão
 
 - cache preservado durante falhas temporárias;
