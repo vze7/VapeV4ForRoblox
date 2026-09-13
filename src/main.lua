@@ -95,12 +95,13 @@ local function finishLoading()
 				if shared.VapeDeveloper then
 					loadstring(readfile('newvape/loader.lua'), 'loader')()
 				else
-					loadstring(game:HttpGet(compiledRaw..readfile('newvape/profiles/commit.txt')..'/loader.lua', true), 'loader')()
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/VAPE_REPOSITORY/'..readfile('newvape/profiles/commit.txt')..'/loader.lua', true), 'loader')()
 				end
 			]]
 			if shared.VapeDeveloper then
 				teleportScript = "shared.VapeDeveloper = true\n" .. teleportScript
 			end
+			teleportScript = teleportScript:gsub('VAPE_REPOSITORY', compiledRepository)
 			if shared.VapeCustomProfile then
 				teleportScript = 'shared.VapeCustomProfile = "' .. shared.VapeCustomProfile .. '"\n' .. teleportScript
 			end
