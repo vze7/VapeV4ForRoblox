@@ -50,7 +50,7 @@ return function(vape)
 		local section = {Name = name, Module = module}
 
 		function section:AddSection(config)
-			module:CreateDivider({Text = type(config) == 'table' and config.Name or tostring(config)})
+			module:CreateDivider({Text = type(config) == 'table' and config.Name or tostring(config or '')})
 			return self
 		end
 
@@ -227,7 +227,7 @@ return function(vape)
 
 		function section:AddSmartTheme()
 			return self:AddColorpicker({
-				Name = 'Theme color', Default = Color3.fromHSV(vape.GUIColor.Hue, vape.GUIColor.Sat, vape.GUIColor.Value),
+				Name = 'Base Color', Default = Color3.fromHSV(vape.GUIColor.Hue, vape.GUIColor.Sat, vape.GUIColor.Value),
 				Callback = function(value)
 					vape.GUIColor.Hue, vape.GUIColor.Sat, vape.GUIColor.Value = value:ToHSV()
 					vape:UpdateGUI()
@@ -260,8 +260,14 @@ return function(vape)
 			})
 			tab.Category.Object.Visible = true
 			tab.Category.Button.Object.Visible = true
+			local panelIndex = #window.Tabs
+			tab.Category.Object.Position = UDim2.fromOffset(
+				236 + ((panelIndex % 4) * 230),
+				60 + (math.floor(panelIndex / 4) * 360)
+			)
 			function tab:AddSection(sectionConfig)
-				local section = makeSection(self, type(sectionConfig) == 'table' and sectionConfig.Name or tostring(sectionConfig))
+				local sectionName = type(sectionConfig) == 'table' and sectionConfig.Name or sectionConfig
+				local section = makeSection(self, sectionName)
 				table.insert(self.Sections, section)
 				return section
 			end
