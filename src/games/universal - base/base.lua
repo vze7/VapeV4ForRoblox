@@ -12,9 +12,10 @@ local isfile = isfile or function(file)
 	return suc and res ~= nil and res ~= ''
 end
 local function downloadFile(path, func)
+	local compiledRepository = shared.VapeRepository or 'vze7/VapeCompiled'
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeCompiled/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/'..compiledRepository..'/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -389,8 +390,9 @@ run(function()
 	end
 
 	vape:Clean(function()
-		entitylib.kill()
-		entitylib = nil
+		if entitylib then
+			entitylib.kill()
+		end
 	end)
 	vape:Clean(vape.Categories.Friends.Update.Event:Connect(function() entitylib.refresh() end))
 	vape:Clean(vape.Categories.Targets.Update.Event:Connect(function() entitylib.refresh() end))
