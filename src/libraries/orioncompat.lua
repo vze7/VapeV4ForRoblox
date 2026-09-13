@@ -1,6 +1,15 @@
 return function(vape)
 	local players = game:GetService('Players')
-	local compat = {Flags = {}, Windows = {}, UMouseMode = 'FreeMouse', maxds = 300, minds = 10}
+	local compat = {
+		Flags = {},
+		Windows = {},
+		UMouseMode = 'FreeMouse',
+		maxds = 300,
+		minds = 10,
+		SelectedTheme = 'Default',
+		CurrentTheme = 'Default',
+		Themes = {}
+	}
 	local serial = 0
 
 	local function nextName(tab, name)
@@ -32,6 +41,7 @@ return function(vape)
 	end
 
 	local function makeSection(tab, name)
+		name = name or 'General'
 		local module = tab.Category:CreateModule({
 			Name = nextName(tab.Name, name),
 			Tooltip = name,
@@ -67,11 +77,13 @@ return function(vape)
 		end
 
 		function section:AddButton(config)
+			config = config or {}
 			module:CreateButton({Name = config.Name or 'Button', Function = config.Callback})
 			return {Set = function() end}
 		end
 
 		function section:AddToggle(config)
+			config = config or {}
 			local native
 			native = module:CreateToggle({
 				Name = config.Name or 'Toggle', Default = config.Default,
@@ -81,27 +93,45 @@ return function(vape)
 				end,
 				Tooltip = config.Tooltip
 			})
-			function native:Set(value) if self.Enabled ~= not not value then self:Toggle() end end
+			function native:Set(value)
+				value = not not value
+				if self.Enabled ~= value then
+					self:Toggle()
+				else
+					self.Value = value
+				end
+			end
 			native.Value = native.Enabled
 			return bindFlag(config, native)
 		end
 
 		function section:AddSlider(config)
+			config = config or {}
 			local decimal = config.Increment and config.Increment > 0 and (1 / config.Increment) or 1
-			local native = module:CreateSlider({
+			local sliderProps = {
 				Name = config.Name or 'Slider', Min = config.Min or 0,
 				Max = config.Max == math.huge and 1000000 or config.Max or 100,
 				Default = config.Default, Decimal = decimal,
 				Suffix = config.ValueName, Function = config.Callback
-			})
+			}
+			local native = module:CreateSlider(sliderProps)
 			native.Set = native.SetValue
-			function native:SetMax(value) self.Max = value end
-			function native:SetMin() end
+			native.Min = sliderProps.Min
+			native.Max = sliderProps.Max
+			function native:SetMax(value)
+				sliderProps.Max = value == math.huge and 1000000 or value
+				self.Max = sliderProps.Max
+			end
+			function native:SetMin(value)
+				sliderProps.Min = value
+				self.Min = value
+			end
 			function native:SetName() end
 			return bindFlag(config, native)
 		end
 
 		function section:AddDropdown(config)
+			config = config or {}
 			local isPlayers = config.Players or config.PlayerList
 			local native = module:CreateChoiceList({
 				Name = config.Name or 'Dropdown', List = isPlayers and playerItems() or config.Options or {},
@@ -123,12 +153,14 @@ return function(vape)
 		end
 
 		function section:AddPlayerDropdown(config)
+			config = config or {}
 			config.Players = true
 			config.Searchable = config.Searchable ~= false
 			return self:AddDropdown(config)
 		end
 
 		function section:AddBind(config)
+			config = config or {}
 			local callback = config.Callback or function() end
 			local native = module:CreateBind({
 				Name = config.Name or 'Bind', Default = {keyName(config.Default)}, Hold = config.Hold,
@@ -149,6 +181,7 @@ return function(vape)
 		end
 
 		function section:AddTextbox(config)
+			config = config or {}
 			local native
 			native = module:CreateTextBox({
 				Name = config.Name or 'Textbox', Default = config.Default,
@@ -160,6 +193,7 @@ return function(vape)
 		end
 
 		function section:AddColorpicker(config)
+			config = config or {}
 			local h, s, v = (config.Default or Color3.new(1, 1, 1)):ToHSV()
 			local native = module:CreateColorSlider({
 				Name = config.Name or 'Colorpicker', DefaultHue = h, DefaultSat = s, DefaultValue = v,
@@ -170,6 +204,7 @@ return function(vape)
 		end
 
 		function section:AddPbind(config)
+			config = config or {}
 			local values = {config.DefaultX or '0', config.DefaultY or '0', config.DefaultZ or '0'}
 			local pbind = {Values = values, Enabled = false}
 			function pbind:toggle()
@@ -203,9 +238,11 @@ return function(vape)
 		return section
 	end
 
-	function compat:MakeWindow(config)
+		function compat:MakeWindow(config)
+		config = config or {}
 		local window = {Name = config.Name or 'Vape', Tabs = {}, Config = config}
 		function window:MakeTab(tabConfig)
+			tabConfig = tabConfig or {}
 			local name = tabConfig.Name or 'Tab'
 			local tab = {Name = name, Sections = {}}
 			tab.Category = vape.Categories[name] or vape:CreateCategory({
@@ -235,7 +272,33 @@ return function(vape)
 	end
 
 	function compat:MakeNotification(config)
+		config = config or {}
 		vape:CreateNotification(config.Name or 'Vape', config.Content or '', config.Time or 5, config.Type)
+	end
+
+	compat.Themes.Default = {
+		Main = Color3.fromRGB(26, 26, 26),
+		Accent = Color3.fromRGB(0, 170, 127),
+		Text = Color3.fromRGB(235, 235, 235)
+	}
+	function compat:GenTheme(accent)
+		return {
+			Main = Color3.fromRGB(26, 26, 26),
+			Accent = accent or self.Themes.Default.Accent,
+			Text = Color3.fromRGB(235, 235, 235)
+		}
+	end
+	function compat:SetTheme(theme)
+		if type(theme) == 'string' then
+			theme = self.Themes[theme]
+		end
+		if type(theme) ~= 'table' then return end
+		self.CurrentTheme = theme
+		local accent = theme.Accent
+		if typeof(accent) == 'Color3' then
+			vape.GUIColor.Hue, vape.GUIColor.Sat, vape.GUIColor.Value = accent:ToHSV()
+			vape:UpdateGUI()
+		end
 	end
 
 	function compat:Init() return self end
