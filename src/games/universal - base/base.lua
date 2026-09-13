@@ -236,7 +236,7 @@ end
 
 local hash = loadstring(downloadFile('newvape/libraries/hash.lua'), 'hash')()
 local prediction = loadstring(downloadFile('newvape/libraries/prediction.lua'), 'prediction')()
-local orioncompat = loadstring(downloadFile('newvape/libraries/orioncompat.lua'), 'orioncompat')(vape)
+local orioncompat = vape.Libraries.orioncompat
 entitylib = loadstring(downloadFile('newvape/libraries/entity.lua'), 'entitylibrary')()
 local whitelist = {
 	alreadychecked = {},
@@ -256,8 +256,10 @@ local whitelist = {
 vape.Libraries.entity = entitylib
 vape.Libraries.whitelist = whitelist
 vape.Libraries.prediction = prediction
-vape.Libraries.orioncompat = orioncompat
-shared.OrionLib = orioncompat
+if orioncompat then
+	vape.Libraries.orioncompat = orioncompat
+	shared.OrionLib = orioncompat
+end
 vape.Libraries.hash = hash
 vape.Libraries.auraanims = {
 	Normal = {

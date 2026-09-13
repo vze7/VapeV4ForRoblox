@@ -135,9 +135,11 @@ if not isfolder("newvape/assets/" .. gui) then
 end
 local guiPath = "newvape/guis/" .. gui .. ".lua"
 local universalPath = "newvape/games/universal.lua"
+local orionPath = "newvape/libraries/orioncompat.lua"
 local gamePath = "newvape/games/" .. game.PlaceId .. ".lua"
 local downloads = {
 	[guiPath] = startDownload(guiPath),
+	[orionPath] = startDownload(orionPath),
 }
 if not shared.VapeIndependent then
 	downloads[universalPath] = startDownload(universalPath)
@@ -153,6 +155,18 @@ if not guiSuccess then
 end
 vape = loadstring(guiSource, "gui")()
 shared.vape = vape
+
+-- Publish Orion compatibility before universal/game modules execute. This keeps
+-- the adapter available for every experience, including independent mode.
+local orionSuccess, orionSource = awaitDownload(downloads[orionPath])
+if orionSuccess then
+	local orionFactory = loadstring(orionSource, "orioncompat")
+	if orionFactory then
+		local orionLib = orionFactory(vape)
+		vape.Libraries.orioncompat = orionLib
+		shared.OrionLib = orionLib
+	end
+end
 
 if not shared.VapeIndependent then
 	local universalSuccess, universalSource = awaitDownload(downloads[universalPath])
