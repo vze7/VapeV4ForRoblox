@@ -37,3 +37,18 @@ button.MouseLeave:Connect(function()
 end)
 
 button.MouseButton1Click:Connect(props.Function)
+
+local component = {
+	Type = 'Button',
+	Name = props.Name,
+	Object = button
+}
+
+function component:Set(name)
+	if name ~= nil then
+		component.Name = tostring(name)
+		title.Text = component.Name
+	end
+end
+
+return component

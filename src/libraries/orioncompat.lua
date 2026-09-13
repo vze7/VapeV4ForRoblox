@@ -1,8 +1,14 @@
 return function(vape)
 	local players = game:GetService('Players')
 	local compat = {
+		elmnts = {},
+		ThemeObjects = {},
+		Connections = {},
 		Flags = {},
 		Windows = {},
+		Toggles = {},
+		Dropdowns = {},
+		Folder = nil,
 		UMouseMode = 'FreeMouse',
 		maxds = 300,
 		minds = 10,
@@ -55,17 +61,18 @@ return function(vape)
 		end
 
 		function section:AddLabel(text)
-			return module:CreateLabel({Name = nextName(tab.Name, 'Label'), Text = tostring(text)})
+			return module:CreateLabel({Name = nextName(tab.Name, 'Label'), Text = tostring(text or '')})
 		end
 
 		function section:ColorLabel(text, labelColor, alignment)
 			return module:CreateLabel({
-				Name = nextName(tab.Name, 'ColorLabel'), Text = tostring(text), Color = labelColor,
+				Name = nextName(tab.Name, 'ColorLabel'), Text = tostring(text or ''), Color = labelColor,
 				Alignment = Enum.TextXAlignment[alignment or 'Left'] or Enum.TextXAlignment.Left
 			})
 		end
 
 		function section:AddParagraph(title, content, alignment)
+			title, content = tostring(title or ''), tostring(content or '')
 			return module:CreateLabel({
 				Name = nextName(tab.Name, title), Text = string.format('<b>%s</b>\n%s', title, content), RichText = true,
 				Alignment = Enum.TextXAlignment[alignment or 'Left'] or Enum.TextXAlignment.Left
@@ -78,8 +85,7 @@ return function(vape)
 
 		function section:AddButton(config)
 			config = config or {}
-			module:CreateButton({Name = config.Name or 'Button', Function = config.Callback})
-			return {Set = function() end}
+			return module:CreateButton({Name = config.Name or 'Button', Function = config.Callback})
 		end
 
 		function section:AddToggle(config)
@@ -162,13 +168,18 @@ return function(vape)
 		function section:AddBind(config)
 			config = config or {}
 			local callback = config.Callback or function() end
+			local default = config.Default or Enum.KeyCode.Unknown
 			local native = module:CreateBind({
-				Name = config.Name or 'Bind', Default = {keyName(config.Default)}, Hold = config.Hold,
+				Name = config.Name or 'Bind', Default = {keyName(default)}, Hold = config.Hold,
 				Function = callback
 			})
 			native.Triggered:Connect(callback)
-			function native:Set(value) self:SetBind({keyName(value)}) end
-			native.Value = config.Default
+			function native:Set(value)
+				value = value or Enum.KeyCode.Unknown
+				self:SetBind({keyName(value)})
+				self.Value = value
+			end
+			native.Value = default
 			return bindFlag(config, native)
 		end
 
@@ -207,7 +218,13 @@ return function(vape)
 		function section:AddPbind(config)
 			config = config or {}
 			local values = {config.DefaultX or '0', config.DefaultY or '0', config.DefaultZ or '0'}
-			local pbind = {Values = values, Enabled = false}
+			local fields = {}
+			local pbind = {
+				Values = values,
+				ValueX = values[1], ValueY = values[2], ValueZ = values[3],
+				Enabled = false,
+				Type = 'PBind'
+			}
 			function pbind:toggle()
 				self.Enabled = not self.Enabled
 			end
@@ -215,24 +232,50 @@ return function(vape)
 			for index, axis in {'X', 'Y', 'Z'} do
 				local native
 				native = module:CreateTextBox({
-					Name = (config.Name or 'Position')..' '..axis, Default = values[index],
+					Name = (config.Name or 'Position')..' '..axis, Default = tostring(values[index]),
 					Function = function()
-						if native then values[index] = native.Value end
+						if native then
+							values[index] = native.Value
+							pbind['Value'..axis] = native.Value
+						end
 						if config.Callback then config.Callback(unpack(values)) end
 					end
 				})
+				fields[index] = native
+			end
+			function pbind:Set(x, y, z)
+				for index, value in {x, y, z} do
+					if value ~= nil then
+						local text = tostring(value)
+						values[index] = text
+						pbind['Value'..({'X', 'Y', 'Z'})[index]] = text
+						fields[index].SetValue(fields[index], text)
+					end
+				end
 			end
 			return pbind
 		end
 
 		function section:AddSmartTheme()
-			return self:AddColorpicker({
-				Name = 'Base Color', Default = Color3.fromHSV(vape.GUIColor.Hue, vape.GUIColor.Sat, vape.GUIColor.Value),
+			local theme = compat.Themes[compat.SelectedTheme] or compat.Themes.Default
+			local picker = self:AddColorpicker({
+				Name = 'Base Color', Default = theme.Main,
 				Callback = function(value)
-					vape.GUIColor.Hue, vape.GUIColor.Sat, vape.GUIColor.Value = value:ToHSV()
-					vape:UpdateGUI()
+					compat.Themes.Custom = compat:GenTheme(value)
+					compat.SelectedTheme = 'Custom'
+					compat:SetTheme()
 				end
 			})
+			local reset = self:AddButton({
+				Name = 'Reset Theme',
+				Callback = function()
+					compat.SelectedTheme = 'Default'
+					compat:SetTheme()
+				end
+			})
+			compat.SelectedTheme = 'Default'
+			compat:SetTheme()
+			return picker, reset
 		end
 
 		function section:FreeMouseDrp()
@@ -246,8 +289,10 @@ return function(vape)
 		return section
 	end
 
-		function compat:MakeWindow(config)
+	function compat:MakeWindow(config)
 		config = config or {}
+		self.Folder = config.ConfigFolder or config.Name or 'Vape'
+		self.SaveConfig = config.SaveConfig == true
 		local window = {Name = config.Name or 'Vape', Tabs = {}, Config = config}
 		function window:MakeTab(tabConfig)
 			tabConfig = tabConfig or {}
@@ -278,9 +323,17 @@ return function(vape)
 			table.insert(self.Tabs, tab)
 			return tab
 		end
-		function window:SetName(...) self.NameParts = {...} end
+		function window:SetName(parts)
+			self.NameParts = parts
+			if type(parts) == 'table' then self.Name = parts[1] or self.Name end
+		end
 		function window:ChangeIcon(icon) self.Icon = icon end
-		function window:Destroy() compat:Destroy() end
+		function window:Destroy()
+			if type(window.Config.CloseCallback) == 'function' then
+				pcall(window.Config.CloseCallback)
+			end
+			compat:Destroy()
+		end
 		table.insert(self.Windows, window)
 		return window
 	end
@@ -290,22 +343,31 @@ return function(vape)
 		vape:CreateNotification(config.Name or 'Vape', config.Content or '', config.Time or 5, config.Type)
 	end
 
-	compat.Themes.Default = {
-		Main = Color3.fromRGB(26, 26, 26),
-		Accent = Color3.fromRGB(0, 170, 127),
-		Text = Color3.fromRGB(235, 235, 235)
-	}
-	function compat:GenTheme(accent)
-		return {
-			Main = Color3.fromRGB(26, 26, 26),
-			Accent = accent or self.Themes.Default.Accent,
-			Text = Color3.fromRGB(235, 235, 235)
-		}
-	end
-	function compat:SetTheme(theme)
-		if type(theme) == 'string' then
-			theme = self.Themes[theme]
+	function compat:GenTheme(mainColor)
+		mainColor = mainColor or Color3.fromRGB(31, 20, 37)
+		local r, g, b = mainColor.R * 255, mainColor.G * 255, mainColor.B * 255
+		local dark = (0.299 * r + 0.587 * g + 0.114 * b) < 128
+		local theme = {Main = mainColor}
+		if dark then
+			theme.Second = Color3.fromRGB(math.clamp(r * 1.12, 0, 255), math.clamp(g * 1.12, 0, 255), math.clamp(b * 1.12, 0, 255))
+			theme.Stroke = Color3.fromRGB(math.clamp(r * 1.45, 0, 255), math.clamp(g * 1.45, 0, 255), math.clamp(b * 1.45, 0, 255))
+			theme.Divider = Color3.fromRGB(math.clamp(r * 1.28, 0, 255), math.clamp(g * 1.28, 0, 255), math.clamp(b * 1.28, 0, 255))
+			theme.Text, theme.TextDark = Color3.fromRGB(240, 240, 242), Color3.fromRGB(155, 155, 160)
+			theme.Accent = Color3.fromRGB(math.clamp(r * 1.85, 0, 255), math.clamp(g * 1.85, 0, 255), math.clamp(b * 1.85, 0, 255))
+		else
+			theme.Second = Color3.fromRGB(math.clamp(r * 0.94, 0, 255), math.clamp(g * 0.94, 0, 255), math.clamp(b * 0.94, 0, 255))
+			theme.Stroke = Color3.fromRGB(math.clamp(r * 0.75, 0, 255), math.clamp(g * 0.75, 0, 255), math.clamp(b * 0.75, 0, 255))
+			theme.Divider = Color3.fromRGB(math.clamp(r * 0.85, 0, 255), math.clamp(g * 0.85, 0, 255), math.clamp(b * 0.85, 0, 255))
+			theme.Text, theme.TextDark = Color3.fromRGB(35, 35, 38), Color3.fromRGB(110, 110, 115)
+			theme.Accent = Color3.fromRGB(math.clamp(r * 0.72, 0, 255), math.clamp(g * 0.72, 0, 255), math.clamp(b * 0.72, 0, 255))
 		end
+		return theme
+	end
+	compat.Themes.Default = compat:GenTheme(Color3.fromRGB(31, 20, 37))
+	compat.CurrentTheme = compat.Themes.Default
+	function compat:SetTheme(theme)
+		theme = theme or self.SelectedTheme
+		if type(theme) == 'string' then theme = self.Themes[theme] end
 		if type(theme) ~= 'table' then return end
 		self.CurrentTheme = theme
 		local accent = theme.Accent
