@@ -2,7 +2,7 @@
 -- Load NewMainScript.lua first, then this file returns the native Vape adapter.
 local deadline = os.clock() + 15
 repeat
-	if shared.OrionLib then
+	if shared.OrionLib and shared.OrionLib.__VapeOrionCompat then
 		return shared.OrionLib
 	end
 	task.wait()

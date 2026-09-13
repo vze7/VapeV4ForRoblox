@@ -1,6 +1,7 @@
 return function(vape)
 	local players = game:GetService('Players')
 	local compat = {
+		__VapeOrionCompat = true,
 		elmnts = {},
 		ThemeObjects = {},
 		Connections = {},

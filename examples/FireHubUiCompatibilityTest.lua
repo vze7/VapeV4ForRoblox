@@ -4,7 +4,7 @@
 local VAPE_LOADER = 'https://raw.githubusercontent.com/vze7/VapeV4ForRoblox/codex/orion-compat/NewMainScript.lua'
 local ORION_LOADER = 'https://raw.githubusercontent.com/vze7/VapeV4ForRoblox/codex/orion-compat/OrionLoader.lua'
 
-if not shared.OrionLib then
+if not shared.OrionLib or not shared.OrionLib.__VapeOrionCompat then
 	loadstring(game:HttpGet(VAPE_LOADER, true))()
 end
 
