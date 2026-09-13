@@ -52,13 +52,6 @@ settingsicon.ImageColor3 = color.Light(uipallet.Main, 0.37)
 settingsicon.Position = UDim2.fromOffset(15, 12)
 settingsicon.Size = UDim2.fromOffset(14, 14)
 settingsicon.Parent = settingsbutton
-local discord = Instance.new('ImageButton')
-discord.BackgroundTransparency = 1
-discord.Image = getvapeasset('newvape/assets/new/discord.png')
-discord.Position = UDim2.new(1, -56, 0, 11)
-discord.Size = UDim2.fromOffset(16, 16)
-discord.Parent = window
-addTooltip(discord, 'Join discord')
 local stroke = Instance.new('UIStroke')
 stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 stroke.Color = Color3.fromRGB(85, 85, 85)
@@ -116,40 +109,6 @@ for index, comp in components do
 		return comp(props, children, component)
 	end
 end
-
-discord.MouseButton1Click:Connect(function()
-	task.spawn(function()
-		local body = httpService:JSONEncode({
-			nonce = httpService:GenerateGUID(false),
-			args = {
-				invite = {code = 'VZEQJxMSnG'},
-				code = 'VZEQJxMSnG'
-			},
-			cmd = 'INVITE_BROWSER'
-		})
-
-		for i = 1, 14 do
-			task.spawn(function()
-				pcall(function()
-					request({
-						Method = 'POST',
-						Url = 'http://127.0.0.1:64'..(53 + i)..'/rpc?v=1',
-						Headers = {
-							['Content-Type'] = 'application/json',
-							Origin = 'https://discord.com'
-						},
-						Body = body
-					})
-				end)
-			end)
-		end
-	end)
-
-	task.spawn(function()
-		tooltip.Text = 'Copied!'
-		setclipboard('https://discord.gg/VZEQJxMSnG')
-	end)
-end)
 
 settingsbutton.MouseEnter:Connect(function()
 	settingsicon.ImageColor3 = uipallet.Text

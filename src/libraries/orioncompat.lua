@@ -199,6 +199,8 @@ return function(vape)
 				Icon = tabConfig.Icon or 'rbxasset://textures/ui/GuiImagePlaceholder.png',
 				Size = UDim2.fromOffset(16, 16)
 			})
+			tab.Category.Object.Visible = true
+			tab.Category.Button.Object.Visible = true
 			function tab:AddSection(sectionConfig)
 				local section = makeSection(self, type(sectionConfig) == 'table' and sectionConfig.Name or tostring(sectionConfig))
 				table.insert(self.Sections, section)

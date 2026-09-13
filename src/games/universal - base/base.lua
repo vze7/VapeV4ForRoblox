@@ -343,6 +343,9 @@ for name in SpeedMethods do
 end
 
 run(function()
+	if not entitylib then
+		return
+	end
 	entitylib.getUpdateConnections = function(entity)
 		local hum = entity.Humanoid
 		return {
