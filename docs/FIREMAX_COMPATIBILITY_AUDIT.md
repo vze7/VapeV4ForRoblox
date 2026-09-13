@@ -26,17 +26,18 @@ Também há aliases de objeto: `Set`, `SetMax`, `SetMin`, `Refresh`, `Get`, `Has
 
 ## Ordem de carregamento
 
-1. `NewMainScript.lua` busca UI, universal e adapter.
-2. UI Vape inicia.
-3. Adapter é publicado em `shared.OrionLib`.
-4. Módulo universal e módulo do jogo executam.
-5. Script Firemax obtém `OrionLib` pelo `OrionLoader.lua`.
+1. `OrionLoader.lua` inicializa `NewMainScript.lua` automaticamente quando necessário.
+2. `NewMainScript.lua` busca UI, universal e adapter.
+3. UI Vape inicia.
+4. Adapter é publicado em `shared.OrionLib`.
+5. Módulo universal e módulo do jogo executam.
+6. Script Firemax obtém `OrionLib` pelo `OrionLoader.lua`.
 
 Assim, adapter não depende de um jogo específico nem cria interface paralela.
 
 ## Teste real de UI
 
-Execute depois do Vape:
+Execute diretamente, mesmo sem carregar Vape antes:
 
 ```lua
 loadstring(game:HttpGet(
@@ -49,7 +50,7 @@ O teste cria as tabs `Grab`, `Anti`, `Auras`, `Loop`, `Blob`, `Bind`, `ESP` e `C
 
 ## Interpretação da imagem “só Vape”
 
-`NewMainScript.lua` carrega somente o Vape; ele não executa automaticamente o Firemax. Se o script Firemax continuar usando o `Loader.lua` original, ele também não usa a ponte. O loader precisa ser:
+Se o script Firemax continuar usando o `Loader.lua` original, ele não usa a ponte. Troque somente o loader por:
 
 ```lua
 local OrionLib = loadstring(game:HttpGet(

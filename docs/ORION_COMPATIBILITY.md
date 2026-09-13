@@ -20,7 +20,7 @@ local OrionLib = loadstring(game:HttpGet(
 ))()
 ```
 
-Carregue `NewMainScript.lua` antes. A única alteração necessária em um script Orion existente é trocar a URL do loader; a lógica restante permanece intacta.
+`OrionLoader.lua` inicializa `NewMainScript.lua` automaticamente quando necessário. A única alteração necessária em um script Orion existente é trocar a URL do loader; a lógica restante permanece intacta.
 
 Não execute o `Loader.lua` Orion junto. Ele criaria outro `ScreenGui`, sistema de input, tema e salvamento.
 

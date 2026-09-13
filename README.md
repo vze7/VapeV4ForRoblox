@@ -58,7 +58,7 @@ O fonte é montado pelo [VapeBundler](https://github.com/7GrandDadPGN/VapeBundle
 
 ### Usar script Orion existente
 
-Carregue o Vape primeiro usando o link acima. Depois, no script Orion, substitua somente a URL do `Loader.lua` por:
+No script Orion, substitua somente a URL do `Loader.lua` por; ele inicializa o Vape automaticamente:
 
 ```text
 https://raw.githubusercontent.com/vze7/VapeV4ForRoblox/codex/orion-compat/OrionLoader.lua
