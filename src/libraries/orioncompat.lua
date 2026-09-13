@@ -163,6 +163,11 @@ return function(vape)
 
 		function section:AddPbind(config)
 			local values = {config.DefaultX or '0', config.DefaultY or '0', config.DefaultZ or '0'}
+			local pbind = {Values = values, Enabled = false}
+			function pbind:toggle()
+				self.Enabled = not self.Enabled
+			end
+			pbind.Toggle = pbind.toggle
 			for index, axis in {'X', 'Y', 'Z'} do
 				local native
 				native = module:CreateTextBox({
@@ -173,6 +178,7 @@ return function(vape)
 					end
 				})
 			end
+			return pbind
 		end
 
 		function section:AddSmartTheme()

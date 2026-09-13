@@ -28,6 +28,7 @@ local Main = Window:MakeTab({Name = 'Smoke test'})
 local Controls = Main:AddSection({Name = 'Controls'})
 local Players = Main:AddSection({Name = 'Players'})
 local Feedback = Main:AddSection({Name = 'Feedback'})
+local Legacy = Main:AddSection()
 
 Controls:AddLabel('Orion controls rendered by Vape UI')
 Controls:AddParagraph('Status', 'This test only changes UI state and prints callbacks.', 'Left')
@@ -55,6 +56,7 @@ Controls:AddSlider({
 	end
 })
 
+
 Controls:AddDropdown({
 	Name = 'Single choice',
 	Options = {'Normal', 'Fast', 'Safe'},
@@ -65,7 +67,7 @@ Controls:AddDropdown({
 	end
 })
 
-Controls:AddDropdown({
+local Multi = Controls:AddDropdown({
 	Name = 'Multiple choice',
 	Options = {'Alpha', 'Beta', 'Gamma', 'Delta'},
 	Default = {'Alpha'},
@@ -75,6 +77,21 @@ Controls:AddDropdown({
 		print('[OrionVapeTest] multi:', table.concat(values, ', '))
 	end
 })
+
+-- Legacy Orion call forms used by existing scripts.
+Multi:Set('Beta', true)
+Multi:Set('Alpha', false)
+Multi:Refresh({'Alpha', 'Beta', 'Gamma'}, true)
+
+Legacy:AddPbind({
+	Name = 'Position',
+	DefaultX = '1',
+	DefaultY = '2',
+	DefaultZ = '3',
+	Callback = function(x, y, z)
+		print('[OrionVapeTest] pbind:', x, y, z)
+	end
+}):toggle()
 
 Players:AddPlayerDropdown({
 	Name = 'Player selector',

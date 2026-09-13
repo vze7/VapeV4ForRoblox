@@ -195,8 +195,19 @@ local function render(filter)
 	updateSize()
 end
 
-function component:Set(value)
-	self.Value = props.Multi and table.clone(value or {}) or value
+function component:Set(value, enabled)
+	if props.Multi and type(value) ~= 'table' then
+		local index = table.find(self.Value, value)
+		if enabled == true and not index then
+			table.insert(self.Value, value)
+		elseif enabled == false and index then
+			table.remove(self.Value, index)
+		elseif enabled == nil then
+			if index then table.remove(self.Value, index) else table.insert(self.Value, value) end
+		end
+	else
+		self.Value = props.Multi and table.clone(value or {}) or value
+	end
 	updateTitle()
 	render(search and search.Text or '')
 	props.Function(props.Multi and table.clone(self.Value) or self.Value)
