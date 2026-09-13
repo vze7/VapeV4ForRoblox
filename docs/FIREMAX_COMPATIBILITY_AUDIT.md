@@ -6,8 +6,8 @@
 
 | Verificação | Resultado |
 |---|---|
-| Métodos definidos pelo `Loader.lua` Firemax | 26 encontrados |
-| Métodos presentes na ponte Vape | 26/26 |
+| Métodos públicos definidos pelo `Loader.lua` Firemax | 27 encontrados |
+| Métodos presentes na ponte Vape | 27/27 |
 | Adapter cria `ScreenGui`, `gethui` ou `CoreGui` próprio | 0 ocorrências |
 | UI duplicada Orion | Não |
 | Inicialização universal antes dos módulos de jogo | Sim |
