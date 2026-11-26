@@ -2626,31 +2626,36 @@ local PTBR_OPCOES_DROPDOWN = {
     ["only You"] = "Apenas Você", ["Everyone"] = "Todos", ["Default"] = "Padrão", ["New"] = "Novo",
     ["Normal"] = "Normal", ["Custom"] = "Personalizado", ["None"] = "Nenhum", ["Automatic"] = "Automático",
     ["Auto"] = "Automático", ["Left"] = "Esquerda", ["Right"] = "Direita", ["Top"] = "Topo", ["Bottom"] = "Inferior",
+    ["Built-in"] = "Padrões", ["Saved"] = "Salvos", ["Sharing"] = "Compartilhar",
+    ["Lighting"] = "Iluminação", ["Ambient Colors"] = "Cores do Ambiente", ["Color Correction"] = "Correção de Cor",
+    ["Fog"] = "Neblina", ["Bloom"] = "Brilho (Bloom)", ["Blur"] = "Desfoque (Blur)",
+    ["Depth of Field"] = "Profundidade de Campo", ["Sun Rays"] = "Raios Solares",
+    ["Soft Fade"] = "Suave", ["Pop"] = "Estouro", ["Static"] = "Estático", ["IY"] = "Infinite Yield",
     ["North America"] = "América do Norte", ["South America"] = "América do Sul", ["Europe"] = "Europa",
     ["Asia"] = "Ásia", ["Oceania"] = "Oceania", ["Africa"] = "África",
-    ["Closest Datacenter"] = "Datacenter Mais Próximo", ["Lowest Players"] = "Menos Jogadores",
+    ["Closest Datacenter"] = "Servidor Mais Próximo", ["Lowest Players"] = "Menos Jogadores",
     ["Highest Players"] = "Mais Jogadores", ["Highest FPS"] = "Maior FPS", ["Random"] = "Aleatório",
-    ["Sideways"] = "De Lado", ["Upside Down"] = "Cabeça p/ Baixo", ["Legs"] = "Pernas", ["Arms"] = "Braços",
+    ["Sideways"] = "De Lado", ["Upside Down"] = "De Ponta-Cabeça", ["Legs"] = "Pernas", ["Arms"] = "Braços",
     ["All"] = "Todos", ["Head"] = "Cabeça", ["Torso"] = "Tronco", ["Left Arm"] = "Braço Esquerdo",
     ["Right Arm"] = "Braço Direito", ["Left Leg"] = "Perna Esquerda", ["Right Leg"] = "Perna Direita",
-    ["Invisible"] = "Invisível", ["Kill"] = "Matar", ["Void"] = "Enviar p/ Void", ["Kick"] = "Expulsar",
-    ["Kick [Slow]"] = "Expulsar [Lento]", ["Spin"] = "Girar", ["Fling"] = "Arremessar",
-    ["Teleport to Spawn"] = "Teleportar p/ Spawn", ["Unstick"] = "Desgrudar", ["Ragdoll"] = "Ragdoll",
-    ["Massless"] = "Sem Massa", ["Infinite"] = "Infinito", ["Noclip"] = "Sem Colisão",
-    ["All Toys Near"] = "Todos os Brinquedos Próximos", ["Only Sticked"] = "Apenas Grudados",
+    ["Invisible"] = "Invisível", ["Kill"] = "Matar", ["Void"] = "Jogar no Void", ["Kick"] = "Expulsar (Kick)",
+    ["Kick [Slow]"] = "Expulsar [Lento]", ["Spin"] = "Girar", ["Fling"] = "Arremessar (Fling)",
+    ["Teleport to Spawn"] = "TP para o Spawn", ["Unstick"] = "Desgrudar", ["Ragdoll"] = "Ragdoll",
+    ["Massless"] = "Sem Massa", ["Infinite"] = "Infinito", ["Noclip"] = "Noclip",
+    ["All Toys Near"] = "Brinquedos Próximos", ["Only Sticked"] = "Só Grudados",
     ["Magnetic"] = "Magnético", ["Sky"] = "Jogar p/ Céu", ["Delete Limbs"] = "Arrancar Membros",
-    ["Grab"] = "Segurar", ["Anchor"] = "Ancorar", ["Banana Ragdoll"] = "Ragdoll de Banana",
+    ["Grab"] = "Agarrar", ["Anchor"] = "Ancorar", ["Banana Ragdoll"] = "Ragdoll de Banana",
     ["Blob-Grab"] = "Agarrar c/ Blobman", ["Blob-Kill"] = "Matar c/ Blobman", ["Blob-Kick"] = "Expulsar c/ Blobman",
-    ["Destroy"] = "Destruir", ["Bounce"] = "Quicar", ["Bring"] = "Trazer", ["Break Holdable"] = "Quebrar Segurável",
+    ["Destroy"] = "Destruir", ["Bounce"] = "Quicar", ["Bring"] = "Trazer (Bring)", ["Break Holdable"] = "Quebrar Itens Seguráveis",
     ["Remove Gucci"] = "Remover Gucci", ["Remove Invisibility"] = "Remover Invisibilidade",
-    ["Delete Seatables"] = "Excluir Assentos", ["Resolve Desync"] = "Resolver Desync",
-    ["Faster but worse"] = "Mais Rápido (Menos Estável)", ["Circle + Lag"] = "Círculo + Lag",
-    ["Lock"] = "Travar", ["Follow"] = "Seguir", ["Grab-Drop"] = "Segurar e Largar", ["Grab-Release"] = "Segurar e Soltar",
+    ["Delete Seatables"] = "Remover Assentos", ["Resolve Desync"] = "Tirar Desync",
+    ["Faster but worse"] = "Mais Rápido (Menos Preciso)", ["Circle + Lag"] = "Círculo + Lag",
+    ["Lock"] = "Travar", ["Follow"] = "Seguir", ["Grab-Drop"] = "Segurar e Soltar", ["Grab-Release"] = "Segurar e Largar",
     ["Oven"] = "Forno", ["Microwave"] = "Micro-ondas", ["Campfire"] = "Fogueira", ["Banana"] = "Banana",
-    ["Ragdoll Kill"] = "Matar em Ragdoll", ["Pallet"] = "Palete", ["You Decoy"] = "Clone Seu (Isca)",
+    ["Ragdoll Kill"] = "Matar em Ragdoll", ["Pallet"] = "Palete", ["You Decoy"] = "Isca (Seu Clone)",
     ["Aura"] = "Aura", ["You"] = "Você", ["Players"] = "Jogadores", ["Custom Pos"] = "Posição Personalizada",
-    ["No Ragdoll"] = "Sem Ragdoll", ["Anti-Kill"] = "Anti-Morte",
-    ["Escapes Anything, but buggy"] = "Escapa de Tudo (Com Bugs)", ["Blobman"] = "Blobman",
+    ["No Ragdoll"] = "Sem Ragdoll", ["Anti-Kill"] = "Anti-Kill",
+    ["Escapes Anything, but buggy"] = "Escapa de Tudo (Instável)", ["Blobman"] = "Blobman",
     ["Tractor [Invisible]"] = "Trator [Invisível]", ["Train [Invisible]"] = "Trem [Invisível]",
     ["Sleigh [Invisible]"] = "Trenó [Invisível]", ["Shuriken"] = "Shuriken", ["Katana"] = "Katana",
     ["Kunai"] = "Kunai", ["Cleaver"] = "Cutelo", ["Rusty Fork"] = "Garfo Enferrujado", ["Pencil"] = "Lápis",
@@ -2658,8 +2663,8 @@ local PTBR_OPCOES_DROPDOWN = {
     ["Pickaxe on Back"] = "Picareta nas Costas", ["Head Katana"] = "Katana na Cabeça",
     ["Ass Shuriken"] = "Shuriken Atrás", ["Belt Kunai"] = "Kunai na Cintura", ["Pencil Penis"] = "Lápis na Frente",
     ["BombMissile"] = "Míssil Explosivo", ["BombDarkMatter"] = "Bomba de Matéria Escura",
-    ["BombBalloon"] = "Balão Bomba", ["BallSnowball"] = "Bola de Neve", ["FireworkMissile"] = "Foguete de Artifício",
-    ["Non-collidable part"] = "Parte Sem Colisão", ["Kickable part"] = "Parte Chutável",
+    ["BombBalloon"] = "Balão Bomba", ["BallSnowball"] = "Bola de Neve", ["FireworkMissile"] = "Foguete",
+    ["Non-collidable part"] = "Sem Colisão", ["Kickable part"] = "Arremessável",
     ["InnerUFO"] = "OVNI Interno", ["OuterUFO"] = "OVNI Externo", ["CaveCart"] = "Carrinho da Caverna",
     ["Train"] = "Trem", ["Flying Rock 1"] = "Pedra Voadora 1", ["Flying Rock 2"] = "Pedra Voadora 2",
     ["Flying Rock 3"] = "Pedra Voadora 3", ["Flying Rock 4"] = "Pedra Voadora 4",
@@ -2672,16 +2677,16 @@ local PTBR_OPCOES_DROPDOWN = {
     ["Spiral"] = "Espiral", ["Wave"] = "Onda", ["Cross"] = "Cruz", ["Arrow"] = "Seta", ["Crown"] = "Coroa",
     ["Sphere"] = "Esfera", ["Dome"] = "Domo", ["Box"] = "Caixa", ["Pyramid"] = "Pirâmide", ["Cone"] = "Cone",
     ["Cylinder"] = "Cilindro", ["Helix"] = "Hélice", ["Double Helix"] = "Hélice Dupla",
-    ["Torus"] = "Toro (Rosquinha)", ["Galaxy"] = "Galáxia", ["Grid"] = "Grade", ["Wall"] = "Parede",
+    ["Torus"] = "Anel (Torus)", ["Galaxy"] = "Galáxia", ["Grid"] = "Grade", ["Wall"] = "Parede",
     ["Ring Stack"] = "Pilha de Anéis", ["Shoulder-Sitting"] = "Sentado no Ombro", ["JoJo Stand"] = "Pose JoJo Stand",
     ["Blowjob"] = "Oral (+18)", ["Standing Sex"] = "Em Pé (+18)", ["Doggy-Pose Sex"] = "De Quatro (+18)",
     ["Missionary Sex"] = "Missionário (+18)", ["Player ESP"] = "ESP de Jogadores", ["Server ESP"] = "ESP do Servidor",
     ["Sticky ESP"] = "ESP de Grudentos", ["Blackhole ESP"] = "ESP de Buraco Negro", ["Circles"] = "Círculos",
     ["Snowflakes"] = "Flocos de Neve", ["Materials"] = "Materiais", ["Textures"] = "Texturas",
     ["Reflections"] = "Reflexos", ["Shadows"] = "Sombras", ["Character"] = "Personagem",
-    ["Coconut Forms"] = "Formas de Coco", ["China Hat"] = "Chapéu Chinês", ["Anti Kick"] = "Anti-Expulsão",
+    ["Coconut Forms"] = "Formas de Coco", ["China Hat"] = "Chapéu Chinês", ["Anti Kick"] = "Anti-Kick",
     ["360 Spin"] = "Giro 360°", ["720 Spin"] = "Giro 720°", ["180 Flick"] = "Flick 180°",
-    ["Tabs"] = "Abas", ["Dropdowns"] = "Seletores", ["Groupboxes"] = "Seções", ["Key Pickers"] = "Seletores de Tecla",
+    ["Tabs"] = "Abas", ["Dropdowns"] = "Seletores", ["Groupboxes"] = "Seções", ["Key Pickers"] = "Teclas de Atalho",
     ["Window"] = "Janela", ["Kicked Player"] = "Jogador Expulso", ["Player Left"] = "Jogador Saiu",
     ["Player Rejoined"] = "Jogador Reentrou", ["Bubble Pop"] = "Estouro de Bolha", ["Loaded"] = "Carregado",
     ["FoodHamburger"] = "Hambúrguer", ["InstrumentDrumBongos"] = "Bongô", ["InstrumentBrassTrumpet"] = "Trompete",
@@ -2690,10 +2695,10 @@ local PTBR_OPCOES_DROPDOWN = {
     ["InstrumentGuitarLyre"] = "Lira", ["InstrumentGuitarBanjo"] = "Banjo", ["InstrumentGuitarAcoustic"] = "Violão",
     ["CupMugBrown"] = "Caneca Marrom", ["CupMugWhite"] = "Caneca Branca", ["FoodBanana"] = "Banana",
     ["FoodBread"] = "Pão", ["FoodBroccoli"] = "Brócolis", ["FoodCakePink"] = "Bolo Rosa", ["FoodCoconut"] = "Coco",
-    ["FoodDippyEgg"] = "Ovo Cozido", ["FoodDonut"] = "Rosquinha", ["FoodFrenchFries"] = "Batata Frita",
+    ["FoodDippyEgg"] = "Ovo Frito", ["FoodDonut"] = "Rosquinha", ["FoodFrenchFries"] = "Batata Frita",
     ["FoodHotdog"] = "Cachorro-Quente", ["FoodMayonnaise"] = "Maionese", ["FoodMeatStick"] = "Espetinho de Carne",
     ["FoodMushroomPoison"] = "Cogumelo Venenoso", ["FoodPizzaCheese"] = "Pizza de Queijo",
-    ["FoodPizzaPepperoni"] = "Pizza de Calabresa", ["FoodSodaCan"] = "Lata de Refrigerante",
+    ["FoodPizzaPepperoni"] = "Pizza de Calabresa", ["FoodSodaCan"] = "Refrigerante",
     ["PoopPile"] = "Cocô", ["PoopPileSparkle"] = "Cocô Brilhante",
 }
 
@@ -10060,10 +10065,12 @@ do
 							LoopTpLocation = false,
 							AutoSeatBlobman = false,
 							FreezeBlobman = false,
-							NetworkOwnerInKick = false,
+							NetworkOwnerInKick = true,
 							DeleteShurInBlobK = true,
 							AntiGrab = false,
+							AllowWhitelistedGrabs = false,
 							GucciAntiGrab = false,
+							GucciAllowSitting = false,
 							AntiBurn = false,
 							AntiExplosion = false,
 							AntiKick = false,
@@ -10390,6 +10397,11 @@ do
 								Texture = "rbxassetid://242109931",
 								Color = Color3.fromRGB(255, 255, 255),
 								Transparency = 0,
+								Glow = 0,
+								Animation = "Soft Fade",
+								RandomRotation = true,
+								Spin = 0,
+								Drag = 0,
 								ParticleSize = 1,
 								Count = 2500,
 								SpeedMin = 0.5,
@@ -13570,6 +13582,7 @@ end
 
 						remotos.RemotoRagdoll:FireServer(valor25, 0)
 					else
+						estadoCompartilhado.TempVoidOverride = true
 						workspace.FallenPartsDestroyHeight = -10000
 						api.Teleportar(valor25, CFrame.new(0, -11000, 0))
 						task.wait()
@@ -13583,6 +13596,7 @@ end
 						end
 
 						valor27.FallenPartsDestroyHeight = alturaDestruicaoQueda2
+						estadoCompartilhado.TempVoidOverride = false
 
 						if valor25.Parent then
 							api.Teleportar(valor25, cQuadro2)
@@ -14008,8 +14022,16 @@ end
 						end
 
 						if estaSegurado.Value and estadoFuncoes.AntiGrab and not estadoCompartilhado.States["Anti Grab"] then
-							remotos.Escapar:FireServer()
 							local valor23, valor24, valor25 = api.ObterPersonagem()
+							if estadoFuncoes.AllowWhitelistedGrabs then
+								local cabGrab = valor23 and valor23:FindFirstChild("Head")
+								local poGrab = cabGrab and cabGrab:FindFirstChild("PartOwner")
+								local grabberPlr = (poGrab and poGrab:IsA("StringValue") and Players:FindFirstChild(poGrab.Value)) or valoresConfig.LastGrabberPlayer
+								if grabberPlr and api.EhJogadorProtegido(grabberPlr, true) then
+									return
+								end
+							end
+							remotos.Escapar:FireServer()
 							local tronco = valor23 and valor23:FindFirstChild("Torso")
 							local pescoco = tronco and tronco:FindFirstChild("Neck")
 							if not (valor25 and tronco) then
@@ -14127,7 +14149,9 @@ end
 										end)
 									end
 
+									valor25.RequiresNeck = true
 									valor25.AutoRotate = true
+									api.AlternarColisoes(valor23, true)
 									conexao:Disconnect()
 								end
 							end)
@@ -14140,6 +14164,9 @@ end
 
 						local function funcao21(arg)
 							if not arg.Parent or arg.Health <= 0 then
+								return
+							end
+							if estadoFuncoes.GucciAllowSitting and arg.SeatPart and (not tabela16 or arg.SeatPart ~= tabela16.Seat) then
 								return
 							end
 							arg.Sit = true
@@ -14172,7 +14199,9 @@ end
 							local raizHumanoide = tabela16.HRP
 
 							if humanoideCurto and humanoideCurto.Parent then
-								humanoideCurto:SetStateEnabled(Enum.HumanoidStateType.Jumping, tabela16.Jumping)
+								humanoideCurto:SetStateEnabled(Enum.HumanoidStateType.Jumping, tabela16.Jumping ~= false)
+								humanoideCurto.AutoRotate = true
+								humanoideCurto.PlatformStand = false
 
 								if humanoideCurto.SeatPart == tabela16.Seat or not humanoideCurto.SeatPart then
 									humanoideCurto.Sit = false
@@ -16045,6 +16074,12 @@ end
 							estadoFuncoes.GucciAntiGrab = arg and not descarregado
 							if not estadoFuncoes.GucciAntiGrab then
 								funcao23()
+								local _, _, hLocal = api.ObterPersonagem()
+								if hLocal and hLocal.Parent then
+									hLocal.AutoRotate = true
+									hLocal.PlatformStand = false
+									hLocal:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
+								end
 								return
 							end
 
@@ -17422,56 +17457,93 @@ end
 			end
 
 			api.AtualizarParticulas = function(arg)
-				local particulaConfiguracoes = estadoCompartilhado.ParticleSettings
-				local estado12 = not arg
+				local cfg = estadoCompartilhado.ParticleSettings
+				local tudo = not arg
 
-				if estado12 or arg == "BoxSize" then
-					parte2.Size = Vector3.one * particulaConfiguracoes.BoxSize
+				if tudo or arg == "BoxSize" then
+					parte2.Size = Vector3.one * cfg.BoxSize
 				end
 
-				if estado12 or arg == "Texture" then
-					particulaEmissor.Texture = particulaConfiguracoes.Texture
+				if tudo or arg == "Texture" then
+					particulaEmissor.Texture = cfg.Texture
 				end
 
-				if estado12 or arg == "Count" then
-					particulaEmissor.Rate = particulaConfiguracoes.Count
+				if tudo or arg == "Count" then
+					particulaEmissor.Rate = cfg.Count
 				end
 
-				if estado12 or arg == "LifeTime" then
-					particulaEmissor.Lifetime = NumberRange.new(particulaConfiguracoes.LifeTime)
+				if tudo or arg == "LifeTime" then
+					particulaEmissor.Lifetime = NumberRange.new(cfg.LifeTime)
 				end
 
-				if estado12 or arg == "SpeedMin" or arg == "SpeedMax" then
-					particulaEmissor.Speed = NumberRange.new(particulaConfiguracoes.SpeedMin, particulaConfiguracoes.SpeedMax)
+				if tudo or arg == "SpeedMin" or arg == "SpeedMax" then
+					local sMin = tonumber(cfg.SpeedMin) or 0.5
+					local sMax = tonumber(cfg.SpeedMax) or 2
+					particulaEmissor.Speed = NumberRange.new(math.min(sMin, sMax), math.max(sMin, sMax))
 				end
 
-				if estado12 or arg == "Color" then
-					particulaEmissor.Color = ColorSequence.new(particulaConfiguracoes.Color)
+				if tudo or arg == "Color" then
+					particulaEmissor.Color = ColorSequence.new(cfg.Color)
 				end
 
-				if estado12 or arg == "ParticleSize" then
-					local valor23 = particulaEmissor
-					local numeroSequencia = NumberSequence.new
-					local tabela16 = {}
-					local valor24 = NumberSequenceKeypoint.new(0, 0)
-					local valor25 = NumberSequenceKeypoint.new(0.1, particulaConfiguracoes.ParticleSize)
-					local valor26 = NumberSequenceKeypoint.new(0.9, particulaConfiguracoes.ParticleSize)
-					local novo = NumberSequenceKeypoint.new
-					tabela16[1] = valor24
-					tabela16[2] = valor25
-					tabela16[3] = valor26
+				if tudo or arg == "Glow" then
+					particulaEmissor.LightEmission = math.clamp(tonumber(cfg.Glow) or 0, 0, 1)
+				end
 
-					do
-						local valores_2 = table.pack(novo(1, 0))
-						table.move(valores_2, 1, valores_2.n, 4, tabela16)
+				if tudo or arg == "RandomRotation" then
+					particulaEmissor.Rotation = (cfg.RandomRotation ~= false) and NumberRange.new(0, 360) or NumberRange.new(0)
+				end
+
+				if tudo or arg == "Spin" then
+					local sp = tonumber(cfg.Spin) or 0
+					particulaEmissor.RotSpeed = NumberRange.new(-sp, sp)
+				end
+
+				if tudo or arg == "Drag" then
+					particulaEmissor.Drag = tonumber(cfg.Drag) or 0
+				end
+
+				if tudo or arg == "ParticleSize" or arg == "Animation" or arg == "Transparency" then
+					local sz = tonumber(cfg.ParticleSize) or 1
+					local tr = math.clamp(tonumber(cfg.Transparency) or 0, 0, 1)
+					local anim = cfg.Animation or "Soft Fade"
+
+					if anim == "Static" then
+						particulaEmissor.Size = NumberSequence.new(sz)
+						particulaEmissor.Transparency = NumberSequence.new(tr)
+					elseif anim == "Pop" then
+						particulaEmissor.Size = NumberSequence.new({
+							NumberSequenceKeypoint.new(0, 0),
+							NumberSequenceKeypoint.new(0.15, sz * 1.2),
+							NumberSequenceKeypoint.new(0.35, sz),
+							NumberSequenceKeypoint.new(0.88, sz),
+							NumberSequenceKeypoint.new(1, 0),
+						})
+						particulaEmissor.Transparency = NumberSequence.new({
+							NumberSequenceKeypoint.new(0, 1),
+							NumberSequenceKeypoint.new(0.12, tr),
+							NumberSequenceKeypoint.new(0.88, tr),
+							NumberSequenceKeypoint.new(1, 1),
+						})
+					else
+						particulaEmissor.Size = NumberSequence.new({
+							NumberSequenceKeypoint.new(0, 0),
+							NumberSequenceKeypoint.new(0.12, sz),
+							NumberSequenceKeypoint.new(0.88, sz),
+							NumberSequenceKeypoint.new(1, 0),
+						})
+						particulaEmissor.Transparency = NumberSequence.new({
+							NumberSequenceKeypoint.new(0, 1),
+							NumberSequenceKeypoint.new(0.15, tr),
+							NumberSequenceKeypoint.new(0.85, tr),
+							NumberSequenceKeypoint.new(1, 1),
+						})
 					end
-
-					valor23.Size = numeroSequencia(tabela16)
 				end
+			end
 
-				if estado12 or arg == "Transparency" then
-					particulaEmissor.Transparency = NumberSequence.new(particulaConfiguracoes.Transparency)
-				end
+			api.LimparParticulas = function()
+				particulaEmissor:Clear()
 			end
 
 			api.AtualizarPosicaoParticulas = function()
@@ -19096,12 +19168,13 @@ end
 						if tick() - agora4 > 1 then
 							return
 						end
-						task.wait(0.3)
+						task.wait(0.15)
+						estadoCompartilhado.TempVoidOverride = true
 						workspace.FallenPartsDestroyHeight = alturaDestruicaoQueda
 						api.Teleportar(valor23, CFrame.new(0, -250, 0))
-						task.wait(0.3)
+						task.wait(0.18)
 						valor24.Sit = false
-						task.wait(0.15)
+						task.wait(0.08)
 						api.Teleportar(valor23, cQuadro2)
 						local valor25 = workspace
 						local alturaDestruicaoQueda2
@@ -19113,6 +19186,7 @@ end
 						end
 
 						valor25.FallenPartsDestroyHeight = alturaDestruicaoQueda2
+						estadoCompartilhado.TempVoidOverride = false
 						api.DestruirBrinquedo(ComidaHamburguer)
 					end
 
@@ -19131,6 +19205,7 @@ end
 							alternadores.DisblVoid:SetDisabled(true)
 						end
 
+						estadoCompartilhado.TempVoidOverride = true
 						workspace.FallenPartsDestroyHeight = alturaDestruicaoQueda
 						api.MoverPivoPara(arg, CFrame.new(0, -11111, 0))
 
@@ -19139,6 +19214,7 @@ end
 						end
 
 						valoresConfig.DestroyThread = task.delay(math.clamp(jogadorLocal:GetNetworkPing() + 0.05, 0.08, 0.25), function()
+							estadoCompartilhado.TempVoidOverride = true
 							workspace.FallenPartsDestroyHeight = -10000
 							task.wait()
 							local valor22 = workspace
@@ -19151,6 +19227,7 @@ end
 							end
 
 							valor22.FallenPartsDestroyHeight = alturaDestruicaoQueda2
+							estadoCompartilhado.TempVoidOverride = false
 
 							if alternadores.DisblVoid then
 								alternadores.DisblVoid:SetDisabled(false)
@@ -24039,7 +24116,7 @@ end
 
 		api.CriarSeletorJogadores = function(arg, arg2, arg3, arg4, arg5, arg6, arg7)
 			if not arg or not arg3 then
-				notificar("Algo deu errado, avise o criador sobre esta notificação.")
+				notificar("Algo deu errado nesta ação.")
 				return
 			end
 			local estado12 = arg5 ~= false
@@ -24053,7 +24130,7 @@ end
 				Multi = estado13,
 				AllowNull = true,
 				Searchable = true,
-				Text = arg7 or "Targets",
+				Text = arg7 or "Alvos",
 				FormatListValue = api.FormatarJogador,
 				FormatDisplayValue = api.FormatarJogador,
 				EnablePlayerImages = true,
@@ -24472,11 +24549,9 @@ end
 
 			local texto6
 
-			if arg4 then
-				texto6 = "todos os"
-			else
-				texto6 = "os selecionados"
-			end
+			local tooltipLoop = arg4
+				and "Aplica continuamente os métodos selecionados em todo o servidor"
+				or "Aplica continuamente os métodos selecionados nos alvos"
 
 			local processarJogador = arg7 or api.ProcessarJogador
 			local estado12 = processarJogador == api.ProcessarJogador
@@ -24484,7 +24559,7 @@ end
 			arg:AddToggle(arg2, {
 				Text = "Aplicar em Loop: " .. texto5,
 				Default = false,
-				Tooltip = "Continua aplicando os métodos selecionados em " .. texto6 .. " jogadores",
+				Tooltip = tooltipLoop,
 				Callback = function(arg8)
 					api.DefinirAlternadorExecucao(arg3, arg8)
 					filaMetodos.TokensLoop[arg3] = (filaMetodos.TokensLoop[arg3] or 0) + 1
@@ -24538,7 +24613,7 @@ end
 			local estado12 = processarJogador == api.ProcessarJogador
 
 			arg:AddButton({
-				Text = "Aplicar Método: " .. texto5,
+				Text = "Aplicar em: " .. texto5,
 				Func = function()
 					task.spawn(function()
 						if arg3 and valoresConfig.BlobMethod == "Kick" then
@@ -26037,6 +26112,17 @@ Tempo p/ Escapar: %*]]
 								local grudentoParte = nil
 								local grudentoSolda, agora3, estado12, estado13
 
+								if valor18 and valor18.Parent and valor18.Name == "ShurikenRSC" then
+									local spRestick = valor18:FindFirstChild("StickyPart")
+									local swRestick = spRestick and spRestick:FindFirstChild("StickyWeld")
+									if spRestick and swRestick and api.DefinirDonoRede(spRestick) then
+										remotos.EventoParteGrudenta:FireServer(spRestick, ragdollTocadoCaixaColisao, CFrame.new(valoresConfig.AKOffsetX, valoresConfig.AKOffsetY, valoresConfig.AKOffsetZ) * CFrame.Angles(math.rad(valoresConfig.AKRotX), math.rad(valoresConfig.AKRotY), math.rad(valoresConfig.AKRotZ)))
+									else
+										api.DestruirBrinquedo(valor18)
+										valor18 = nil
+									end
+								end
+
 								if not valor18 or not valor18.Parent then
 									api.DestruirBrinquedo(valor18)
 									valor18 = nil
@@ -26511,7 +26597,7 @@ Tempo p/ Escapar: %*]]
 				local antiLagSensibilidade = valoresConfig.AntiLagSens
 
 				if math.floor(1 / deltaTempo) < antiLagSensibilidade and alternadores.AntiLag and not alternadores.AntiLag.Value then
-					notificar("Anti-Lag Ativado || FPS muito baixo", "Auto Anti-Lag")
+					notificar("Anti-Lag ativado automaticamente (FPS baixo)", "Auto Anti-Lag")
 					alternadores.AntiLag:SetValue(true)
 				end
 			end)
@@ -26659,7 +26745,7 @@ Tempo p/ Escapar: %*]]
 								valor24:ChangeState(Enum.HumanoidStateType.Dead)
 
 								if valoresConfig.KickFlags == 1 then
-									notificar("Personagem resetado por alerta de expulsão", "Resetar Automaticamente")
+									notificar("Personagem resetado por alerta de kick", "Auto-Reset")
 								end
 							end
 						end
@@ -26690,6 +26776,7 @@ Tempo p/ Escapar: %*]]
 
 					if filho.Name == "PartOwner" and valor23 then
 						valoresConfig.WhoGrabbed = api.FormatarJogador(valor23)
+						valoresConfig.LastGrabberPlayer = valor23
 
 						if api.AtualizarRotuloUltimoAgarrao then
 							api.AtualizarRotuloUltimoAgarrao()
@@ -28036,19 +28123,19 @@ Tempo p/ Escapar: %*]]
 		end)
 
 		abas = {
-			Inicio = janela:AddTab("<b>Início</b>", "house", "Visão geral, licença e atualizações"),
-			Jogador = janela:AddTab("<b>Jogador</b>", "person-standing", "Funções para aplicar em você mesmo"),
-			Combate = janela:AddTab("<b>Combate</b>", "hand", "Funções de agarrão, linha e auras"),
-			Invencibilidade = janela:AddTab("<b>Invencibilidade</b>", "shield", "Defesa e proteções"),
-			Alvo = janela:AddTab("<b>Alvo</b>", "crosshair", "Ações em um ou vários alvos"),
-			Blobman = janela:AddTab("<b>Blobman</b>", "bot", "Ações com Blobman em um ou vários alvos"),
-			Brinquedos = janela:AddTab("<b>Brinquedos</b>", "shapes", "Ações e efeitos com brinquedos"),
-			Visual = janela:AddTab("<b>Visual</b>", "eye", "Visuais que só você vê"),
-			AutoClique = janela:AddTab("<b>Auto-Clique</b>", "mouse-pointer-click", "Montar poses e figuras com jogadores"),
-			Atalhos = janela:AddTab("<b>Atalhos</b>", "keyboard", "Teclas de atalho para ações rápidas"),
-			Diversos = janela:AddTab("<b>Diversos</b>", "funnel", "Outras funções úteis"),
-			Listas = janela:AddTab("<b>Listas</b>", "scroll-text", "Listas de permissão e imunidade"),
-			Configuracoes = janela:AddTab("<b>Configurações</b>", "settings", "Configurações do menu"),
+			Inicio = janela:AddTab("<b>Início</b>", "house", "Resumo, servidor e privacidade"),
+			Jogador = janela:AddTab("<b>Jogador</b>", "person-standing", "Movimento, atributos e teleporte"),
+			Combate = janela:AddTab("<b>Combate</b>", "hand", "Agarrão, linha, auras e servidor"),
+			Invencibilidade = janela:AddTab("<b>Invencibilidade</b>", "shield", "Proteções, anti-kick e contra-ataque"),
+			Alvo = janela:AddTab("<b>Alvo</b>", "crosshair", "Ações em jogadores selecionados"),
+			Blobman = janela:AddTab("<b>Blobman</b>", "bot", "Controles e métodos com Blobman"),
+			Brinquedos = janela:AddTab("<b>Brinquedos</b>", "shapes", "Aura, âncora, efeitos e experimental"),
+			Visual = janela:AddTab("<b>Visual</b>", "eye", "ESP, câmera, shaders e partículas"),
+			AutoClique = janela:AddTab("<b>Auto-Clique</b>", "mouse-pointer-click", "Poses e controle de figuras"),
+			Atalhos = janela:AddTab("<b>Atalhos</b>", "keyboard", "Teclas rápidas e botões mobile"),
+			Diversos = janela:AddTab("<b>Diversos</b>", "funnel", "Mira, gamepasses, casas e extras"),
+			Listas = janela:AddTab("<b>Listas</b>", "scroll-text", "Whitelist de amigos e imunidade"),
+			Configuracoes = janela:AddTab("<b>Configurações</b>", "settings", "Menu, temas, HUD e configs"),
 		}
 
 	do
@@ -28342,7 +28429,7 @@ Tempo p/ Escapar: %*]]
 			ServidorAcoes:AddDivider("Opções")
 
 			ServidorAcoes:AddToggle("AutoRj", {
-				Text = "Reentrar Automaticamente",
+				Text = "Auto-Rejoin",
 				Tooltip = "Reentra imediatamente assim que você for desconectado/expulso",
 				Callback = function(autoReentrar)
 					estadoFuncoes.AutoRejoin = autoReentrar
@@ -28444,7 +28531,7 @@ Tempo p/ Escapar: %*]]
 				Min = 1,
 				Max = 360,
 				Rounding = 0,
-				Suffix = " segundos",
+				Suffix = " s",
 				Compact = true,
 				Callback = function(autoServidorTrocaTempo)
 					valoresConfig.AutoServerHopTime = autoServidorTrocaTempo
@@ -28456,7 +28543,7 @@ Tempo p/ Escapar: %*]]
 			})
 
 			ServidorTrocaAba:AddToggle("AutoServerHop", {
-				Text = "Trocar Servidor Automaticamente",
+				Text = "Auto-Hop",
 				Tooltip = "Troca de servidor automaticamente após o tempo selecionado",
 				Callback = function(autoServidorTroca)
 					estadoFuncoes.AutoServerHop = autoServidorTroca
@@ -28465,11 +28552,14 @@ Tempo p/ Escapar: %*]]
 			})
 		end
 
+		local PersonagemTabs = abas.Jogador:AddLeftTabbox("Personagem", "user")
+		local TabHabilidades = PersonagemTabs:AddTab("Habilidades", "zap")
+		local TabAtributos = PersonagemTabs:AddTab("Atributos", "sliders-horizontal")
 		do
-			local Valores = abas.Jogador:AddLeftGroupbox("Valores", "user")
+			local Valores = TabAtributos
 
 			Valores:AddSlider("WalkspeedS", {
-				Text = "Velocidade de Caminhada",
+				Text = "Velocidade (WalkSpeed)",
 				Default = 16,
 				Min = 5,
 				Max = 1000,
@@ -28479,7 +28569,7 @@ Tempo p/ Escapar: %*]]
 			})
 
 			Valores:AddSlider("JumpPowerS", {
-				Text = "Força do Pulo",
+				Text = "Força do Pulo (JumpPower)",
 				Default = 24,
 				Min = 24,
 				Max = 1000,
@@ -28510,7 +28600,7 @@ Tempo p/ Escapar: %*]]
 		end
 
 		do
-			local Personagem = abas.Jogador:AddLeftGroupbox("Personagem", "badge")
+			local Personagem = TabHabilidades
 
 			Personagem:AddToggle("FlyT", {
 				Text = "Voo (Fly)",
@@ -28526,7 +28616,7 @@ Tempo p/ Escapar: %*]]
 			}):AddKeyPicker("FlightKey", { Text = "Voo (Fly)", Mode = "Toggle", NoUI = false, SyncToggleState = true })
 
 			Personagem:AddToggle("WalkspeedT", {
-				Text = "Velocidade de Caminhada",
+				Text = "Velocidade (WalkSpeed)",
 				Default = false,
 				Callback = function(andarVelocidade)
 					estadoFuncoes.WalkSpeed = andarVelocidade
@@ -28540,16 +28630,16 @@ Tempo p/ Escapar: %*]]
 						end
 					end
 				end,
-			}):AddKeyPicker("WSKey", { Text = "Velocidade de Caminhada", Mode = "Toggle", NoUI = false, SyncToggleState = true })
+			}):AddKeyPicker("WSKey", { Text = "Velocidade (WalkSpeed)", Mode = "Toggle", NoUI = false, SyncToggleState = true })
 
 			Personagem:AddToggle("JumpPowerT", {
-				Text = "Força do Pulo",
+				Text = "Força do Pulo (JumpPower)",
 				Default = false,
 				Callback = function(puloForca)
 					estadoFuncoes.JumpPower = puloForca
 					api.AcordarPortaoExecucao("MovementPhysics")
 				end,
-			}):AddKeyPicker("JPKey", { Text = "Força do Pulo", Mode = "Toggle", NoUI = true, SyncToggleState = true })
+			}):AddKeyPicker("JPKey", { Text = "Força do Pulo (JumpPower)", Mode = "Toggle", NoUI = true, SyncToggleState = true })
 
 			Personagem:AddToggle("SpinT", {
 				Text = "Girar Personagem",
@@ -28587,7 +28677,7 @@ Tempo p/ Escapar: %*]]
 			Personagem:AddDivider()
 
 			Personagem:AddToggle("NoclipT", {
-				Text = "Atravessar Paredes (Noclip)",
+				Text = "Noclip",
 				Default = false,
 				Callback = function(semColisao)
 					estadoFuncoes.Noclip = semColisao
@@ -28601,7 +28691,7 @@ Tempo p/ Escapar: %*]]
 						end
 					end
 				end,
-			}):AddKeyPicker("NCKey", { Text = "Atravessar Paredes (Noclip)", Mode = "Toggle", NoUI = false, SyncToggleState = true })
+			}):AddKeyPicker("NCKey", { Text = "Noclip", Mode = "Toggle", NoUI = false, SyncToggleState = true })
 
 			Personagem:AddToggle("InfJumpT", {
 				Text = "Pulo Infinito",
@@ -28676,7 +28766,7 @@ Tempo p/ Escapar: %*]]
 			Personagem:AddDivider()
 
 			Personagem:AddToggle("DesyncT", {
-				Text = "Dessincronização de Posição (Desync)",
+				Text = "Desync",
 				Default = false,
 				Tooltip = "Praticamente invisibilidade (seu personagem fica parado para os outros, mas não para o servidor)",
 				Disabled = not api.DessincronizacaoSuportada,
@@ -28684,7 +28774,7 @@ Tempo p/ Escapar: %*]]
 				DisabledTooltip = "Seu executor não suporta este recurso",
 				Callback = api.DefinirDessincronizacao,
 			}):AddKeyPicker("DesyncKey", {
-				Text = "Dessincronização de Posição (Desync)",
+				Text = "Desync",
 				Default = nil,
 				Mode = "Toggle",
 				NoUI = false,
@@ -28694,8 +28784,9 @@ Tempo p/ Escapar: %*]]
 			Personagem:AddLabel("Use apenas se tiver >= 100 FPS!", true)
 		end
 
+		local TeleporteTabs = abas.Jogador:AddRightTabbox("Teleporte", "map-pin")
 		do
-			local Teleportando = abas.Jogador:AddRightGroupbox("Teleporte", "house")
+			local Teleportando = TeleporteTabs:AddTab("Locais", "house")
 
 			Teleportando:AddDropdown("TeleportToDropdown", {
 				Values = estadoCompartilhado.TeleportLocations,
@@ -28736,7 +28827,7 @@ Tempo p/ Escapar: %*]]
 			})
 
 			Teleportando:AddToggle("LoopTPToLoc", {
-				Text = "TP em Loop p/ Local",
+				Text = "Loop TP p/ Local",
 				Default = false,
 				Callback = function(loopTpLocalizacao)
 					estadoFuncoes.LoopTpLocation = loopTpLocalizacao
@@ -28755,7 +28846,7 @@ Tempo p/ Escapar: %*]]
 		end
 
 		do
-			local SecaoJogadores = abas.Jogador:AddRightGroupbox("Jogadores", "users")
+			local SecaoJogadores = TeleporteTabs:AddTab("Jogadores", "users")
 			api.CriarSeletorJogadores(SecaoJogadores, "TeleportTargets", estadoCompartilhado.SelectedTeleportPlayers, false, false)
 
 			SecaoJogadores:AddToggle("LoopSpectatePlayer", {
@@ -28784,7 +28875,7 @@ Tempo p/ Escapar: %*]]
 			}):AddKeyPicker("SpectateKey", { Text = "Espectar Jogador", Mode = "Toggle", NoUI = true, SyncToggleState = true })
 
 			SecaoJogadores:AddToggle("LoopTPToPlayer", {
-				Text = "TP em Loop p/ Jogador",
+				Text = "Loop TP p/ Jogador",
 				Default = false,
 				Callback = function()
 					while alternadores.LoopTPToPlayer.Value and task.wait() do
@@ -28801,7 +28892,7 @@ Tempo p/ Escapar: %*]]
 		end
 
 		do
-			local valor22 = abas.Jogador:AddRightGroupbox("Figuras do Evento Look", "person-standing")
+			local valor22 = abas.Jogador:AddRightGroupbox("Figuras (Look)", "person-standing")
 
 			valor22:AddDropdown("LookFigure", {
 				Text = "Figura",
@@ -28837,7 +28928,7 @@ Tempo p/ Escapar: %*]]
 		end
 
 		do
-			local Animacoes = abas.Jogador:AddRightGroupbox("Animações", "audio-lines")
+			local Animacoes = abas.Jogador:AddLeftGroupbox("Animações", "audio-lines")
 
 			local tabela16 = {
 				Struggle = "rbxassetid://7047322890",
@@ -28973,7 +29064,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Linha = abas.Combate:AddRightGroupbox("Linha", "spline")
+		local Linha = abas.Combate:AddRightGroupbox("Linha & Força", "spline")
 
 		Linha:AddToggleSlider("ExtLineToggle", {
 			Text = "Extensão de Linha",
@@ -29013,7 +29104,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local valor20 = abas.Combate:AddRightTabbox("Lag no Servidor", "gauge")
+		local valor20 = abas.Combate:AddRightTabbox("Servidor", "gauge")
 		local Linhas = valor20:AddTab("Linhas", "spline")
 
 		Linhas:AddToggleSlider("LineLagToggle", {
@@ -29162,7 +29253,7 @@ Tempo p/ Escapar: %*]]
 			Max = 5,
 			Rounding = 2,
 			Compact = true,
-			Suffix = " segundos",
+			Suffix = " s",
 			Callback = function(pacoteAtraso)
 				valoresConfig.PacketDelay = pacoteAtraso
 			end,
@@ -29185,7 +29276,7 @@ Tempo p/ Escapar: %*]]
 			Tooltip = "Requer [GUCCI] Anti-Agarrão ativado! Quebra agarrões, cassinos e interações do servidor.",
 			Func = function()
 				if not estadoFuncoes.GucciAntiGrab then
-					return notificar("Ative o [GUCCI] Anti-Agarrão na aba Invencibilidade para funcionar!", "Lobotomia")
+					return notificar("Ative o [GUCCI] Anti-Grab na aba Invencibilidade primeiro!", "Lobotomia")
 				end
 				local valor22, valor23, value24 = api.ObterPersonagem()
 				if not valor23 or not valor24 or valor24.Health == 0 then
@@ -29230,7 +29321,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Agarroes = abas.Combate:AddLeftGroupbox("Agarrões", "hand-grab")
+		local Agarroes = abas.Combate:AddLeftGroupbox("Agarrão", "hand-grab")
 
 		Agarroes:AddDropdown("GrabsDropdown", {
 			Values = {
@@ -29264,7 +29355,7 @@ Tempo p/ Escapar: %*]]
 			Multi = true,
 			AllowNull = true,
 			Searchable = true,
-			Text = "Agarrões",
+			Text = "Ações ao Agarrar",
 			Tooltip = "O que fazer com o que você segurar usando a linha",
 			Callback = function(agarroes)
 				estadoCompartilhado.Grabs = agarroes
@@ -29272,7 +29363,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Agarroes:AddToggle("ToggleGrabs", {
-			Text = "Ativar Agarrões",
+			Text = "Ativar Agarrão",
 			Default = false,
 			Callback = function(agarrao)
 				estadoFuncoes.Grab = agarrao
@@ -29301,8 +29392,9 @@ Tempo p/ Escapar: %*]]
 		})
 	end
 
+	local CombateAurasTabs = abas.Combate:AddLeftTabbox("Auras", "sparkles")
 	do
-		local Auras = abas.Combate:AddLeftGroupbox("Auras", "salad")
+		local Auras = CombateAurasTabs:AddTab("Jogadores", "users")
 
 		Auras:AddDropdown("AurasDropdown", {
 			Values = {
@@ -29422,7 +29514,7 @@ Tempo p/ Escapar: %*]]
 			Default = 3,
 			Multi = false,
 			Searchable = true,
-			Text = "Membros para arrancar",
+			Text = "Membros Alvo",
 			Tooltip = "Quais membros serão arrancados na aura de arrancar membros",
 			Callback = function(alvoMembroAura)
 				valoresConfig.TargetedLimbAura = alvoMembroAura
@@ -29431,7 +29523,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local valor20 = abas.Combate:AddLeftGroupbox("Aura de Brinquedos (Combate)", "shapes")
+		local valor20 = CombateAurasTabs:AddTab("Brinquedos", "shapes")
 
 		valor20:AddDropdown("TAurasDropdown", {
 			Values = { "Destroy", "Fling", "Teleport to Spawn", "Bounce", "Anchor" },
@@ -29494,12 +29586,16 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Protecoes = abas.Invencibilidade:AddLeftGroupbox("Proteções (Antis)", "brick-wall-shield")
+		local ProtecoesTabs = abas.Invencibilidade:AddLeftTabbox("Proteções", "brick-wall-shield")
+		local TabProtCombate = ProtecoesTabs:AddTab("Combate", "shield")
+		local TabProtMapa = ProtecoesTabs:AddTab("Mapa & Dano", "flame")
+		local TabProtLag = ProtecoesTabs:AddTab("Lag & Auto", "zap")
+		local Protecoes = TabProtCombate
 
 		Protecoes:AddToggle("AntiGrab", {
-			Text = "Anti-Agarrão",
+			Text = "Anti-Grab",
 			Default = false,
-			Tooltip = "O anti-agarrão padrão mais comum",
+			Tooltip = "Anti-Grab padrão para escapar rapidamente",
 			Callback = function(antiAgarrao)
 				estadoFuncoes.AntiGrab = antiAgarrao
 				api.AntiAgarrao()
@@ -29507,14 +29603,14 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Protecoes:AddToggle("GucciAntiGrab", {
-			Text = "[GUCCI] Anti-Agarrão",
+			Text = "[GUCCI] Anti-Grab",
 			Default = false,
-			Tooltip = "Impede que toquem ou agarrem você.",
+			Tooltip = "Impede que outros jogadores encostem ou agarrem você",
 			Callback = function(arg)
 				api.DefinirAntiAgarraoGucci(arg)
 			end,
 		}):AddKeyPicker("GucciK", {
-			Text = "[GUCCI] Anti-Agarrão",
+			Text = "[GUCCI] Anti-Grab",
 			Default = nil,
 			Mode = "Toggle",
 			NoUI = false,
@@ -29524,31 +29620,33 @@ Tempo p/ Escapar: %*]]
 		Protecoes:AddToggle("AntiBlobman", {
 			Text = "Anti-Blobman",
 			Default = false,
-			Tooltip = "Impede que te agarrem usando o Blobman",
+			Tooltip = "Impede que te puxem ou prendam com o Blobman",
 			Callback = function(arg)
 				api.DefinirAlternadorExecucao("AntiBlobman", arg)
 			end,
 		})
 
 		Protecoes:AddToggle("AntiInputLag", {
-			Text = "Anti-Dono de Rede",
+			Text = "Anti-Net Owner",
 			Default = false,
-			Tooltip = "Protege contra morte por Blobman, etc.",
+			Tooltip = "Evita que outros jogadores tomem posse de rede do seu personagem",
 			Callback = function(arg)
 				api.DefinirAlternadorExecucao("AntiInputLag", arg)
 			end,
 		}):AddKeyPicker("AntiNetK", {
-			Text = "Anti-Dono de Rede",
+			Text = "Anti-Net Owner",
 			Default = nil,
 			Mode = "Toggle",
 			NoUI = false,
 			SyncToggleState = true,
 		})
 
+		Protecoes = TabProtMapa
+
 		Protecoes:AddToggle("AntiExplosion", {
 			Text = "Anti-Explosão",
 			Default = false,
-			Tooltip = "Impede que explosões afetem você",
+			Tooltip = "Impede dano e arremesso por explosões",
 			Callback = function(antiExplosao)
 				estadoFuncoes.AntiExplosion = antiExplosao
 			end,
@@ -29557,7 +29655,7 @@ Tempo p/ Escapar: %*]]
 		Protecoes:AddToggle("AntiBurn", {
 			Text = "Anti-Fogo",
 			Default = false,
-			Tooltip = "Impede que você pegue fogo",
+			Tooltip = "Evita que seu personagem pegue fogo",
 			Callback = function(antiQueimar)
 				estadoFuncoes.AntiBurn = antiQueimar
 			end,
@@ -29566,16 +29664,19 @@ Tempo p/ Escapar: %*]]
 		Protecoes:AddToggle("AntiVoid", {
 			Text = "Anti-Void",
 			Default = false,
-			Tooltip = "Teleporta você de volta para cima se cair no void",
+			Tooltip = "Traz você de volta se cair fora do mapa (void)",
 			Callback = function(arg)
 				api.DefinirAlternadorExecucao("AntiVoid", arg)
 			end,
 		})
 
+		Protecoes = TabProtCombate
+		Protecoes:AddDivider("Anti-Kick")
+
 		Protecoes:AddToggle("AntiKick", {
-			Text = "Anti-Expulsão (Kick)",
+			Text = "Anti-Kick",
 			Default = false,
-			Tooltip = "Anti-expulsão padrão usando shuriken",
+			Tooltip = "Proteção padrão contra kick usando shuriken",
 			Callback = function(arg)
 				api.DefinirAlternadorExecucao("AntiKick", arg)
 				api.AcordarPortaoExecucao("PCLDTracking")
@@ -29583,9 +29684,9 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Protecoes:AddToggle("AntiKick2", {
-			Text = "[Quebrar PCLD] Anti-Expulsão",
+			Text = "Anti-Kick [Quebrar PCLD]",
 			Default = false,
-			Tooltip = "Torna impossível ser expulso",
+			Tooltip = "Impede kicks quebrando o PCLD",
 			Callback = function(arg)
 				api.DefinirAlternadorExecucao("AntiKick2", arg)
 			end,
@@ -29637,9 +29738,9 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Protecoes:AddToggle("AntiStickyExploit", {
-			Text = "Anti-Exploit Grudento",
+			Text = "Anti-Lag Grudento",
 			Default = false,
-			Tooltip = "Destrói partes grudentas soldadas em você (anti-lag grudento)",
+			Tooltip = "Remove itens grudentos presos no seu personagem para evitar lag",
 			Callback = function(arg)
 				estadoFuncoes.AntiStickyExploit = arg
 
@@ -29667,10 +29768,13 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
+		Protecoes = TabProtMapa
+		Protecoes:AddDivider("Objetos & Toque")
+
 		Protecoes:AddToggle("AntiSnowball", {
 			Text = "Anti-Bola de Neve",
 			Default = false,
-			Tooltip = "Impede que bolas de neve atinjam você",
+			Tooltip = "Evita que bolas de neve derrubem você",
 			Callback = function(arg)
 				api.DefinirAlternadorExecucao("AntiSnowball", arg)
 
@@ -29687,7 +29791,7 @@ Tempo p/ Escapar: %*]]
 		Protecoes:AddToggle("AntiBanana", {
 			Text = "Anti-Banana",
 			Default = false,
-			Tooltip = "Bananas não vão encostar em você",
+			Tooltip = "Impede que cascas de banana derrubem você",
 			Callback = function(arg)
 				api.DefinirAlternadorExecucao("AntiBanana", arg)
 			end,
@@ -29696,7 +29800,7 @@ Tempo p/ Escapar: %*]]
 		Protecoes:AddToggle("AntiPaint", {
 			Text = "Anti-Tinta",
 			Default = false,
-			Tooltip = "Você não será pintado",
+			Tooltip = "Impede que pintem seu personagem",
 			Callback = function(antiTinta)
 				estadoFuncoes.AntiPaint = antiTinta
 
@@ -29742,7 +29846,7 @@ Tempo p/ Escapar: %*]]
 		Protecoes:AddToggle("AntiPoison", {
 			Text = "Anti-Veneno",
 			Default = false,
-			Tooltip = "Partes venenosas não vão matar você",
+			Tooltip = "Evita dano das áreas de veneno do mapa",
 			Callback = function(arg)
 				local buraco = mapa:FindFirstChild("Hole")
 				local venenoGrandeBuraco = buraco and buraco:FindFirstChild("PoisonBigHole")
@@ -29839,6 +29943,8 @@ Tempo p/ Escapar: %*]]
 			end)
 		end
 
+		Protecoes = TabProtLag
+
 		Protecoes:AddToggle("AntiLag", {
 			Text = "Anti-Lag",
 			Default = true,
@@ -29893,7 +29999,7 @@ Tempo p/ Escapar: %*]]
 			},
 			Default = 1,
 			Text = "Modo do Anti-Lag",
-			Tooltip = "O modo Novo também desativa scripts de toque/grudentos em PlayerScripts mesmo após renascer e protege contra lag de pacotes via RakNet",
+			Tooltip = "O modo Novo desativa scripts de toque/grudentos após renascer e filtra lag de pacotes",
 			Callback = function(modo)
 				valoresConfig.AntiLagMode = modo
 
@@ -29915,7 +30021,7 @@ Tempo p/ Escapar: %*]]
 		Protecoes:AddToggle("AutoAntiLag", {
 			Text = "Auto Anti-Lag",
 			Default = true,
-			Tooltip = "Ativa o anti-lag automaticamente se o FPS cair demais",
+			Tooltip = "Ativa o Anti-Lag automaticamente quando o FPS cair demais",
 			Callback = function(autoAntiLag)
 				estadoFuncoes.AutoAntiLag = autoAntiLag
 			end,
@@ -29924,7 +30030,7 @@ Tempo p/ Escapar: %*]]
 		Protecoes:AddToggle("AntiInvis", {
 			Text = "Anti-Invisibilidade",
 			Default = false,
-			Tooltip = "Torna visíveis quaisquer jogadores invisíveis",
+			Tooltip = "Revela jogadores que estejam invisíveis",
 			Callback = function()
 				task.spawn(function()
 					while alternadores.AntiInvis and alternadores.AntiInvis.Value do
@@ -29954,9 +30060,9 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Protecoes:AddToggle("AutoReset", {
-			Text = "Resetar Automaticamente",
+			Text = "Auto-Reset",
 			Default = true,
-			Tooltip = "Detecta tentativas de expulsão e reseta o personagem quando necessário",
+			Tooltip = "Detecta tentativas de kick e reseta seu personagem automaticamente",
 			Callback = function(autoResetar)
 				estadoFuncoes.AutoReset = autoResetar
 			end,
@@ -29965,7 +30071,7 @@ Tempo p/ Escapar: %*]]
 		Protecoes:AddToggle("LoopTP", {
 			Text = "TP em Loop",
 			Default = false,
-			Tooltip = "Teleporta continuamente para impedir que agarrem você",
+			Tooltip = "Teleporta sem parar para ninguém conseguir te agarrar",
 			Callback = function(loopTP)
 				estadoFuncoes.LoopTP = loopTP
 
@@ -30001,7 +30107,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Diversos_2 = abas.Invencibilidade:AddRightGroupbox("Diversos", "bolt")
+		local Diversos_2 = abas.Invencibilidade:AddRightGroupbox("Utilitários", "bolt")
 
 		Diversos_2:AddToggle("DisblVoid", {
 			Text = "Desativar Void",
@@ -30018,6 +30124,15 @@ Tempo p/ Escapar: %*]]
 				end
 			end,
 		})
+
+		bibliotecaUI:GiveSignal(workspace:GetPropertyChangedSignal("FallenPartsDestroyHeight"):Connect(function()
+			if not descarregado and estadoFuncoes.DestroyVoid and not estadoCompartilhado.TempVoidOverride and not valoresConfig.DestroyThread then
+				local h = workspace.FallenPartsDestroyHeight
+				if h == h then
+					workspace.FallenPartsDestroyHeight = (0/0)
+				end
+			end
+		end))
 
 		Diversos_2:AddToggle("WaterWalk", {
 			Text = "Andar Sobre a Água",
@@ -30111,13 +30226,13 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
-		local UltimoAgarradoRotulo = Diversos_2:AddLabel("LastGrabbedLabel", { Text = "Última pessoa que te agarrou: ninguém", DoesWrap = true })
+		local UltimoAgarradoRotulo = Diversos_2:AddLabel("LastGrabbedLabel", { Text = "Último a te agarrar: ninguém", DoesWrap = true })
 
 		api.AtualizarRotuloUltimoAgarrao = function()
 			UltimoAgarradoRotulo:SetVisible(valoresConfig.WhoGrabbed ~= nil)
 
 			if valoresConfig.WhoGrabbed then
-				UltimoAgarradoRotulo:SetText("Última pessoa que te agarrou: " .. valoresConfig.WhoGrabbed)
+				UltimoAgarradoRotulo:SetText("Último a te agarrar: " .. valoresConfig.WhoGrabbed)
 			end
 		end
 	end
@@ -30170,7 +30285,7 @@ Tempo p/ Escapar: %*]]
 			Default = 3,
 			Multi = false,
 			Searchable = true,
-			Text = "Membros para arrancar",
+			Text = "Membros Alvo",
 			Tooltip = "Quais membros serão arrancados",
 			Callback = function(alvoMembroCA)
 				valoresConfig.TargetedLimbCA = alvoMembroCA
@@ -30181,31 +30296,27 @@ Tempo p/ Escapar: %*]]
 	do
 		local Config = abas.Invencibilidade:AddRightGroupbox("Configuração", "settings")
 
-		Config:AddSlider("AntiLagSens", {
-			Text = "Sensibilidade do Auto Anti-Lag",
-			Default = 3,
-			Min = 1,
-			Max = 20,
-			Suffix = " FPS",
-			Callback = function(antiLagSensibilidade)
-				valoresConfig.AntiLagSens = antiLagSensibilidade
-			end,
+		Config:AddDropdown("InvincibilityConfigCat", {
+			Values = { "Anti-Agarrão", "Resetar Automaticamente", "Anti Dono de Rede", "Anti-Lag" },
+			ValueImages = {
+				["Anti-Agarrão"] = "shield",
+				["Resetar Automaticamente"] = "rotate-ccw",
+				["Anti Dono de Rede"] = "network",
+				["Anti-Lag"] = "zap",
+			},
+			Default = 1,
+			Multi = false,
+			Text = "Categoria",
 		})
 
-		Config:AddDivider("Resetar Automaticamente")
+		Config:AddDivider()
 
-		Config:AddToggle("AutoLeave", {
-			Text = "Sair Automaticamente",
-			Default = true,
-			Tooltip = "Sai do servidor após quatro alertas de expulsão em vez de continuar resetando",
-			Callback = function(autoSair)
-				estadoFuncoes.AutoLeave = autoSair
-			end,
-		})
+		local DepAntiGrab = Config:AddDependencyBox()
+		DepAntiGrab:SetupDependencies({ { opcoes.InvincibilityConfigCat, "Anti-Agarrão" } })
 
-		Config:AddDivider("Anti-Agarrões")
+		DepAntiGrab:AddDivider("Anti-Grab")
 
-		Config:AddDropdown("AGTDropdown", {
+		DepAntiGrab:AddDropdown("AGTDropdown", {
 			Values = { "Normal", "No Ragdoll", "Anti-Kill", "Escapes Anything, but buggy" },
 			ValueImages = {
 				["Normal"] = "shield",
@@ -30215,14 +30326,25 @@ Tempo p/ Escapar: %*]]
 			},
 			Default = 1,
 			Multi = false,
-			Text = "Tipo de Anti-Agarrão",
+			Text = "Modo do Anti-Grab",
 			Tooltip = "Modo de funcionamento do Anti-Agarrão padrão",
 			Callback = function(agTipo)
 				valoresConfig.AGType = agTipo
 			end,
 		})
 
-		Config:AddDropdown("GTDropdown", {
+		DepAntiGrab:AddToggle("AllowWhitelistedGrabs", {
+			Text = "Permitir Agarrão da Whitelist",
+			Default = false,
+			Tooltip = "Permite que jogadores da Whitelist te agarrem mesmo com Anti-Grab ativo",
+			Callback = function(v)
+				estadoFuncoes.AllowWhitelistedGrabs = v
+			end,
+		})
+
+		DepAntiGrab:AddDivider("Gucci")
+
+		DepAntiGrab:AddDropdown("GTDropdown", {
 			Values = { "Blobman", "Tractor [Invisible]", "Train [Invisible]", "Sleigh [Invisible]" },
 			ValueImages = {
 				["Blobman"] = "bot",
@@ -30247,9 +30369,31 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
-		Config:AddDivider("Anti Dono de Rede")
+		DepAntiGrab:AddToggle("GucciAllowSitting", {
+			Text = "Permitir Sentar [Gucci]",
+			Default = false,
+			Tooltip = "Permite sentar em outros assentos e Blobmans sem cancelar ou avisar enquanto o Gucci estiver ativo",
+			Callback = function(v)
+				estadoFuncoes.GucciAllowSitting = v
+			end,
+		})
 
-		Config:AddDropdown("AITDropdown", {
+		local DepAutoReset = Config:AddDependencyBox()
+		DepAutoReset:SetupDependencies({ { opcoes.InvincibilityConfigCat, "Resetar Automaticamente" } })
+
+		DepAutoReset:AddToggle("AutoLeave", {
+			Text = "Auto-Leave",
+			Default = true,
+			Tooltip = "Sai do servidor após 4 alertas de kick em vez de continuar resetando",
+			Callback = function(autoSair)
+				estadoFuncoes.AutoLeave = autoSair
+			end,
+		})
+
+		local DepNetOwner = Config:AddDependencyBox()
+		DepNetOwner:SetupDependencies({ { opcoes.InvincibilityConfigCat, "Anti Dono de Rede" } })
+
+		DepNetOwner:AddDropdown("AITDropdown", {
 			Values = {
 				"FoodHamburger",
 				"InstrumentDrumBongos",
@@ -30321,21 +30465,21 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
-		Config:AddSlider("AntiInpLagDel", {
-			Text = "Atraso de Segurar e Soltar",
+		DepNetOwner:AddSlider("AntiInpLagDel", {
+			Text = "Delay (Segurar/Soltar)",
 			Default = 0.05,
 			Min = 0,
 			Max = 0.3,
-			Suffix = " sec",
+			Suffix = " s",
 			Rounding = 2,
 			Callback = function(entradaLgAtraso)
 				valoresConfig.InputLgDelay = entradaLgAtraso
 			end,
 		})
 
-		Config:AddLabel("Abaixo de 0.05 pode causar ping alto")
+		DepNetOwner:AddLabel("Abaixo de 0.05s pode aumentar seu ping")
 
-		Config:AddSlider("ItemTransAK", {
+		DepNetOwner:AddSlider("ItemTransAK", {
 			Text = "Transparência do Item",
 			Default = valoresConfig.AILTransparency,
 			Min = 0,
@@ -30346,14 +30490,26 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
+		local DepAntiLag = Config:AddDependencyBox()
+		DepAntiLag:SetupDependencies({ { opcoes.InvincibilityConfigCat, "Anti-Lag" } })
 
+		DepAntiLag:AddSlider("AntiLagSens", {
+			Text = "Sensibilidade do Auto Anti-Lag",
+			Default = 3,
+			Min = 1,
+			Max = 20,
+			Suffix = " FPS",
+			Callback = function(antiLagSensibilidade)
+				valoresConfig.AntiLagSens = antiLagSensibilidade
+			end,
+		})
 	end
 
 	do
-		local Highlight = abas.Invencibilidade:AddRightTabbox("Destaque", "highlighter")
+		local Highlight = abas.Invencibilidade:AddRightTabbox("Anti-Kick (Visual)", "highlighter")
 
 		local PosicoesAba = Highlight:AddTab("Posições", "move-diagonal")
-		local PredefinicoesAba = Highlight:AddTab("Predefinições", "settings-2")
+		local PredefinicoesAba = Highlight:AddTab("Presets", "settings-2")
 
 		local aplicarAntiExpulsaoDeslocamentos = function()
 			local personagem, raiz, humanoide = api.ObterPersonagem()
@@ -30453,14 +30609,14 @@ Tempo p/ Escapar: %*]]
 			},
 			Default = nil,
 			Multi = false,
-			Text = "Predefinição",
+			Text = "Preset",
 			Callback = function(antiExpulsaoPredefinicao)
 				valoresConfig.AKPresetChoice = antiExpulsaoPredefinicao
 			end,
 		})
 
 		PredefinicoesAba:AddButton({
-			Text = "Carregar Predefinição",
+			Text = "Carregar Preset",
 			Icon = "settings",
 			Func = function()
 				local antiExpulsaoPredefinicao = valoresConfig.AKPresetChoice or (opcoes.AKPreset and opcoes.AKPreset.Value)
@@ -30475,7 +30631,7 @@ Tempo p/ Escapar: %*]]
 				local predefinicao = antiExpulsaoPredefinicoes[antiExpulsaoPredefinicao]
 
 				if not predefinicao then
-					return notificar("Selecione uma predefinição primeiro!")
+					return notificar("Selecione um preset primeiro!")
 				end
 
 				valoresConfig.AKOffsetX, valoresConfig.AKOffsetY, valoresConfig.AKOffsetZ = predefinicao[1], predefinicao[2], predefinicao[3]
@@ -30512,23 +30668,23 @@ Tempo p/ Escapar: %*]]
 		})
 
 		PredefinicoesAba:AddInput("AKCustomPresetName", {
-			Text = "Nome da Predefinição",
+			Text = "Nome do Preset",
 			ClearTextOnFocus = false,
 			Callback = function() end,
 		})
 
 		PredefinicoesAba:AddButton({
-			Text = "Salvar Predefinição",
+			Text = "Salvar Preset",
 			Icon = "settings",
 			Func = function()
 				local predefinicaoNome = opcoes.AKCustomPresetName and opcoes.AKCustomPresetName.Value or ""
 
 				if predefinicaoNome == "" then
-					return notificar("Digite um nome para a predefinição primeiro!")
+					return notificar("Digite um nome para o preset primeiro!")
 				end
 
 				if not (writefile and makefolder and isfolder) then
-					return notificar("Seu executor não suporta predefinições em arquivo.")
+					return notificar("Seu executor não suporta salvar presets em arquivo.")
 				end
 
 				local sucesso = pcall(function()
@@ -30550,28 +30706,28 @@ Tempo p/ Escapar: %*]]
 					}))
 				end)
 
-				notificar(sucesso and ("Predefinição salva: " .. predefinicaoNome) or "Não foi possível salvar o arquivo da predefinição.")
+				notificar(sucesso and ("Preset salvo: " .. predefinicaoNome) or "Não foi possível salvar o preset em arquivo.")
 			end,
 		})
 
 		PredefinicoesAba:AddButton({
-			Text = "Carregar Predefinição",
+			Text = "Carregar Preset",
 			Icon = "settings-2",
 			Func = function()
 				local predefinicaoNome = opcoes.AKCustomPresetName and opcoes.AKCustomPresetName.Value or ""
 
 				if predefinicaoNome == "" then
-					return notificar("Digite um nome para a predefinição primeiro!")
+					return notificar("Digite um nome para o preset primeiro!")
 				end
 
 				if not (readfile and isfile) then
-					return notificar("Seu executor não suporta predefinições em arquivo.")
+					return notificar("Seu executor não suporta salvar presets em arquivo.")
 				end
 
 				local caminho = "Brazuka/AntiKickPresets/" .. predefinicaoNome .. ".json"
 
 				if not isfile(caminho) then
-					return notificar("Predefinição não encontrada: " .. predefinicaoNome)
+					return notificar("Preset não encontrado: " .. predefinicaoNome)
 				end
 
 				local sucesso, result = pcall(function()
@@ -30579,7 +30735,7 @@ Tempo p/ Escapar: %*]]
 				end)
 
 				if not sucesso or type(resultado) ~= "table" then
-					return notificar("Não foi possível ler o arquivo da predefinição.")
+					return notificar("Não foi possível ler o arquivo do preset.")
 				end
 
 				valoresConfig.AKOffsetX = tonumber(resultado.X) or 0
@@ -30617,12 +30773,12 @@ Tempo p/ Escapar: %*]]
 					aplicarAntiExpulsaoDeslocamentos()
 				end
 
-				notificar("Predefinição carregada: " .. predefinicaoNome)
+				notificar("Preset carregado: " .. predefinicaoNome)
 			end,
 		})
 
 		PosicoesAba:AddSlider("AKOffsetXS", {
-			Text = "Deslocamento X",
+			Text = "Offset X",
 			Default = 0,
 			Min = -2,
 			Max = 2,
@@ -30638,7 +30794,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		PosicoesAba:AddSlider("AKOffsetYS", {
-			Text = "Deslocamento Y",
+			Text = "Offset Y",
 			Default = -0.3,
 			Min = -2,
 			Max = 2,
@@ -30654,7 +30810,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		PosicoesAba:AddSlider("AKOffsetZS", {
-			Text = "Deslocamento Z",
+			Text = "Offset Z",
 			Default = 0,
 			Min = -2,
 			Max = 2,
@@ -30800,7 +30956,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local valor20 = abas.Alvo:AddRightGroupbox("Configurações do Método", "apple")
+		local valor20 = abas.Alvo:AddRightGroupbox("Config. do Método", "apple")
 
 		local sincronizarMetodoConfig
 
@@ -30911,7 +31067,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		valor21:AddToggle("AntiKickRemoverNK", {
-			Text = "Remover Anti-Expulsão",
+			Text = "Remover Anti-Kick",
 			Default = true,
 			Callback = function(excluirShurikenEmExpulsao)
 				estadoFuncoes.DeleteShurInNK = excluirShurikenEmExpulsao
@@ -30985,7 +31141,7 @@ Tempo p/ Escapar: %*]]
 		valor22:AddDivider("Config. de Remover Gucci")
 
 		valor22:AddToggle("RagdollInRG", {
-			Text = "Quebrar Jogador? [Ragdoll Infinito]",
+			Text = "Ragdoll Infinito no Alvo",
 			Default = false,
 			Tooltip = "Isso leva 1,5 segundo — use apenas se tiver tempo!",
 			Callback = function(ragdollEmRG)
@@ -31003,7 +31159,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		valor22:AddButton({
-			Text = "Corrigir Removedor de Gucci",
+			Text = "Resetar Removedor de Gucci",
 			Tooltip = "Corrige falhas do Removedor de Gucci caso pare de funcionar",
 			Func = function()
 				for k in estadoCompartilhado.SelectedPlayers, nil, nil do
@@ -31039,69 +31195,6 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Seguir = abas.Blobman:AddLeftGroupbox("Seguir", "footprints")
-
-		Seguir:AddButton({
-			Text = "Pular",
-			Icon = "footprints",
-			Func = function()
-				apiBlobman.PularSeguindo()
-			end,
-		}):AddKeyPicker("BlobFollowJump", {
-			Text = "Pular",
-			Default = nil,
-			Mode = "Press",
-			NoUI = false,
-			Callback = function()
-				apiBlobman.PularSeguindo()
-			end,
-		})
-
-		Seguir:AddToggle("BlobFollowLoopJump", {
-			Text = "Pular Contínuo",
-			Default = false,
-			Tooltip = "O Blobman continua pulando enquanto segue você",
-		})
-
-		Seguir:AddSlider("BlobFollowWalkSpeed", {
-			Text = "Velocidade de Caminhada",
-			Default = 16,
-			Min = 0,
-			Max = 100,
-			Rounding = 0,
-			Compact = true,
-			Callback = function(blobSeguirAndarVelocidade)
-				valoresConfig.BlobFollowWalkSpeed = blobSeguirAndarVelocidade
-			end,
-		})
-
-		Seguir:AddSlider("BlobFollowJumpPower", {
-			Text = "Força do Pulo",
-			Default = 50,
-			Min = 0,
-			Max = 150,
-			Rounding = 0,
-			Compact = true,
-			Callback = function(blobSeguirPuloForca)
-				valoresConfig.BlobFollowJumpPower = blobSeguirPuloForca
-			end,
-		})
-
-		Seguir:AddSlider("BlobFollowHipHeight", {
-			Text = "Altura do Quadril",
-			Default = 0,
-			Min = 0,
-			Max = 10,
-			Rounding = 1,
-			Compact = true,
-			Tooltip = "0 mantém a altura padrão do quadril do Blobman",
-			Callback = function(blobSeguirQuadrilAltura)
-				valoresConfig.BlobFollowHipHeight = blobSeguirQuadrilAltura
-			end,
-		})
-	end
-
-	do
 		local Aplicar = abas.Blobman:AddLeftGroupbox("Aplicar", "dock")
 		api.CriarAlternadorLoop(Aplicar, "LoopApplyMethodSel", "LoopApplyMethod", false, true, estadoCompartilhado.SelectedPlayersBlob)
 		api.CriarAlternadorLoop(Aplicar, "LoopApplyMethodServ", "LoopApplyMethodServer", true, true, estadoCompartilhado.SelectedPlayersBlob)
@@ -31113,7 +31206,7 @@ Tempo p/ Escapar: %*]]
 		local Configuracoes = abas.Blobman:AddRightGroupbox("Configurações", "settings")
 
 		Configuracoes:AddToggle("AutoSeatBlobman", {
-			Text = "Sentar no Blobman Auto",
+			Text = "Auto-Sentar no Blobman",
 			Default = false,
 			Callback = function(autoAssentoBlobman)
 				estadoFuncoes.AutoSeatBlobman = autoAssentoBlobman
@@ -31125,7 +31218,7 @@ Tempo p/ Escapar: %*]]
 				end)
 			end,
 		}):AddKeyPicker("ASBK", {
-			Text = "Sentar no Blobman Auto",
+			Text = "Auto-Sentar no Blobman",
 			Default = nil,
 			Mode = "Toggle",
 			NoUI = false,
@@ -31136,7 +31229,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local valor20 = abas.Blobman:AddRightGroupbox("Configurações do Método", "apple")
+		local valor20 = abas.Blobman:AddRightGroupbox("Config. do Método", "apple")
 
 		valor20:AddDropdown("MethodSettingsBlobs", {
 			Values = { "Kick", "Kill", "Bring", "Lock", "Follow", "Remove Gucci" },
@@ -31179,7 +31272,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		valor21:AddToggle("ShurikenDeleteBlob", {
-			Text = "Remover Anti-Expulsão [Grudento]",
+			Text = "Remover Anti-Kick [Grudento]",
 			Default = true,
 			Callback = function(excluirShurikenEmBlobK)
 				estadoFuncoes.DeleteShurInBlobK = excluirShurikenEmBlobK
@@ -31190,28 +31283,91 @@ Tempo p/ Escapar: %*]]
 		valor22:SetupDependencies({ { opcoes.KickSettingBlob, "Grab-Drop" } })
 
 		valor22:AddToggle("NetOwninKick", {
-			Default = false,
-			Text = "Spam de Dono de Rede",
+			Default = true,
+			Text = "Spam de Net Owner",
 			Callback = function(redeDonoEmExpulsao)
 				estadoFuncoes.NetworkOwnerInKick = redeDonoEmExpulsao
 			end,
 		})
 
 		valor21:AddDivider()
-		valor21:AddSlider("BlobKickX", { Text = "Deslocamento X", Default = 0, Min = -5, Max = 5, Compact = true, Rounding = 1 })
-		valor21:AddSlider("BlobKickY", { Text = "Deslocamento Y", Default = 25, Min = 10, Max = 40, Compact = true, Rounding = 1 })
-		valor21:AddSlider("BlobKickZ", { Text = "Deslocamento Z", Default = 0, Min = -5, Max = 5, Compact = true, Rounding = 1 })
+		valor21:AddSlider("BlobKickX", { Text = "Offset X", Default = 0, Min = -5, Max = 5, Compact = true, Rounding = 1 })
+		valor21:AddSlider("BlobKickY", { Text = "Offset Y", Default = 36, Min = 10, Max = 40, Compact = true, Rounding = 1 })
+		valor21:AddSlider("BlobKickZ", { Text = "Offset Z", Default = 0, Min = -5, Max = 5, Compact = true, Rounding = 1 })
+
+		local DepFollow = valor20:AddDependencyBox()
+		DepFollow:SetupDependencies({ { opcoes.MethodSettingsBlobs, "Follow" } })
+
+		DepFollow:AddButton({
+			Text = "Pular",
+			Icon = "footprints",
+			Func = function()
+				apiBlobman.PularSeguindo()
+			end,
+		}):AddKeyPicker("BlobFollowJump", {
+			Text = "Pular",
+			Default = nil,
+			Mode = "Press",
+			NoUI = false,
+			Callback = function()
+				apiBlobman.PularSeguindo()
+			end,
+		})
+
+		DepFollow:AddToggle("BlobFollowLoopJump", {
+			Text = "Pular Contínuo",
+			Default = false,
+			Tooltip = "O Blobman continua pulando enquanto segue você",
+		})
+
+		DepFollow:AddSlider("BlobFollowWalkSpeed", {
+			Text = "Velocidade (WalkSpeed)",
+			Default = 16,
+			Min = 0,
+			Max = 100,
+			Rounding = 0,
+			Compact = true,
+			Callback = function(blobSeguirAndarVelocidade)
+				valoresConfig.BlobFollowWalkSpeed = blobSeguirAndarVelocidade
+			end,
+		})
+
+		DepFollow:AddSlider("BlobFollowJumpPower", {
+			Text = "Força do Pulo (JumpPower)",
+			Default = 50,
+			Min = 0,
+			Max = 150,
+			Rounding = 0,
+			Compact = true,
+			Callback = function(blobSeguirPuloForca)
+				valoresConfig.BlobFollowJumpPower = blobSeguirPuloForca
+			end,
+		})
+
+		DepFollow:AddSlider("BlobFollowHipHeight", {
+			Text = "Altura (HipHeight)",
+			Default = 0,
+			Min = 0,
+			Max = 10,
+			Rounding = 1,
+			Compact = true,
+			Tooltip = "0 mantém a altura padrão do quadril do Blobman",
+			Callback = function(blobSeguirQuadrilAltura)
+				valoresConfig.BlobFollowHipHeight = blobSeguirQuadrilAltura
+			end,
+		})
 	end
 
+	local AcoesBrinquedosTabs = abas.Brinquedos:AddRightTabbox("Ações & Combate", "flame")
 	do
-		local Barreira = abas.Brinquedos:AddRightGroupbox("Barreira", "circle-slash")
+		local Barreira = AcoesBrinquedosTabs:AddTab("Barreira", "circle-slash")
 		local estado12 = false
 		local estado13 = false
 
 		Barreira:AddToggle("BreakBarrierT", {
 			Text = "Desativar Barreira da Casa",
 			Default = false,
-			Tooltip = "Impede que brinquedos de fora sejam destruídos dentro das casas e vice-versa",
+			Tooltip = "Permite levar brinquedos para dentro e fora das casas sem sumirem",
 			Callback = function(arg)
 				estado12 = arg and not descarregado
 				if not estado12 or estado13 then
@@ -31385,7 +31541,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Efeitos = abas.Brinquedos:AddRightGroupbox("Efeitos", "flask-conical")
+		local Efeitos = AcoesBrinquedosTabs:AddTab("Efeitos", "flask-conical")
 		api.CriarSeletorJogadores(Efeitos, "Toy Effects", estadoCompartilhado.SelectedPlayersEffect)
 		Efeitos:AddDivider("Método")
 
@@ -31430,7 +31586,7 @@ Tempo p/ Escapar: %*]]
 			Default = 3,
 			Multi = false,
 			Searchable = true,
-			Text = "Membros para arrancar",
+			Text = "Membros Alvo",
 			Tooltip = "Quais membros serão arrancados no efeito de brinquedo",
 			Callback = function(alvoMembroEfeitoBrinquedo)
 				valoresConfig.TargetedLimbTE = alvoMembroEfeitoBrinquedo
@@ -31463,7 +31619,11 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local valor20 = abas.Brinquedos:AddLeftGroupbox("Aura de Brinquedos", "tornado")
+		local ToysAuraTabs = abas.Brinquedos:AddLeftTabbox("Aura de Brinquedos", "tornado")
+		local TabAuraGeral = ToysAuraTabs:AddTab("Geral", "sparkles")
+		local TabAuraForma = ToysAuraTabs:AddTab("Forma & Mov.", "move")
+		local TabAuraPos = ToysAuraTabs:AddTab("Posição", "map-pin")
+		local valor20 = TabAuraGeral
 		local brinquedosAuraConfiguracoes = estadoCompartilhado.ToysAuraSettings
 
 		local function funcao21(arg, arg2, arg3)
@@ -31541,7 +31701,7 @@ Tempo p/ Escapar: %*]]
 			adicionarControleDeslizante(valor21, arg, tabela16)
 		end
 
-		funcao21("ToggleToysAura", "Enabled", "Enabled")
+		funcao21("ToggleToysAura", "Ativar Aura", "Enabled")
 
 		valor20:AddDropdown("ShapesDropdown", {
 			Values = registroPersonagem.NomesFormas,
@@ -31738,9 +31898,9 @@ Tempo p/ Escapar: %*]]
 		})
 
 		valor20:AddToggle("ToysAuraExcludeProtected", {
-			Text = "Ignorar Seus e da Lista Branca",
+			Text = "Ignorar Seus e Whitelist",
 			Default = false,
-			Tooltip = "Ignora seus brinquedos e os da lista branca ao pegar ou destruir",
+			Tooltip = "Ignora seus brinquedos e os da Whitelist ao pegar ou destruir",
 			Callback = function(brinquedosAuraExcluirProtegido)
 				estadoFuncoes.ToysAuraExcludeProtected = brinquedosAuraExcluirProtegido
 			end,
@@ -31752,7 +31912,7 @@ Tempo p/ Escapar: %*]]
 			Multi = true,
 			AllowNull = true,
 			Searchable = true,
-			Text = "Lista Branca de Brinquedos",
+			Text = "Whitelist de Brinquedos",
 			Tooltip = "Estes tipos de brinquedos nunca serão pegos ou destruídos",
 			Callback = function(brinquedoListaBranca)
 				estadoCompartilhado.ToyWhitelist = brinquedoListaBranca
@@ -31787,22 +31947,23 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
-		funcao21("ToysAuraFaceCenter", "Face Center", "FaceCenter")
+		funcao21("ToysAuraFaceCenter", "Olhar p/ o Centro", "FaceCenter")
+		valor20 = TabAuraForma
 		valor20:AddDivider("Movimento da Forma")
-		funcao21("AutoMoveTA", "Auto Move", "AutoMove")
-		funcao22("AutoMoveSp", "Move Speed", "MoveSpeed", 0.1, 25, 1)
-		funcao21("AutoRotateTA", "Auto Rotate", "AutoRotate")
-		funcao22("AutoRotateSp", "Rotate Speed", "RotationSpeed", 0.1, 20, 1)
-		funcao21("ToysAuraBob", "Bob", "Bob")
-		funcao22("ToysAuraBobHeight", "Bob Height", "BobHeight", 0, 50, 1)
-		funcao22("ToysAuraBobSpeed", "Bob Speed", "BobSpeed", 0.1, 12, 1)
-		valor20:AddDivider("Tamanho da Forma")
-		funcao22("ToysAuraRadius", "Radius", "Radius", 5, 200, 0)
-		funcao22("ToysAuraHeight", "Height", "Height", 0, 200, 0)
-		funcao22("ToysAuraSpread", "Spread", "Spacing", 0.25, 3, 2)
-		funcao22("ToysAuraRows", "Rows", "Rows", 1, 20, 0)
-		funcao22("ToysAuraRotations", "Turns", "Rotations", 0, 12, 1)
-		valor20:AddDivider("Posição")
+		funcao21("AutoMoveTA", "Movimento Automático", "AutoMove")
+		funcao22("AutoMoveSp", "Velocidade de Movimento", "MoveSpeed", 0.1, 25, 1)
+		funcao21("AutoRotateTA", "Giro Automático", "AutoRotate")
+		funcao22("AutoRotateSp", "Velocidade de Giro", "RotationSpeed", 0.1, 20, 1)
+		funcao21("ToysAuraBob", "Flutuar", "Bob")
+		funcao22("ToysAuraBobHeight", "Altura da Flutuação", "BobHeight", 0, 50, 1)
+		funcao22("ToysAuraBobSpeed", "Velocidade da Flutuação", "BobSpeed", 0.1, 12, 1)
+		valor20:AddDivider("Dimensões da Forma")
+		funcao22("ToysAuraRadius", "Raio", "Radius", 5, 200, 0)
+		funcao22("ToysAuraHeight", "Altura", "Height", 0, 200, 0)
+		funcao22("ToysAuraSpread", "Espaçamento", "Spacing", 0.25, 3, 2)
+		funcao22("ToysAuraRows", "Fileiras", "Rows", 1, 20, 0)
+		funcao22("ToysAuraRotations", "Voltas", "Rotations", 0, 12, 1)
+		valor20 = TabAuraPos
 
 		valor20:AddDropdown("PositionTypeDropdown", {
 			Values = { "You", "Players", "Custom Pos" },
@@ -31841,17 +32002,17 @@ Tempo p/ Escapar: %*]]
 		})
 
 		valor20:AddDivider("Deslocamento")
-		funcao22("ToysAuraXO", "X Offset", "Offset", -100, 100, 0, "X")
-		funcao22("ToysAuraYO", "Y Offset", "Offset", -100, 100, 0, "Y")
-		funcao22("ToysAuraZO", "Z Offset", "Offset", -100, 100, 0, "Z")
+		funcao22("ToysAuraXO", "Offset X", "Offset", -100, 100, 0, "X")
+		funcao22("ToysAuraYO", "Offset Y", "Offset", -100, 100, 0, "Y")
+		funcao22("ToysAuraZO", "Offset Z", "Offset", -100, 100, 0, "Z")
 		valor20:AddDivider("Rotação")
-		funcao22("ToysAuraXR", "X Rotation", "Rotation", -180, 180, 0, "X")
-		funcao22("ToysAuraYR", "Y Rotation", "Rotation", -180, 180, 0, "Y")
-		funcao22("ToysAuraZR", "Z Rotation", "Rotation", -180, 180, 0, "Z")
+		funcao22("ToysAuraXR", "Rotação X", "Rotation", -180, 180, 0, "X")
+		funcao22("ToysAuraYR", "Rotação Y", "Rotation", -180, 180, 0, "Y")
+		funcao22("ToysAuraZR", "Rotação Z", "Rotation", -180, 180, 0, "Z")
 	end
 
 	do
-		local Explosoes = abas.Brinquedos:AddRightGroupbox("Explosões", "bomb")
+		local Explosoes = AcoesBrinquedosTabs:AddTab("Explosões", "bomb")
 		api.CriarSeletorJogadores(Explosoes, "Explosions", estadoCompartilhado.SelectedPlayersExp)
 		Explosoes:AddDivider()
 
@@ -31876,7 +32037,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Explosoes:AddSlider("missilesToFire", {
-			Text = "Quantos disparar por vez?",
+			Text = "Quantidade por Disparo",
 			Default = 1,
 			Min = 1,
 			Max = 17,
@@ -31890,7 +32051,7 @@ Tempo p/ Escapar: %*]]
 		Explosoes:AddDivider()
 
 		Explosoes:AddToggle("AutoExpTarget", {
-			Text = "Explodir Alvo Automaticamente",
+			Text = "Auto-Explodir Alvo",
 			Default = false,
 			Callback = function(arg)
 				api.DefinirAlternadorExecucao("AutoExplodeTarget", arg)
@@ -31898,9 +32059,10 @@ Tempo p/ Escapar: %*]]
 		})
 	end
 
+	local AncoraGruposTabs = abas.Brinquedos:AddLeftTabbox("Âncora & Grupos", "anchor")
 	do
 		local ancoraConfiguracoes = estadoCompartilhado.AnchorSettings
-		local valor20 = abas.Brinquedos:AddLeftGroupbox("Sistema de Âncora", "anchor")
+		local valor20 = AncoraGruposTabs:AddTab("Âncora", "anchor")
 
 		valor20:AddLabel("Cor de Preenchimento"):AddColorPicker("AnchorFill", {
 			Default = ancoraConfiguracoes.FillColor,
@@ -31929,7 +32091,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local valor20 = abas.Brinquedos:AddLeftGroupbox("Grupos de Objetos", "group")
+		local valor20 = AncoraGruposTabs:AddTab("Grupos", "group")
 		local estado12 = false
 
 		local function funcao21(arg, arg2)
@@ -32085,15 +32247,34 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Experimental = abas.Brinquedos:AddRightGroupbox("Experimental", "flask-conical")
-		Experimental:AddDivider("Partes Ancoradas")
+		local ExperimentalTabs = abas.Brinquedos:AddRightTabbox("Experimental", "flask-conical")
+		local AbaAncoradas = ExperimentalTabs:AddTab("Ancoradas", "anchor")
+		local AbaVoadoras = ExperimentalTabs:AddTab("Voadoras", "plane")
+		local AbaExpDiversos = ExperimentalTabs:AddTab("Diversos", "bolt")
+
 		local numero36 = 1
 		local ativado = false
 		local numero37 = 0
 		local fracoCache = setmetatable({}, { __mode = "k" })
+		local modelosQuebrados = {}
 		local quebradoParteDestaque = estadoCompartilhado.BrokenPartHighlight
 
-		Experimental:AddToggle("BreakPartAffectsYou", {
+		AbaAncoradas:AddDropdown("BreakMethod", {
+			Values = { "Non-collidable part", "Kickable part" },
+			ValueImages = {
+				["Non-collidable part"] = "circle-off",
+				["Kickable part"] = "footprints",
+			},
+			Default = 1,
+			Multi = false,
+			Searchable = true,
+			Text = "Método de Quebra",
+			Callback = function(arg)
+				numero36 = (arg == "Non-collidable part") and 1 or 2
+			end,
+		})
+
+		AbaAncoradas:AddToggle("BreakPartAffectsYou", {
 			Text = "Afeta você",
 			Default = false,
 			Callback = function(ativado2)
@@ -32109,7 +32290,7 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
-		local DestaqueQuebradoPartes = Experimental:AddToggle("HighlightBrokenParts", {
+		local DestaqueQuebradoPartes = AbaAncoradas:AddToggle("HighlightBrokenParts", {
 			Text = "Destacar Partes Quebradas",
 			Default = false,
 			Callback = api.DefinirDestaquesPartesQuebradas,
@@ -32139,18 +32320,14 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
+		AbaAncoradas:AddDivider("Controles")
+
 		local function funcao21(arg)
 			local valor20 = arg or api.ObterAlvo()
 			if not valor20 or not valor20:IsA("BasePart") then
 				return
 			end
-			local cframe
-
-			if numero36 == 1 then
-				cframe = CFrame.new(1e15, 1e15, 1e15)
-			else
-				cframe = CFrame.new(0, -2.3e9, 0)
-			end
+			local cframe = (numero36 == 1) and CFrame.new(1e15, 1e15, 1e15) or CFrame.new(0, -2.3e9, 0)
 
 			local NinjaShuriken = api.GerarBrinquedo("NinjaShuriken")
 			local grudentoParte = NinjaShuriken and NinjaShuriken:WaitForChild("StickyPart", 0.5)
@@ -32162,6 +32339,7 @@ Tempo p/ Escapar: %*]]
 			if not api.DefinirDonoRede(grudentoParte) then
 				return api.DestruirBrinquedo(NinjaShuriken)
 			end
+			table.insert(modelosQuebrados, NinjaShuriken)
 			api.RastrearParteQuebrada(valor20, grudentoSolda)
 			numero37 += 1
 			local texto5 = "BreakPartAffectsYou" .. numero37
@@ -32179,14 +32357,13 @@ Tempo p/ Escapar: %*]]
 				api.DefinirConexaoExecucao(texto5 .. "Cleanup", nil, false)
 			end)
 
-			local valor21 = ativado
 			fracoCache[grudentoSolda] = true
-			grudentoSolda.Enabled = valor21
+			grudentoSolda.Enabled = ativado
 			remotos.EventoParteGrudenta:FireServer(grudentoParte, valor20, cframe)
 		end
 
-		Experimental:AddLabel("Remover Colisão da Parte"):AddKeyPicker("DecollidePart", {
-			Text = "Remover Colisão da Parte",
+		AbaAncoradas:AddLabel("Quebrar Colisão da Parte"):AddKeyPicker("DecollidePart", {
+			Text = "Quebrar Colisão da Parte",
 			Mode = "Press",
 			NoUI = true,
 			Callback = function()
@@ -32194,86 +32371,88 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
-		local valor20 = nil
-
-		Experimental:AddButton({
-			Text = "Criar Botão",
-			Icon = "smartphone",
-			Func = function()
-				if valor20 and valor20.Button and valor20.Button.Parent then
-					notificar("O botão \"Break Part\" já foi criado na tela.")
-					return
-				end
-				valor20 = bibliotecaUI:AddDraggableButton({
-					Id = "BreakPart",
-					Name = "Break Part",
-					Icon = "hammer",
-				}, function()
-					funcao21()
-				end)
-			end,
-		}):AddButton({
-			Text = "Remover Botão",
-			Icon = "smartphone",
-			Func = function()
-				if valor20 then
-					valor20:Destroy()
-					valor20 = nil
-				end
-			end,
-		})
-
-		Experimental:AddButton({
-			Text = "Quebrar Spawn",
-			Func = function()
-				local valor21 = nil
-
-				for _, valor22 in mapa.BaseGround:GetChildren() do
-					if valor22:IsA("BasePart") then
-						if (valor22.Position - Vector3.new(107.5, -101.35, 43.375)).Magnitude <= 0.1 then
+		AbaAncoradas:AddButtonRow({
+			{
+				Text = "Quebrar Spawn",
+				Func = function()
+					local valor21 = nil
+					for _, valor22 in mapa.BaseGround:GetChildren() do
+						if valor22:IsA("BasePart") and (valor22.Position - Vector3.new(107.5, -101.35, 43.375)).Magnitude <= 0.1 then
 							valor21 = valor22
 							break
-						else
-							valor21 = nil
 						end
-					else
-						valor21 = nil
 					end
-				end
-
-				if valor21 then
-					funcao21(valor21)
-				end
-			end,
-		})
-
-		Experimental:AddDropdown("BreakMethod", {
-			Values = { "Non-collidable part", "Kickable part" },
-			ValueImages = {
-				["Non-collidable part"] = "circle-off",
-				["Kickable part"] = "footprints",
+					if valor21 then
+						funcao21(valor21)
+					end
+				end,
 			},
-			Default = 1,
-			Multi = false,
-			Searchable = true,
-			Text = "Método de Quebra",
-			Callback = function(arg)
-				local numero38
-
-				if arg == "Non-collidable part" then
-					numero38 = 1
-				else
-					numero38 = 2
-				end
-
-				numero36 = numero38
-			end,
+			{
+				Text = "Restaurar Tudo",
+				Func = function()
+					local removidos = 0
+					for k in pairs(fracoCache) do
+						local mod = k and k.Parent and k.Parent.Parent
+						if mod and mod:IsA("Model") then
+							api.DestruirBrinquedo(mod)
+							removidos += 1
+						end
+						fracoCache[k] = nil
+					end
+					for i = #modelosQuebrados, 1, -1 do
+						local mod = modelosQuebrados[i]
+						if mod and mod.Parent then
+							api.DestruirBrinquedo(mod)
+							removidos += 1
+						end
+						modelosQuebrados[i] = nil
+					end
+					for parte, infoBP in pairs(table.clone(estadoCompartilhado.BrokenParts)) do
+						if infoBP and infoBP.Welds then
+							for w in pairs(table.clone(infoBP.Welds)) do
+								api.PararRastreioParteQuebrada(parte, w)
+							end
+						end
+					end
+					notificar(removidos > 0 and string.format("%d parte(s) restaurada(s).", removidos) or "Todas as partes restauradas.")
+				end,
+			},
 		})
 
-		Experimental:AddLabel("Para restaurar: exclua a shuriken gerada no seu inventário!", true)
-		Experimental:AddDivider("Partes Voadoras")
+		local valor20 = nil
+		AbaAncoradas:AddButtonRow({
+			{
+				Text = "Criar Botão",
+				Icon = "smartphone",
+				Func = function()
+					if valor20 and valor20.Button and valor20.Button.Parent then
+						notificar("O botão \"Quebrar Parte\" já está na tela.")
+						return
+					end
+					valor20 = bibliotecaUI:AddDraggableButton({
+						Id = "BreakPart",
+						Name = "Break Part",
+						Icon = "hammer",
+					}, function()
+						funcao21()
+					end)
+				end,
+			},
+			{
+				Text = "Remover Botão",
+				Icon = "smartphone",
+				Func = function()
+					if valor20 then
+						valor20:Destroy()
+						valor20 = nil
+					end
+				end,
+			},
+		})
 
-		Experimental:AddDropdown("WhichToBreak", {
+		AbaAncoradas:AddLabel("Para restaurar: clique em Restaurar Tudo ou exclua a shuriken gerada no seu inventário!", true)
+
+		AbaVoadoras:AddDropdown("WhichToBreak", {
 			Values = {
 				"InnerUFO",
 				"OuterUFO",
@@ -32301,7 +32480,7 @@ Tempo p/ Escapar: %*]]
 			Text = "Qual Parte Quebrar",
 		})
 
-		Experimental:AddButton({
+		AbaVoadoras:AddButton({
 			Text = "Quebrar",
 			Func = function()
 				local valor = opcoes.WhichToBreak.Value
@@ -32311,16 +32490,32 @@ Tempo p/ Escapar: %*]]
 					local valor22 = valor21()
 
 					if valor22 then
+						local raizVoadora = nil
 						for _, filho in pairs(valor22:GetChildren()) do
 							if filho:IsA("BasePart") then
-								api.BuracoNegro(filho.AssemblyRootPart)
+								raizVoadora = filho.AssemblyRootPart or filho
+								api.BuracoNegro(raizVoadora)
 								break
 							end
 						end
 
-						if valor22.Parent:FindFirstChild("FollowThisPart") then
-							valor22.Parent:FindFirstChild("FollowThisPart").AlignPosition.Enabled = false
-							valor22.Parent:FindFirstChild("FollowThisPart").AlignOrientation.Enabled = false
+						local followPart = valor22.Parent and valor22.Parent:FindFirstChild("FollowThisPart")
+						if followPart then
+							followPart.AlignPosition.Enabled = false
+							followPart.AlignOrientation.Enabled = false
+							if estadoFuncoes.ImproveFlyingBreak then
+								task.spawn(function()
+									for _ = 1, 20 do
+										if not followPart.Parent then break end
+										followPart.AlignPosition.Enabled = false
+										followPart.AlignOrientation.Enabled = false
+										if raizVoadora and raizVoadora.Parent then
+											api.ZerarVelocidade(raizVoadora)
+										end
+										task.wait(0.05)
+									end
+								end)
+							end
 						end
 					else
 						warn("Part not found for:", valor)
@@ -32331,10 +32526,20 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
-		Experimental:AddDivider("Diversos")
-		Experimental:AddButton({ Text = "Destruir Trem", Icon = "bomb", Func = api.DestruirTrem })
+		AbaVoadoras:AddDivider()
 
-		Experimental:AddButton({
+		AbaVoadoras:AddToggle("ImproveFlyingBreak", {
+			Text = "Melhorar",
+			Default = false,
+			Tooltip = "Mantém a parte voadora sem alinhamento e sem velocidade ao quebrar",
+			Callback = function(v)
+				estadoFuncoes.ImproveFlyingBreak = v
+			end,
+		})
+
+		AbaExpDiversos:AddButton({ Text = "Destruir Trem", Icon = "bomb", Func = api.DestruirTrem })
+
+		AbaExpDiversos:AddButton({
 			Text = "Criar Tsunami",
 			Func = function()
 				local cframe = CFrame.new
@@ -32344,7 +32549,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Diversos = abas.Brinquedos:AddLeftGroupbox("Diversos", "funnel")
+		local Diversos = abas.Brinquedos:AddRightGroupbox("Formas & Extras", "shapes")
 
 		Diversos:AddDropdown("CoconutFormsDropdown", {
 			Values = estadoCompartilhado.CoconutForms.Names,
@@ -32553,7 +32758,7 @@ Tempo p/ Escapar: %*]]
 		end
 
 		local esp = abas.Visual:AddLeftTabbox("ESP", "eye")
-		local Alternadores = esp:AddTab("Alternadores", "toggle-right")
+		local Alternadores = esp:AddTab("Ativar", "toggle-right")
 
 		Alternadores:AddToggle("PlrESPT", {
 			Text = "ESP de Jogadores",
@@ -32805,7 +33010,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		valor21:AddToggle("BoldToggleFF", {
-			Text = "Negrito?",
+			Text = "Negrito",
 			Default = true,
 			Callback = function(arg)
 				local valor
@@ -32963,7 +33168,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		valor22:AddToggle("BoldTogglePCLDFF", {
-			Text = "Negrito?",
+			Text = "Negrito",
 			Default = false,
 			Callback = function(arg)
 				local valor
@@ -33132,7 +33337,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		valor24:AddToggle("BoldToggleFF2", {
-			Text = "Negrito?",
+			Text = "Negrito",
 			Default = false,
 			Callback = function(arg)
 				local valor
@@ -33402,7 +33607,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Graficos = abas.Visual:AddRightGroupbox("Gráficos", "file-image")
+		local Graficos = abas.Visual:AddRightGroupbox("Gráficos & FPS", "file-image")
 		local numero36 = 0
 		local numero37 = 0.004
 		local numero38 = 128
@@ -33647,7 +33852,7 @@ Tempo p/ Escapar: %*]]
 		valor20:SetupDependencies({ { alternadores.CustomWaterT, true } })
 
 		valor20:AddToggle("NonSwimmableWater", {
-			Text = "Água Sem Natação (Afundar)",
+			Text = "Afundar na Água (Sem Nadar)",
 			Tooltip = "Faz seu personagem atravessar a água do mapa em vez de nadar",
 			Callback = function(naoNadavelAgua)
 				estadoFuncoes.NonSwimmableWater = naoNadavelAgua
@@ -33715,15 +33920,39 @@ Tempo p/ Escapar: %*]]
 			end
 		end)
 
-		Graficos:AddDivider("Shaders")
+		Graficos:AddDivider("Otimizar FPS")
+		Graficos:AddToggle("BoostFPS", { Text = "Otimizar FPS", Default = false, Callback = api.DefinirOtimizarFPS })
 
-		local tabela17 = {
-			Lighting = {
+		Graficos:AddDropdown("BoostFPSOptions", {
+			Text = "Desativar",
+			Values = { "Materials", "Textures", "Reflections", "Shadows" },
+			ValueImages = {
+				["Materials"] = "layers",
+				["Textures"] = "image",
+				["Reflections"] = "sun",
+				["Shadows"] = "moon",
+			},
+			Default = { "Materials", "Textures", "Reflections", "Shadows" },
+			Multi = true,
+			AllowNull = true,
+			Callback = api.DefinirOpcoesOtimizarFPS,
+		})
+	end
+
+	do
+		local ShadersTabs = abas.Visual:AddRightTabbox("Shaders", "sun")
+		local AbaShaderConfig = ShadersTabs:AddTab("Config.", "sliders-horizontal")
+		local AbaShaderPresets = ShadersTabs:AddTab("Presets", "folder")
+
+		local shaderEstado = {
+			LightingOrig = {
 				Ambient = Lighting.Ambient,
 				Brightness = Lighting.Brightness,
 				ColorShift_Bottom = Lighting.ColorShift_Bottom,
 				ColorShift_Top = Lighting.ColorShift_Top,
 				ExposureCompensation = Lighting.ExposureCompensation,
+				EnvironmentDiffuseScale = Lighting.EnvironmentDiffuseScale,
+				EnvironmentSpecularScale = Lighting.EnvironmentSpecularScale,
 				FogColor = Lighting.FogColor,
 				FogEnd = Lighting.FogEnd,
 				FogStart = Lighting.FogStart,
@@ -33733,407 +33962,537 @@ Tempo p/ Escapar: %*]]
 			Settings = {
 				Brightness = 2.14,
 				Exposure = 0.24,
-				BloomIntensity = 0.1,
+				ShadowSoftness = 0,
+				EnvironmentDiffuse = 0.35,
+				EnvironmentSpecular = 0.4,
+				Ambient = Color3.fromRGB(59, 33, 27),
+				OutdoorAmbient = Color3.fromRGB(34, 0, 49),
+				ColorShift_Top = Color3.fromRGB(240, 127, 14),
+				ColorShift_Bottom = Color3.fromRGB(11, 0, 20),
 				Saturation = 0.05,
+				Contrast = 0.08,
 				TintColor = Color3.fromRGB(255, 224, 219),
+				FogColor = Color3.fromRGB(94, 76, 106),
+				FogStart = 0,
+				FogEnd = 1000,
+				BloomIntensity = 0.1,
+				BloomSize = 100,
+				BloomThreshold = 0.85,
+				BlurSize = 2,
+				DofEnabled = false,
+				DofFocus = 35,
+				DofRadius = 50,
+				DofNear = 0,
+				DofFar = 0.25,
+				SunRaysIntensity = 0.05,
+				SunRaysSpread = 0.8,
 			},
 			Effects = {},
 		}
 
-		local function funcao26()
+		local SHADER_PRESETS_BUILTIN = {
+			["Padrão"] = {
+				Brightness = 2.14, Exposure = 0.24, ShadowSoftness = 0, EnvironmentDiffuse = 0.35, EnvironmentSpecular = 0.4,
+				Ambient = Color3.fromRGB(59, 33, 27), OutdoorAmbient = Color3.fromRGB(34, 0, 49),
+				ColorShift_Top = Color3.fromRGB(240, 127, 14), ColorShift_Bottom = Color3.fromRGB(11, 0, 20),
+				Saturation = 0.05, Contrast = 0.08, TintColor = Color3.fromRGB(255, 224, 219),
+				FogColor = Color3.fromRGB(94, 76, 106), FogStart = 0, FogEnd = 1000,
+				BloomIntensity = 0.1, BloomSize = 100, BloomThreshold = 0.85, BlurSize = 2,
+				DofEnabled = false, DofFocus = 35, DofRadius = 50, DofNear = 0, DofFar = 0.25,
+				SunRaysIntensity = 0.05, SunRaysSpread = 0.8,
+			},
+			["Brazuka"] = {
+				Brightness = 2.4, Exposure = 0.18, ShadowSoftness = 0.15, EnvironmentDiffuse = 0.55, EnvironmentSpecular = 0.6,
+				Ambient = Color3.fromRGB(48, 72, 54), OutdoorAmbient = Color3.fromRGB(58, 92, 68),
+				ColorShift_Top = Color3.fromRGB(255, 236, 175), ColorShift_Bottom = Color3.fromRGB(18, 44, 28),
+				Saturation = 0.22, Contrast = 0.12, TintColor = Color3.fromRGB(245, 255, 245),
+				FogColor = Color3.fromRGB(145, 195, 170), FogStart = 80, FogEnd = 1600,
+				BloomIntensity = 0.25, BloomSize = 48, BloomThreshold = 0.9, BlurSize = 0,
+				DofEnabled = false, DofFocus = 40, DofRadius = 60, DofNear = 0, DofFar = 0.15,
+				SunRaysIntensity = 0.12, SunRaysSpread = 0.9,
+			},
+			["Natural"] = {
+				Brightness = 2.0, Exposure = 0.1, ShadowSoftness = 0.25, EnvironmentDiffuse = 0.65, EnvironmentSpecular = 0.5,
+				Ambient = Color3.fromRGB(70, 75, 80), OutdoorAmbient = Color3.fromRGB(95, 105, 115),
+				ColorShift_Top = Color3.fromRGB(255, 248, 235), ColorShift_Bottom = Color3.fromRGB(40, 48, 60),
+				Saturation = 0.08, Contrast = 0.05, TintColor = Color3.fromRGB(255, 255, 255),
+				FogColor = Color3.fromRGB(185, 200, 215), FogStart = 120, FogEnd = 2200,
+				BloomIntensity = 0.12, BloomSize = 36, BloomThreshold = 0.95, BlurSize = 0,
+				DofEnabled = false, DofFocus = 45, DofRadius = 65, DofNear = 0, DofFar = 0.1,
+				SunRaysIntensity = 0.08, SunRaysSpread = 0.75,
+			},
+			["Warm"] = {
+				Brightness = 2.35, Exposure = 0.2, ShadowSoftness = 0.1, EnvironmentDiffuse = 0.45, EnvironmentSpecular = 0.55,
+				Ambient = Color3.fromRGB(72, 48, 32), OutdoorAmbient = Color3.fromRGB(85, 58, 38),
+				ColorShift_Top = Color3.fromRGB(255, 190, 120), ColorShift_Bottom = Color3.fromRGB(42, 22, 12),
+				Saturation = 0.15, Contrast = 0.1, TintColor = Color3.fromRGB(255, 232, 208),
+				FogColor = Color3.fromRGB(180, 130, 95), FogStart = 40, FogEnd = 1400,
+				BloomIntensity = 0.22, BloomSize = 55, BloomThreshold = 0.85, BlurSize = 1,
+				DofEnabled = false, DofFocus = 35, DofRadius = 50, DofNear = 0, DofFar = 0.2,
+				SunRaysIntensity = 0.14, SunRaysSpread = 0.95,
+			},
+			["Cool"] = {
+				Brightness = 1.9, Exposure = 0.12, ShadowSoftness = 0.2, EnvironmentDiffuse = 0.5, EnvironmentSpecular = 0.6,
+				Ambient = Color3.fromRGB(36, 50, 74), OutdoorAmbient = Color3.fromRGB(52, 74, 110),
+				ColorShift_Top = Color3.fromRGB(170, 210, 255), ColorShift_Bottom = Color3.fromRGB(18, 28, 48),
+				Saturation = 0.04, Contrast = 0.1, TintColor = Color3.fromRGB(220, 236, 255),
+				FogColor = Color3.fromRGB(115, 145, 185), FogStart = 50, FogEnd = 1500,
+				BloomIntensity = 0.18, BloomSize = 42, BloomThreshold = 0.9, BlurSize = 1,
+				DofEnabled = false, DofFocus = 38, DofRadius = 55, DofNear = 0, DofFar = 0.15,
+				SunRaysIntensity = 0.06, SunRaysSpread = 0.7,
+			},
+			["Cinematic"] = {
+				Brightness = 1.85, Exposure = 0.08, ShadowSoftness = 0.05, EnvironmentDiffuse = 0.4, EnvironmentSpecular = 0.7,
+				Ambient = Color3.fromRGB(35, 28, 38), OutdoorAmbient = Color3.fromRGB(48, 44, 58),
+				ColorShift_Top = Color3.fromRGB(255, 200, 155), ColorShift_Bottom = Color3.fromRGB(16, 18, 30),
+				Saturation = 0.12, Contrast = 0.24, TintColor = Color3.fromRGB(246, 238, 245),
+				FogColor = Color3.fromRGB(72, 68, 86), FogStart = 20, FogEnd = 1100,
+				BloomIntensity = 0.35, BloomSize = 68, BloomThreshold = 0.8, BlurSize = 1,
+				DofEnabled = true, DofFocus = 32, DofRadius = 45, DofNear = 0, DofFar = 0.28,
+				SunRaysIntensity = 0.15, SunRaysSpread = 1,
+			},
+		}
+
+		local function limparEfeitosShader()
 			for _, filho in ipairs(Lighting:GetChildren()) do
 				if filho:GetAttribute("RSC") then
 					filho:Destroy()
 				end
 			end
-
-			table.clear(tabela17.Effects)
+			table.clear(shaderEstado.Effects)
 		end
 
-		Graficos:AddToggle("ShadersT", {
-			Text = "Shaders",
+		local function aplicarShadersEmTempoReal()
+			if not estadoFuncoes.Shaders then return end
+			local s = shaderEstado.Settings
+			Lighting.Brightness = s.Brightness
+			Lighting.ExposureCompensation = s.Exposure
+			Lighting.ShadowSoftness = s.ShadowSoftness
+			Lighting.EnvironmentDiffuseScale = s.EnvironmentDiffuse
+			Lighting.EnvironmentSpecularScale = s.EnvironmentSpecular
+			Lighting.Ambient = s.Ambient
+			Lighting.OutdoorAmbient = s.OutdoorAmbient
+			Lighting.ColorShift_Top = s.ColorShift_Top
+			Lighting.ColorShift_Bottom = s.ColorShift_Bottom
+			Lighting.FogColor = s.FogColor
+			Lighting.FogStart = s.FogStart
+			Lighting.FogEnd = s.FogEnd
+
+			local bloom = shaderEstado.Effects.BloomEffect
+			if bloom and bloom.Parent then
+				bloom.Intensity = s.BloomIntensity
+				bloom.Size = s.BloomSize
+				bloom.Threshold = s.BloomThreshold
+			end
+			local blur = shaderEstado.Effects.BlurEffect
+			if blur and blur.Parent then
+				blur.Size = s.BlurSize
+			end
+			local cc = shaderEstado.Effects.ColorCorrectionEffect
+			if cc and cc.Parent then
+				cc.Saturation = s.Saturation
+				cc.Contrast = s.Contrast
+				cc.TintColor = s.TintColor
+			end
+			local dof = shaderEstado.Effects.DepthOfFieldEffect
+			if dof and dof.Parent then
+				dof.Enabled = s.DofEnabled == true
+				dof.FocusDistance = s.DofFocus
+				dof.InFocusRadius = s.DofRadius
+				dof.NearIntensity = s.DofNear
+				dof.FarIntensity = s.DofFar
+			end
+			local sr = shaderEstado.Effects.SunRaysEffect
+			if sr and sr.Parent then
+				sr.Intensity = s.SunRaysIntensity
+				sr.Spread = s.SunRaysSpread
+			end
+		end
+
+		local function definirShaderPredefinicao(predef, nomeLabel)
+			local s = shaderEstado.Settings
+			for k, v in pairs(predef) do
+				s[k] = v
+			end
+
+			local mapaNum = {
+				ShaderBrightness = s.Brightness, ShaderExposure = s.Exposure, ShaderShadowSoftness = s.ShadowSoftness,
+				ShaderEnvDiffuse = s.EnvironmentDiffuse, ShaderEnvSpecular = s.EnvironmentSpecular,
+				ShaderSaturation = s.Saturation, ShaderContrast = s.Contrast,
+				ShaderFogStart = s.FogStart, ShaderFogEnd = s.FogEnd,
+				ShaderBloomIntensity = s.BloomIntensity, ShaderBloomSize = s.BloomSize, ShaderBloomThreshold = s.BloomThreshold,
+				ShaderBlurSize = s.BlurSize,
+				ShaderDofFocus = s.DofFocus, ShaderDofRadius = s.DofRadius, ShaderDofNear = s.DofNear, ShaderDofFar = s.DofFar,
+				ShaderSunIntensity = s.SunRaysIntensity, ShaderSunSpread = s.SunRaysSpread,
+			}
+			for k, v in pairs(mapaNum) do
+				if opcoes[k] then opcoes[k]:SetValue(v) end
+			end
+			local mapaCor = {
+				ShaderAmbient = s.Ambient, ShaderOutdoorAmbient = s.OutdoorAmbient,
+				ShaderColorShiftTop = s.ColorShift_Top, ShaderColorShiftBottom = s.ColorShift_Bottom,
+				ShaderTintColor = s.TintColor, ShaderFogColor = s.FogColor,
+			}
+			for k, v in pairs(mapaCor) do
+				if opcoes[k] then opcoes[k]:SetValue(v) end
+			end
+			if alternadores.ShaderDofEnabled then
+				alternadores.ShaderDofEnabled:SetValue(s.DofEnabled == true)
+			end
+			if bibliotecaUI.Labels.CurrentShaderPreset and nomeLabel then
+				bibliotecaUI.Labels.CurrentShaderPreset:SetText(("Preset Atual: <b>%s</b>"):format(tostring(nomeLabel)))
+			end
+			aplicarShadersEmTempoReal()
+		end
+
+		AbaShaderConfig:AddToggle("ShadersT", {
+			Text = "Ativado",
 			Default = false,
 			Callback = function(shaders)
 				estadoFuncoes.Shaders = shaders
-				funcao26()
+				limparEfeitosShader()
 
 				if shaders then
-					local configuracoes = tabela17.Settings
-
-					for k in pairs(tabela17.Lighting) do
-						tabela17.Lighting[k] = Lighting[k]
+					for k in pairs(shaderEstado.LightingOrig) do
+						shaderEstado.LightingOrig[k] = Lighting[k]
 					end
-
-					Lighting.Brightness = configuracoes.Brightness
-					Lighting.ColorShift_Bottom = Color3.fromRGB(11, 0, 20)
-					Lighting.ColorShift_Top = Color3.fromRGB(240, 127, 14)
-					Lighting.OutdoorAmbient = Color3.fromRGB(34, 0, 49)
-					Lighting.FogColor = Color3.fromRGB(94, 76, 106)
-					Lighting.FogEnd = 1000
-					Lighting.FogStart = 0
-					Lighting.ExposureCompensation = configuracoes.Exposure
-					Lighting.ShadowSoftness = 0
-					Lighting.Ambient = Color3.fromRGB(59, 33, 27)
-
-					for _, valor21 in ipairs({
-						{ "BloomEffect", { Intensity = configuracoes.BloomIntensity, Threshold = 0, Size = 100 } },
-						{ "BlurEffect", { Size = 2 } },
-						{ "ColorCorrectionEffect", { Saturation = configuracoes.Saturation, TintColor = configuracoes.TintColor } },
-						{ "SunRaysEffect", { Intensity = 0.05 } },
-					}) do
-						local instancia = Instance.new(valor21[1])
-						instancia.Name = "RSC"
-						instancia:SetAttribute("RSC", true)
-
-						for k, valor22 in pairs(valor21[2]) do
-							instancia[k] = valor22
-						end
-
-						instancia.Parent = Lighting
-						tabela17.Effects[valor21[1]] = instancia
+					for _, tipo in ipairs({ "BloomEffect", "BlurEffect", "ColorCorrectionEffect", "DepthOfFieldEffect", "SunRaysEffect" }) do
+						local inst = Instance.new(tipo)
+						inst.Name = "RSC"
+						inst:SetAttribute("RSC", true)
+						inst.Parent = Lighting
+						shaderEstado.Effects[tipo] = inst
 					end
+					aplicarShadersEmTempoReal()
 				else
-					for k, valor21 in pairs(tabela17.Lighting) do
-						Lighting[k] = valor21
+					for k, orig in pairs(shaderEstado.LightingOrig) do
+						pcall(function() Lighting[k] = orig end)
 					end
 				end
 			end,
-		}):AddColorPicker("ShaderTintColor", {
-			Default = tabela17.Settings.TintColor,
-			Title = "Cor da Tonalidade",
-			Callback = function(tonalidadeCor)
-				tabela17.Settings.TintColor = tonalidadeCor
-				local corCorrecaoEfeito = tabela17.Effects.ColorCorrectionEffect
-
-				if corCorrecaoEfeito and corCorrecaoEfeito.Parent then
-					corCorrecaoEfeito.TintColor = tonalidadeCor
-				end
-			end,
 		})
 
-		local valor21 = Graficos:AddDependencyBox()
-		valor21:SetupDependencies({ { alternadores.ShadersT, true } })
+		AbaShaderConfig:AddLabel("CurrentShaderPreset", { Text = "Preset Atual: <b>Padrão</b>", DoesWrap = true })
+		AbaShaderConfig:AddLabel("Dica: combine Shaders com um Skybox personalizado para melhor resultado.", true)
 
-		valor21:AddSlider("ShaderBrightness", {
-			Text = "Brilho",
-			Default = tabela17.Settings.Brightness,
-			Min = 0,
-			Max = 5,
-			Rounding = 2,
-			Compact = true,
-			Callback = function(brightness)
-				tabela17.Settings.Brightness = brightness
-
-				if estadoFuncoes.Shaders then
-					Lighting.Brightness = brightness
-				end
-			end,
+		AbaShaderConfig:AddDropdown("ShaderEditCategory", {
+			Values = { "Lighting", "Ambient Colors", "Color Correction", "Fog", "Bloom", "Blur", "Depth of Field", "Sun Rays" },
+			ValueImages = {
+				["Lighting"] = "sun", ["Ambient Colors"] = "palette", ["Color Correction"] = "contrast",
+				["Fog"] = "cloud", ["Bloom"] = "sparkles", ["Blur"] = "droplet",
+				["Depth of Field"] = "aperture", ["Sun Rays"] = "sunrise",
+			},
+			Default = 1,
+			Multi = false,
+			Text = "Editar",
 		})
 
-		valor21:AddSlider("ShaderExposure", {
-			Text = "Exposição",
-			Default = tabela17.Settings.Exposure,
-			Min = -3,
-			Max = 3,
-			Rounding = 2,
-			Compact = true,
-			Callback = function(exposicao)
-				tabela17.Settings.Exposure = exposicao
-
-				if estadoFuncoes.Shaders then
-					Lighting.ExposureCompensation = exposicao
-				end
-			end,
-		})
-
-		valor21:AddSlider("ShaderBloomIntensity", {
-			Text = "Intensidade do Brilho (Bloom)",
-			Default = tabela17.Settings.BloomIntensity,
-			Min = 0,
-			Max = 3,
-			Rounding = 2,
-			Compact = true,
-			Callback = function(brilhoIntensity)
-				tabela17.Settings.BloomIntensity = brilhoIntensity
-				local brilhoEfeito = tabela17.Effects.BloomEffect
-
-				if brilhoEfeito and brilhoEfeito.Parent then
-					brilhoEfeito.Intensity = brilhoIntensity
-				end
-			end,
-		})
-
-		valor21:AddSlider("ShaderSaturation", {
-			Text = "Saturação",
-			Default = tabela17.Settings.Saturation,
-			Min = -1,
-			Max = 1,
-			Rounding = 2,
-			Compact = true,
-			Callback = function(saturacao)
-				tabela17.Settings.Saturation = saturacao
-				local corCorrecaoEfeito = tabela17.Effects.ColorCorrectionEffect
-
-				if corCorrecaoEfeito and corCorrecaoEfeito.Parent then
-					corCorrecaoEfeito.Saturation = saturacao
-				end
-			end,
-		})
-
-		valor21:AddDivider("Predefinições")
-
-
-		local function aplicarShaderValores()
-			local configuracoes = tabela17.Settings
-
-			Lighting.Brightness = configuracoes.Brightness
-			Lighting.ExposureCompensation = configuracoes.Exposure
-
-			local brilhoEfeito = tabela17.Effects.BloomEffect
-
-			if brilhoEfeito and brilhoEfeito.Parent then
-				brilhoEfeito.Intensity = configuracoes.BloomIntensity
-			end
-
-			local corCorrecaoEfeito = tabela17.Effects.ColorCorrectionEffect
-
-			if corCorrecaoEfeito and corCorrecaoEfeito.Parent then
-				corCorrecaoEfeito.Saturation = configuracoes.Saturation
-				corCorrecaoEfeito.TintColor = configuracoes.TintColor
-			end
+		local function addShaderSlider(dep, id, texto, key, minV, maxV, rounding)
+			dep:AddSlider(id, {
+				Text = texto, Default = shaderEstado.Settings[key], Min = minV, Max = maxV, Rounding = rounding, Compact = true,
+				Callback = function(v) shaderEstado.Settings[key] = v; aplicarShadersEmTempoReal() end,
+			})
+		end
+		local function addShaderColor(dep, id, texto, key)
+			dep:AddLabel(texto):AddColorPicker(id, {
+				Default = shaderEstado.Settings[key], Title = texto,
+				Callback = function(c) shaderEstado.Settings[key] = c; aplicarShadersEmTempoReal() end,
+			})
 		end
 
-		local function definirShaderPredefinicao(predefinicao)
-			tabela17.Settings.Brightness = predefinicao.Brightness
-			tabela17.Settings.Exposure = predefinicao.Exposure
-			tabela17.Settings.BloomIntensity = predefinicao.BloomIntensity
-			tabela17.Settings.Saturation = predefinicao.Saturation
-			tabela17.Settings.TintColor = predefinicao.TintColor
+		local DepShLighting = AbaShaderConfig:AddDependencyBox()
+		DepShLighting:SetupDependencies({ { opcoes.ShaderEditCategory, "Lighting" } })
+		addShaderSlider(DepShLighting, "ShaderBrightness", "Brilho", "Brightness", 0, 5, 2)
+		addShaderSlider(DepShLighting, "ShaderExposure", "Exposição", "Exposure", -3, 3, 2)
+		addShaderSlider(DepShLighting, "ShaderShadowSoftness", "Suavidade das Sombras", "ShadowSoftness", 0, 1, 2)
+		addShaderSlider(DepShLighting, "ShaderEnvDiffuse", "Difusão do Ambiente", "EnvironmentDiffuse", 0, 1, 2)
+		addShaderSlider(DepShLighting, "ShaderEnvSpecular", "Reflexo do Ambiente", "EnvironmentSpecular", 0, 1, 2)
 
-			if opcoes.ShaderBrightness then
-				opcoes.ShaderBrightness:SetValue(predefinicao.Brightness)
-			end
+		local DepShAmbient = AbaShaderConfig:AddDependencyBox()
+		DepShAmbient:SetupDependencies({ { opcoes.ShaderEditCategory, "Ambient Colors" } })
+		addShaderColor(DepShAmbient, "ShaderAmbient", "Ambiente", "Ambient")
+		addShaderColor(DepShAmbient, "ShaderOutdoorAmbient", "Ambiente Externo", "OutdoorAmbient")
+		addShaderColor(DepShAmbient, "ShaderColorShiftTop", "ColorShift Topo", "ColorShift_Top")
+		addShaderColor(DepShAmbient, "ShaderColorShiftBottom", "ColorShift Base", "ColorShift_Bottom")
 
-			if opcoes.ShaderExposure then
-				opcoes.ShaderExposure:SetValue(predefinicao.Exposure)
-			end
+		local DepShCC = AbaShaderConfig:AddDependencyBox()
+		DepShCC:SetupDependencies({ { opcoes.ShaderEditCategory, "Color Correction" } })
+		addShaderColor(DepShCC, "ShaderTintColor", "Cor da Tonalidade", "TintColor")
+		addShaderSlider(DepShCC, "ShaderSaturation", "Saturação", "Saturation", -1, 1, 2)
+		addShaderSlider(DepShCC, "ShaderContrast", "Contraste", "Contrast", -1, 1, 2)
 
-			if opcoes.ShaderBloomIntensity then
-				opcoes.ShaderBloomIntensity:SetValue(predefinicao.BloomIntensity)
-			end
+		local DepShFog = AbaShaderConfig:AddDependencyBox()
+		DepShFog:SetupDependencies({ { opcoes.ShaderEditCategory, "Fog" } })
+		addShaderColor(DepShFog, "ShaderFogColor", "Cor da Neblina", "FogColor")
+		addShaderSlider(DepShFog, "ShaderFogStart", "Início da Neblina", "FogStart", 0, 1000, 0)
+		addShaderSlider(DepShFog, "ShaderFogEnd", "Fim da Neblina", "FogEnd", 50, 5000, 0)
 
-			if opcoes.ShaderSaturation then
-				opcoes.ShaderSaturation:SetValue(predefinicao.Saturation)
-			end
+		local DepShBloom = AbaShaderConfig:AddDependencyBox()
+		DepShBloom:SetupDependencies({ { opcoes.ShaderEditCategory, "Bloom" } })
+		addShaderSlider(DepShBloom, "ShaderBloomIntensity", "Intensidade", "BloomIntensity", 0, 3, 2)
+		addShaderSlider(DepShBloom, "ShaderBloomSize", "Tamanho", "BloomSize", 0, 100, 0)
+		addShaderSlider(DepShBloom, "ShaderBloomThreshold", "Limite (Threshold)", "BloomThreshold", 0, 2, 2)
 
-			if opcoes.ShaderTintColor then
-				opcoes.ShaderTintColor:SetValue(predefinicao.TintColor)
-			end
+		local DepShBlur = AbaShaderConfig:AddDependencyBox()
+		DepShBlur:SetupDependencies({ { opcoes.ShaderEditCategory, "Blur" } })
+		addShaderSlider(DepShBlur, "ShaderBlurSize", "Intensidade do Desfoque", "BlurSize", 0, 24, 1)
 
-			if estadoFuncoes.Shaders then
-				aplicarShaderValores()
-			end
-		end
+		local DepShDof = AbaShaderConfig:AddDependencyBox()
+		DepShDof:SetupDependencies({ { opcoes.ShaderEditCategory, "Depth of Field" } })
+		DepShDof:AddToggle("ShaderDofEnabled", {
+			Text = "Ativar Profundidade de Campo", Default = false,
+			Callback = function(v) shaderEstado.Settings.DofEnabled = v; aplicarShadersEmTempoReal() end,
+		})
+		addShaderSlider(DepShDof, "ShaderDofFocus", "Distância de Foco", "DofFocus", 0, 200, 0)
+		addShaderSlider(DepShDof, "ShaderDofRadius", "Raio em Foco", "DofRadius", 0, 200, 0)
+		addShaderSlider(DepShDof, "ShaderDofNear", "Desfoque Próximo", "DofNear", 0, 1, 2)
+		addShaderSlider(DepShDof, "ShaderDofFar", "Desfoque Distante", "DofFar", 0, 1, 2)
+
+		local DepShSun = AbaShaderConfig:AddDependencyBox()
+		DepShSun:SetupDependencies({ { opcoes.ShaderEditCategory, "Sun Rays" } })
+		addShaderSlider(DepShSun, "ShaderSunIntensity", "Intensidade", "SunRaysIntensity", 0, 1, 2)
+		addShaderSlider(DepShSun, "ShaderSunSpread", "Espalhamento", "SunRaysSpread", 0, 1, 2)
 
 		local function atualizarShaderPredefinicoes()
 			local nomes = {}
-
-			if listfiles and isfolder and isfolder("Brazuka/VisualPresets") then
-				for _, arquivoCaminho in listfiles("Brazuka/VisualPresets") do
+			if type(listfiles) == "function" and type(isfolder) == "function" and pcall(isfolder, "Brazuka/VisualPresets") and isfolder("Brazuka/VisualPresets") then
+				for _, arquivoCaminho in ipairs(listfiles("Brazuka/VisualPresets")) do
 					local arquivoNome = arquivoCaminho:match("([^/\\]+)%.json$")
-
-					if arquivoNome then
-						nomes[#nomes + 1] = arquivoNome
-					end
+					if arquivoNome then nomes[#nomes + 1] = arquivoNome end
 				end
 			end
-
 			table.sort(nomes)
-
-			if opcoes.ShaderSavedPreset then
-				opcoes.ShaderSavedPreset:SetValues(nomes)
-			end
-
+			if opcoes.ShaderSavedPreset then opcoes.ShaderSavedPreset:SetValues(nomes) end
 			return nomes
 		end
 
-		valor21:AddLabel("CurrentShaderPreset", { Text = "Predefinição Atual: <b>Personalizada</b>", DoesWrap = true })
+		local function codificarShaderTabela()
+			local s = shaderEstado.Settings
+			local function colTbl(c) return { math.round(c.R * 1000) / 1000, math.round(c.G * 1000) / 1000, math.round(c.B * 1000) / 1000 } end
+			return HttpService:JSONEncode({
+				Brightness = s.Brightness, Exposure = s.Exposure, ShadowSoftness = s.ShadowSoftness,
+				EnvironmentDiffuse = s.EnvironmentDiffuse, EnvironmentSpecular = s.EnvironmentSpecular,
+				Ambient = colTbl(s.Ambient), OutdoorAmbient = colTbl(s.OutdoorAmbient),
+				ColorShift_Top = colTbl(s.ColorShift_Top), ColorShift_Bottom = colTbl(s.ColorShift_Bottom),
+				Saturation = s.Saturation, Contrast = s.Contrast, Tint = colTbl(s.TintColor),
+				FogColor = colTbl(s.FogColor), FogStart = s.FogStart, FogEnd = s.FogEnd,
+				BloomIntensity = s.BloomIntensity, BloomSize = s.BloomSize, BloomThreshold = s.BloomThreshold,
+				BlurSize = s.BlurSize,
+				DofEnabled = s.DofEnabled, DofFocus = s.DofFocus, DofRadius = s.DofRadius, DofNear = s.DofNear, DofFar = s.DofFar,
+				SunRaysIntensity = s.SunRaysIntensity, SunRaysSpread = s.SunRaysSpread,
+				Skybox = valoresConfig.SkyboxImage,
+			})
+		end
 
-		valor21:AddInput("ShaderPresetName", {
-			Text = "Nome da Predefinição",
+		local function aplicarShaderDeTabela(tbl, nomeLabel)
+			local function lerCor(v, fallback)
+				if type(v) == "table" then return Color3.new(tonumber(v[1]) or fallback.R, tonumber(v[2]) or fallback.G, tonumber(v[3]) or fallback.B) end
+				return fallback
+			end
+			local s = shaderEstado.Settings
+			local novo = {
+				Brightness = tonumber(tbl.Brightness) or s.Brightness,
+				Exposure = tonumber(tbl.Exposure) or s.Exposure,
+				ShadowSoftness = tonumber(tbl.ShadowSoftness) or s.ShadowSoftness,
+				EnvironmentDiffuse = tonumber(tbl.EnvironmentDiffuse) or s.EnvironmentDiffuse,
+				EnvironmentSpecular = tonumber(tbl.EnvironmentSpecular) or s.EnvironmentSpecular,
+				Ambient = lerCor(tbl.Ambient, s.Ambient),
+				OutdoorAmbient = lerCor(tbl.OutdoorAmbient, s.OutdoorAmbient),
+				ColorShift_Top = lerCor(tbl.ColorShift_Top, s.ColorShift_Top),
+				ColorShift_Bottom = lerCor(tbl.ColorShift_Bottom, s.ColorShift_Bottom),
+				Saturation = tonumber(tbl.Saturation) or s.Saturation,
+				Contrast = tonumber(tbl.Contrast) or s.Contrast,
+				TintColor = lerCor(tbl.Tint, s.TintColor),
+				FogColor = lerCor(tbl.FogColor, s.FogColor),
+				FogStart = tonumber(tbl.FogStart) or s.FogStart,
+				FogEnd = tonumber(tbl.FogEnd) or s.FogEnd,
+				BloomIntensity = tonumber(tbl.BloomIntensity) or s.BloomIntensity,
+				BloomSize = tonumber(tbl.BloomSize) or s.BloomSize,
+				BloomThreshold = tonumber(tbl.BloomThreshold) or s.BloomThreshold,
+				BlurSize = tonumber(tbl.BlurSize) or s.BlurSize,
+				DofEnabled = tbl.DofEnabled == true,
+				DofFocus = tonumber(tbl.DofFocus) or s.DofFocus,
+				DofRadius = tonumber(tbl.DofRadius) or s.DofRadius,
+				DofNear = tonumber(tbl.DofNear) or s.DofNear,
+				DofFar = tonumber(tbl.DofFar) or s.DofFar,
+				SunRaysIntensity = tonumber(tbl.SunRaysIntensity) or s.SunRaysIntensity,
+				SunRaysSpread = tonumber(tbl.SunRaysSpread) or s.SunRaysSpread,
+			}
+			if type(tbl.Skybox) == "string" and tbl.Skybox ~= "" then
+				valoresConfig.SkyboxImage = tbl.Skybox
+			end
+			definirShaderPredefinicao(novo, nomeLabel)
+		end
+
+		AbaShaderPresets:AddDropdown("ShaderPresetManage", {
+			Values = { "Built-in", "Saved", "Sharing" },
+			ValueImages = { ["Built-in"] = "sparkles", ["Saved"] = "save", ["Sharing"] = "share-2" },
+			Default = 1,
+			Multi = false,
+			Text = "Gerenciar",
+		})
+
+		local DepShBuiltIn = AbaShaderPresets:AddDependencyBox()
+		DepShBuiltIn:SetupDependencies({ { opcoes.ShaderPresetManage, "Built-in" } })
+
+		DepShBuiltIn:AddDropdown("ShaderBuiltInPreset", {
+			Values = { "Padrão", "Brazuka", "Natural", "Warm", "Cool", "Cinematic" },
+			Default = 1,
+			Multi = false,
+			Text = "Preset",
+		})
+
+		DepShBuiltIn:AddButton({
+			Text = "Carregar Preset",
+			Icon = "download",
+			Func = function()
+				local nome = opcoes.ShaderBuiltInPreset and opcoes.ShaderBuiltInPreset.Value or "Padrão"
+				local p = SHADER_PRESETS_BUILTIN[nome]
+				if p then
+					definirShaderPredefinicao(p, nome)
+					notificar("Preset carregado: " .. nome)
+				end
+			end,
+		})
+
+		local DepShSaved = AbaShaderPresets:AddDependencyBox()
+		DepShSaved:SetupDependencies({ { opcoes.ShaderPresetManage, "Saved" } })
+
+		DepShSaved:AddInput("ShaderPresetName", {
+			Text = "Nome do Preset",
 			ClearTextOnFocus = false,
 			Callback = function() end,
 		})
 
-		valor21:AddDropdown("ShaderSavedPreset", {
-			Values = {},
+		DepShSaved:AddDropdown("ShaderSavedPreset", {
+			Values = atualizarShaderPredefinicoes(),
 			Default = nil,
 			Multi = false,
 			AllowNull = true,
 			Searchable = true,
-			Text = "Predefinição Salva",
+			Text = "Preset Salvo",
 			Callback = function() end,
 		})
 
-		valor21:AddButton({
-			Text = "Salvar Atual",
-			Icon = "settings",
-			Func = function()
-				local predefinicaoNome = opcoes.ShaderPresetName and opcoes.ShaderPresetName.Value or ""
+		DepShSaved:AddButtonRow({
+			{
+				Text = "Salvar Atual",
+				Icon = "save",
+				Func = function()
+					local predefinicaoNome = opcoes.ShaderPresetName and opcoes.ShaderPresetName.Value or ""
+					if predefinicaoNome == "" then return notificar("Digite um nome para o preset primeiro!") end
+					if not (writefile and makefolder and isfolder) then return notificar("Seu executor não suporta salvar presets em arquivo.") end
+					local sucesso = pcall(function()
+						if not isfolder("Brazuka") then makefolder("Brazuka") end
+						if not isfolder("Brazuka/VisualPresets") then makefolder("Brazuka/VisualPresets") end
+						writefile("Brazuka/VisualPresets/" .. predefinicaoNome .. ".json", codificarShaderTabela())
+					end)
+					if sucesso then atualizarShaderPredefinicoes() end
+					notificar(sucesso and ("Preset salvo: " .. predefinicaoNome) or "Não foi possível salvar o arquivo.")
+				end,
+			},
+			{
+				Text = "Carregar",
+				Icon = "folder-open",
+				Func = function()
+					local predefinicaoNome = (opcoes.ShaderSavedPreset and opcoes.ShaderSavedPreset.Value) or (opcoes.ShaderPresetName and opcoes.ShaderPresetName.Value) or ""
+					if predefinicaoNome == "" then return notificar("Selecione ou digite um nome primeiro!") end
+					if not (readfile and isfile) then return notificar("Seu executor não suporta salvar presets em arquivo.") end
+					local caminho = "Brazuka/VisualPresets/" .. predefinicaoNome .. ".json"
+					if not isfile(caminho) then return notificar("Preset não encontrado: " .. predefinicaoNome) end
+					local sucesso, resultado = pcall(function() return HttpService:JSONDecode(readfile(caminho)) end)
+					if not sucesso or type(resultado) ~= "table" then return notificar("Não foi possível ler o arquivo do preset.") end
+					aplicarShaderDeTabela(resultado, predefinicaoNome)
+					notificar("Preset carregado: " .. predefinicaoNome)
+				end,
+			},
+		})
 
-				if predefinicaoNome == "" then
-					return notificar("Digite um nome para a predefinição primeiro!")
-				end
-
-				if not (writefile and makefolder and isfolder) then
-					return notificar("Seu executor não suporta predefinições em arquivo.")
-				end
-
-				local configuracoes = tabela17.Settings
-				local sucesso = pcall(function()
-					if not isfolder("Brazuka") then
-						makefolder("Brazuka")
-					end
-
-					if not isfolder("Brazuka/VisualPresets") then
-						makefolder("Brazuka/VisualPresets")
-					end
-
-					writefile("Brazuka/VisualPresets/" .. predefinicaoNome .. ".json", HttpService:JSONEncode({
-						Brightness = configuracoes.Brightness,
-						Exposure = configuracoes.Exposure,
-						BloomIntensity = configuracoes.BloomIntensity,
-						Saturation = configuracoes.Saturation,
-						Tint = { configuracoes.TintColor.R, configuracoes.TintColor.G, configuracoes.TintColor.B },
-						Skybox = valoresConfig.SkyboxImage,
-					}))
-				end)
-
-				if sucesso then
+		DepShSaved:AddButtonRow({
+			{
+				Text = "Excluir",
+				Func = function()
+					local predefinicaoNome = (opcoes.ShaderSavedPreset and opcoes.ShaderSavedPreset.Value) or (opcoes.ShaderPresetName and opcoes.ShaderPresetName.Value) or ""
+					if predefinicaoNome == "" then return notificar("Selecione ou digite um nome primeiro!") end
+					if not (isfile and delfile) then return notificar("Seu executor não suporta salvar presets em arquivo.") end
+					local caminho = "Brazuka/VisualPresets/" .. predefinicaoNome .. ".json"
+					if not isfile(caminho) then return notificar("Preset não encontrado: " .. predefinicaoNome) end
+					local sucesso = pcall(delfile, caminho)
+					if sucesso then atualizarShaderPredefinicoes() end
+					notificar(sucesso and ("Preset excluído: " .. predefinicaoNome) or "Não foi possível excluir.")
+				end,
+			},
+			{
+				Text = "Atualizar",
+				Icon = "refresh-cw",
+				Func = function()
 					atualizarShaderPredefinicoes()
-				end
-
-				notificar(sucesso and ("Predefinição salva: " .. predefinicaoNome) or "Não foi possível salvar o arquivo da predefinição.")
-			end,
+					notificar("Lista de presets de shader atualizada.")
+				end,
+			},
 		})
 
-		valor21:AddButton({
-			Text = "Carregar",
-			Icon = "settings-2",
-			Func = function()
-				local predefinicaoNome = (opcoes.ShaderSavedPreset and opcoes.ShaderSavedPreset.Value) or (opcoes.ShaderPresetName and opcoes.ShaderPresetName.Value) or ""
+		local DepShSharing = AbaShaderPresets:AddDependencyBox()
+		DepShSharing:SetupDependencies({ { opcoes.ShaderPresetManage, "Sharing" } })
 
-				if predefinicaoNome == "" then
-					return notificar("Selecione ou digite um nome de predefinição primeiro!")
-				end
-
-				if not (readfile and isfile) then
-					return notificar("Seu executor não suporta predefinições em arquivo.")
-				end
-
-				local caminho = "Brazuka/VisualPresets/" .. predefinicaoNome .. ".json"
-
-				if not isfile(caminho) then
-					return notificar("Predefinição não encontrada: " .. predefinicaoNome)
-				end
-
-				local sucesso, result = pcall(function()
-					return HttpService:JSONDecode(readfile(caminho))
-				end)
-
-				if not sucesso or type(resultado) ~= "table" then
-					return notificar("Não foi possível ler o arquivo da predefinição.")
-				end
-
-				local tonalidadeCor = Color3.new(1, 1, 1)
-
-				if type(resultado.Tint) == "table" then
-					tonalidadeCor = Color3.new(resultado.Tint[1] or 1, resultado.Tint[2] or 1, resultado.Tint[3] or 1)
-				end
-
-				definirShaderPredefinicao({
-					Brightness = tonumber(resultado.Brightness) or 2.14,
-					Exposure = tonumber(resultado.Exposure) or 0.24,
-					BloomIntensity = tonumber(resultado.BloomIntensity) or 0.1,
-					Saturation = tonumber(resultado.Saturation) or 0.05,
-					TintColor = tonalidadeCor,
-				})
-
-				if type(resultado.Skybox) == "string" and resultado.Skybox ~= "" then
-					valoresConfig.SkyboxImage = resultado.Skybox
-				end
-
-				if bibliotecaUI.Labels.CurrentShaderPreset then
-					local atualRotulo = bibliotecaUI.Labels.CurrentShaderPreset
-					local definirTexto = atualRotulo.SetText
-					definirTexto(atualRotulo, ("Predefinição Atual: <b>%*</b>"):format(predefinicaoNome))
-				end
-
-				notificar("Predefinição carregada: " .. predefinicaoNome)
-			end,
+		DepShSharing:AddInput("ShaderShareJSON", {
+			Text = "Código JSON",
+			Placeholder = "Cole ou exporte o JSON do shader aqui",
+			ClearTextOnFocus = false,
 		})
 
-		valor21:AddButton({
-			Text = "Excluir",
-			Func = function()
-				local predefinicaoNome = (opcoes.ShaderSavedPreset and opcoes.ShaderSavedPreset.Value) or (opcoes.ShaderPresetName and opcoes.ShaderPresetName.Value) or ""
-
-				if predefinicaoNome == "" then
-					return notificar("Selecione ou digite um nome de predefinição primeiro!")
-				end
-
-				if not (isfile and delfile) then
-					return notificar("Seu executor não suporta predefinições em arquivo.")
-				end
-
-				local caminho = "Brazuka/VisualPresets/" .. predefinicaoNome .. ".json"
-
-				if not isfile(caminho) then
-					return notificar("Predefinição não encontrada: " .. predefinicaoNome)
-				end
-
-				local sucesso = pcall(delfile, caminho)
-
-				if sucesso then
-					atualizarShaderPredefinicoes()
-				end
-
-				notificar(sucesso and ("Predefinição excluída: " .. predefinicaoNome) or "Não foi possível excluir o arquivo da predefinição.")
-			end,
+		DepShSharing:AddButtonRow({
+			{
+				Text = "Exportar JSON",
+				Icon = "upload",
+				Func = function()
+					local jsonStr = codificarShaderTabela()
+					if opcoes.ShaderShareJSON then opcoes.ShaderShareJSON:SetValue(jsonStr) end
+					if type(setclipboard) == "function" then pcall(setclipboard, jsonStr) end
+					notificar("Shader exportado para JSON!")
+				end,
+			},
+			{
+				Text = "Importar JSON",
+				Icon = "download",
+				Func = function()
+					local txt = opcoes.ShaderShareJSON and opcoes.ShaderShareJSON.Value or ""
+					if txt == "" then return notificar("Cole um código JSON primeiro!") end
+					local ok, tbl = pcall(HttpService.JSONDecode, HttpService, txt)
+					if not ok or type(tbl) ~= "table" then return notificar("JSON de shader inválido!") end
+					aplicarShaderDeTabela(tbl, "Importada")
+					notificar("Shader importado com sucesso!")
+				end,
+			},
 		})
+	end
 
-		valor21:AddButton({
-			Text = "Atualizar",
-			Icon = "refresh-cw",
-			Func = function()
-				atualizarShaderPredefinicoes()
-				notificar("Predefinições de shader atualizadas.")
-			end,
-		})
-
-		Graficos:AddDivider("Partículas")
+	do
 		local particulaConfiguracoes = estadoCompartilhado.ParticleSettings
 
 		local function funcao27(arg, arg2)
 			particulaConfiguracoes[arg] = arg2
-
 			if particulaConfiguracoes.Enabled then
 				api.AtualizarParticulas(arg)
 			end
 		end
 
-		Graficos:AddToggle("ParticlesT", { Text = "Partículas", Default = false, Callback = api.DefinirParticulasAtivas }):AddColorPicker("ParticlesCo", {
+		local ParticlesTabs = abas.Visual:AddLeftTabbox("Partículas", "sparkles")
+		local AbaPartAparencia = ParticlesTabs:AddTab("Aparência", "palette")
+		local AbaPartMovimento = ParticlesTabs:AddTab("Movimento", "wind")
+		local AbaPartPresets = ParticlesTabs:AddTab("Presets", "folder")
+
+		AbaPartAparencia:AddToggle("ParticlesT", {
+			Text = "Partículas",
+			Default = false,
+			Callback = api.DefinirParticulasAtivas,
+		}):AddColorPicker("ParticlesCo", {
 			Default = particulaConfiguracoes.Color,
 			Title = "Cor",
-			Callback = function(arg)
-				funcao27("Color", arg)
-			end,
+			Callback = function(arg) funcao27("Color", arg) end,
 		})
 
-		local valor22 = Graficos:AddDependencyBox()
-		valor22:SetupDependencies({ { alternadores.ParticlesT, true } })
-
-		valor22:AddDropdown("ParticlesDropdown", {
+		AbaPartAparencia:AddDropdown("ParticlesDropdown", {
 			Values = { "Circles", "Snowflakes", "Brazuka", "Custom" },
 			ValueImages = {
 				["Circles"] = "circle",
@@ -34158,16 +34517,15 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
-		local valor23 = valor22:AddDependencyBox()
-		valor23:SetupDependencies({ { opcoes.ParticlesDropdown, "Custom" } })
+		local DepCustomPart = AbaPartAparencia:AddDependencyBox()
+		DepCustomPart:SetupDependencies({ { opcoes.ParticlesDropdown, "Custom" } })
 
-		valor23:AddInput("customParticleBoxInput", {
+		DepCustomPart:AddInput("customParticleBoxInput", {
 			Text = "ID/Link da Imagem",
 			ClearTextOnFocus = false,
 			Callback = function(arg)
 				api.ResolverEntradaRecurso(arg, "ParticleTexture", "image", function(personalizadoParticula)
 					valoresConfig.CustomParticle = personalizadoParticula
-
 					if opcoes.ParticlesDropdown.Value == "Custom" then
 						funcao27("Texture", personalizadoParticula or "rbxassetid://242109931")
 					end
@@ -34175,78 +34533,253 @@ Tempo p/ Escapar: %*]]
 			end,
 		})
 
-		valor22:AddSlider("PDensity", {
-			Text = "Densidade (Quantidade)",
-			Default = particulaConfiguracoes.Count,
-			Min = 100,
-			Max = 5000,
-			Compact = true,
-			Callback = function(arg)
-				funcao27("Count", arg)
+		AbaPartAparencia:AddSlider("PDensity", {
+			Text = "Densidade", Default = particulaConfiguracoes.Count, Min = 100, Max = 5000, Compact = true,
+			Callback = function(arg) funcao27("Count", arg) end,
+		})
+		AbaPartAparencia:AddSlider("PSize", {
+			Text = "Tamanho", Default = particulaConfiguracoes.ParticleSize, Min = 0.1, Max = 5, Rounding = 1, Compact = true,
+			Callback = function(arg) funcao27("ParticleSize", arg) end,
+		})
+		AbaPartAparencia:AddSlider("PTransparency", {
+			Text = "Transparência", Default = particulaConfiguracoes.Transparency, Min = 0, Max = 1, Rounding = 2, Compact = true,
+			Callback = function(arg) funcao27("Transparency", arg) end,
+		})
+		AbaPartAparencia:AddSlider("PGlow", {
+			Text = "Brilho (Glow)", Default = particulaConfiguracoes.Glow, Min = 0, Max = 1, Rounding = 2, Compact = true,
+			Callback = function(arg) funcao27("Glow", arg) end,
+		})
+		AbaPartAparencia:AddSlider("PBoxSize", {
+			Text = "Tamanho da Área", Default = particulaConfiguracoes.BoxSize, Min = 50, Max = 2000, Compact = true,
+			Callback = function(arg) funcao27("BoxSize", arg) end,
+		})
+
+		AbaPartMovimento:AddDropdown("PAnimation", {
+			Values = { "Soft Fade", "Pop", "Static" },
+			ValueImages = { ["Soft Fade"] = "sparkles", ["Pop"] = "zap", ["Static"] = "circle" },
+			Default = 1,
+			Multi = false,
+			Text = "Animação",
+			Callback = function(arg) funcao27("Animation", arg) end,
+		})
+
+		AbaPartMovimento:AddToggle("PRandomRot", {
+			Text = "Rotação Aleatória",
+			Default = true,
+			Callback = function(arg) funcao27("RandomRotation", arg) end,
+		})
+
+		AbaPartMovimento:AddDivider("Movimento")
+
+		AbaPartMovimento:AddSlider("PMinSp", {
+			Text = "Velocidade Mínima", Default = particulaConfiguracoes.SpeedMin, Min = 0, Max = 10, Rounding = 1, Compact = true,
+			Callback = function(arg) funcao27("SpeedMin", arg) end,
+		})
+		AbaPartMovimento:AddSlider("PMaxSp", {
+			Text = "Velocidade Máxima", Default = particulaConfiguracoes.SpeedMax, Min = 0, Max = 10, Rounding = 1, Compact = true,
+			Callback = function(arg) funcao27("SpeedMax", arg) end,
+		})
+		AbaPartMovimento:AddSlider("PLifetime", {
+			Text = "Duração (Lifetime)", Default = particulaConfiguracoes.LifeTime, Min = 1, Max = 30, Rounding = 0, Compact = true,
+			Callback = function(arg) funcao27("LifeTime", arg) end,
+		})
+		AbaPartMovimento:AddSlider("PSpin", {
+			Text = "Giro (Spin)", Default = particulaConfiguracoes.Spin, Min = 0, Max = 360, Rounding = 0, Compact = true,
+			Callback = function(arg) funcao27("Spin", arg) end,
+		})
+		AbaPartMovimento:AddSlider("PDrag", {
+			Text = "Resistência (Drag)", Default = particulaConfiguracoes.Drag, Min = 0, Max = 10, Rounding = 1, Compact = true,
+			Callback = function(arg) funcao27("Drag", arg) end,
+		})
+
+		local PARTICLE_PRESETS_BUILTIN = {
+			["Neve Suave"] = { TextureName = "Snowflakes", Color = Color3.new(1, 1, 1), Count = 2200, ParticleSize = 0.8, Transparency = 0.1, Glow = 0.1, BoxSize = 500, Animation = "Soft Fade", RandomRotation = true, SpeedMin = 0.4, SpeedMax = 1.6, LifeTime = 12, Spin = 45, Drag = 0.5 },
+			["Brazuka"] = { TextureName = "Brazuka", Color = Color3.new(1, 1, 1), Count = 1400, ParticleSize = 1.2, Transparency = 0, Glow = 0.25, BoxSize = 450, Animation = "Pop", RandomRotation = true, SpeedMin = 0.8, SpeedMax = 2.5, LifeTime = 10, Spin = 90, Drag = 0.3 },
+			["Brilho Flutuante"] = { TextureName = "Circles", Color = Color3.fromRGB(160, 235, 255), Count = 1800, ParticleSize = 0.7, Transparency = 0.15, Glow = 0.85, BoxSize = 400, Animation = "Soft Fade", RandomRotation = false, SpeedMin = 0.2, SpeedMax = 1.0, LifeTime = 14, Spin = 0, Drag = 1.2 },
+			["Tempestade"] = { TextureName = "Snowflakes", Color = Color3.fromRGB(220, 235, 255), Count = 4200, ParticleSize = 1.1, Transparency = 0.05, Glow = 0.2, BoxSize = 650, Animation = "Static", RandomRotation = true, SpeedMin = 3.5, SpeedMax = 7.5, LifeTime = 6, Spin = 180, Drag = 0 },
+		}
+
+		local function aplicarParticulaTabela(tbl)
+			if tbl.TextureName and opcoes.ParticlesDropdown then
+				opcoes.ParticlesDropdown:SetValue(tbl.TextureName)
+			elseif type(tbl.Texture) == "string" then
+				particulaConfiguracoes.Texture = tbl.Texture
+			end
+			if typeof(tbl.Color) == "Color3" and opcoes.ParticlesCo then
+				opcoes.ParticlesCo:SetValue(tbl.Color)
+			elseif type(tbl.Color) == "table" and opcoes.ParticlesCo then
+				opcoes.ParticlesCo:SetValue(Color3.new(tbl.Color[1] or 1, tbl.Color[2] or 1, tbl.Color[3] or 1))
+			end
+			if opcoes.PDensity and tbl.Count then opcoes.PDensity:SetValue(tbl.Count) end
+			if opcoes.PSize and tbl.ParticleSize then opcoes.PSize:SetValue(tbl.ParticleSize) end
+			if opcoes.PTransparency and tbl.Transparency ~= nil then opcoes.PTransparency:SetValue(tbl.Transparency) end
+			if opcoes.PGlow and tbl.Glow ~= nil then opcoes.PGlow:SetValue(tbl.Glow) end
+			if opcoes.PBoxSize and tbl.BoxSize then opcoes.PBoxSize:SetValue(tbl.BoxSize) end
+			if opcoes.PAnimation and tbl.Animation then opcoes.PAnimation:SetValue(tbl.Animation) end
+			if alternadores.PRandomRot and tbl.RandomRotation ~= nil then alternadores.PRandomRot:SetValue(tbl.RandomRotation == true) end
+			if opcoes.PMinSp and tbl.SpeedMin ~= nil then opcoes.PMinSp:SetValue(tbl.SpeedMin) end
+			if opcoes.PMaxSp and tbl.SpeedMax ~= nil then opcoes.PMaxSp:SetValue(tbl.SpeedMax) end
+			if opcoes.PLifetime and tbl.LifeTime then opcoes.PLifetime:SetValue(tbl.LifeTime) end
+			if opcoes.PSpin and tbl.Spin ~= nil then opcoes.PSpin:SetValue(tbl.Spin) end
+			if opcoes.PDrag and tbl.Drag ~= nil then opcoes.PDrag:SetValue(tbl.Drag) end
+			if particulaConfiguracoes.Enabled then api.AtualizarParticulas() end
+		end
+
+		local function atualizarParticulaPredefinicoes()
+			local nomes = {}
+			if type(listfiles) == "function" and type(isfolder) == "function" and pcall(isfolder, "Brazuka/ParticlePresets") and isfolder("Brazuka/ParticlePresets") then
+				for _, arq in ipairs(listfiles("Brazuka/ParticlePresets")) do
+					local nome = arq:match("([^/\\]+)%.json$")
+					if nome then nomes[#nomes + 1] = nome end
+				end
+			end
+			table.sort(nomes)
+			if opcoes.ParticleSavedPreset then opcoes.ParticleSavedPreset:SetValues(nomes) end
+			return nomes
+		end
+
+		local function codificarParticulaJSON()
+			local p = particulaConfiguracoes
+			return HttpService:JSONEncode({
+				TextureName = opcoes.ParticlesDropdown and opcoes.ParticlesDropdown.Value or "Circles",
+				Texture = p.Texture,
+				Color = { p.Color.R, p.Color.G, p.Color.B },
+				Count = p.Count, ParticleSize = p.ParticleSize, Transparency = p.Transparency, Glow = p.Glow, BoxSize = p.BoxSize,
+				Animation = p.Animation, RandomRotation = p.RandomRotation,
+				SpeedMin = p.SpeedMin, SpeedMax = p.SpeedMax, LifeTime = p.LifeTime, Spin = p.Spin, Drag = p.Drag,
+			})
+		end
+
+		AbaPartPresets:AddDropdown("ParticlePresetManage", {
+			Values = { "Built-in", "Saved", "Sharing" },
+			ValueImages = { ["Built-in"] = "sparkles", ["Saved"] = "save", ["Sharing"] = "share-2" },
+			Default = 1,
+			Multi = false,
+			Text = "Gerenciar",
+		})
+
+		local DepPartBuiltIn = AbaPartPresets:AddDependencyBox()
+		DepPartBuiltIn:SetupDependencies({ { opcoes.ParticlePresetManage, "Built-in" } })
+
+		DepPartBuiltIn:AddDropdown("ParticleBuiltInPreset", {
+			Values = { "Neve Suave", "Brazuka", "Brilho Flutuante", "Tempestade" },
+			Default = 1,
+			Multi = false,
+			Text = "Preset",
+		})
+
+		DepPartBuiltIn:AddButton({
+			Text = "Carregar Preset",
+			Icon = "download",
+			Func = function()
+				local nome = opcoes.ParticleBuiltInPreset and opcoes.ParticleBuiltInPreset.Value or "Neve Suave"
+				local tbl = PARTICLE_PRESETS_BUILTIN[nome]
+				if tbl then aplicarParticulaTabela(tbl); notificar("Partículas: " .. nome) end
 			end,
 		})
 
-		valor22:AddSlider("PSize", {
-			Text = "Tamanho",
-			Default = particulaConfiguracoes.ParticleSize,
-			Min = 0.1,
-			Max = 5,
-			Rounding = 1,
-			Compact = true,
-			Callback = function(arg)
-				funcao27("ParticleSize", arg)
-			end,
+		local DepPartSaved = AbaPartPresets:AddDependencyBox()
+		DepPartSaved:SetupDependencies({ { opcoes.ParticlePresetManage, "Saved" } })
+
+		DepPartSaved:AddInput("ParticlePresetName", { Text = "Nome do Preset", ClearTextOnFocus = false })
+		DepPartSaved:AddDropdown("ParticleSavedPreset", {
+			Values = atualizarParticulaPredefinicoes(), Default = nil, Multi = false, AllowNull = true, Searchable = true, Text = "Preset Salvo",
 		})
 
-		valor22:AddSlider("PMaxSp", {
-			Text = "Velocidade Máxima",
-			Default = particulaConfiguracoes.SpeedMax,
-			Min = 0,
-			Max = 10,
-			Rounding = 1,
-			Compact = true,
-			Callback = function(arg)
-				funcao27("SpeedMax", arg)
-			end,
-		})
-
-		valor22:AddSlider("PBoxSize", {
-			Text = "Tamanho da Caixa",
-			Default = particulaConfiguracoes.BoxSize,
-			Min = 50,
-			Max = 2000,
-			Compact = true,
-			Callback = function(arg)
-				funcao27("BoxSize", arg)
-			end,
-		})
-
-		Graficos:AddDivider("Otimizar FPS")
-		Graficos:AddToggle("BoostFPS", { Text = "Otimizar FPS", Default = false, Callback = api.DefinirOtimizarFPS })
-
-		Graficos:AddDropdown("BoostFPSOptions", {
-			Text = "Desativar",
-			Values = { "Materials", "Textures", "Reflections", "Shadows" },
-			ValueImages = {
-				["Materials"] = "layers",
-				["Textures"] = "image",
-				["Reflections"] = "sun",
-				["Shadows"] = "moon",
+		DepPartSaved:AddButtonRow({
+			{
+				Text = "Salvar Atual", Icon = "save",
+				Func = function()
+					local nome = opcoes.ParticlePresetName and opcoes.ParticlePresetName.Value or ""
+					if nome == "" then return notificar("Digite um nome primeiro!") end
+					if not (writefile and makefolder and isfolder) then return notificar("Seu executor não suporta salvar presets em arquivo.") end
+					local ok = pcall(function()
+						if not isfolder("Brazuka") then makefolder("Brazuka") end
+						if not isfolder("Brazuka/ParticlePresets") then makefolder("Brazuka/ParticlePresets") end
+						writefile("Brazuka/ParticlePresets/" .. nome .. ".json", codificarParticulaJSON())
+					end)
+					if ok then atualizarParticulaPredefinicoes() end
+					notificar(ok and ("Partícula salva: " .. nome) or "Falha ao salvar partícula.")
+				end,
 			},
-			Default = { "Materials", "Textures", "Reflections", "Shadows" },
-			Multi = true,
-			AllowNull = true,
-			Callback = api.DefinirOpcoesOtimizarFPS,
+			{
+				Text = "Carregar", Icon = "folder-open",
+				Func = function()
+					local nome = (opcoes.ParticleSavedPreset and opcoes.ParticleSavedPreset.Value) or (opcoes.ParticlePresetName and opcoes.ParticlePresetName.Value) or ""
+					if nome == "" then return notificar("Selecione ou digite um nome primeiro!") end
+					if not (readfile and isfile) then return notificar("Seu executor não suporta salvar presets em arquivo.") end
+					local cam = "Brazuka/ParticlePresets/" .. nome .. ".json"
+					if not isfile(cam) then return notificar("Não encontrada: " .. nome) end
+					local ok, res = pcall(function() return HttpService:JSONDecode(readfile(cam)) end)
+					if not ok or type(res) ~= "table" then return notificar("JSON inválido.") end
+					aplicarParticulaTabela(res)
+					notificar("Partícula carregada: " .. nome)
+				end,
+			},
 		})
 
+		DepPartSaved:AddButtonRow({
+			{
+				Text = "Excluir",
+				Func = function()
+					local nome = (opcoes.ParticleSavedPreset and opcoes.ParticleSavedPreset.Value) or (opcoes.ParticlePresetName and opcoes.ParticlePresetName.Value) or ""
+					if nome == "" then return notificar("Selecione ou digite um nome primeiro!") end
+					if not (isfile and delfile) then return notificar("Seu executor não suporta salvar presets em arquivo.") end
+					local cam = "Brazuka/ParticlePresets/" .. nome .. ".json"
+					if not isfile(cam) then return notificar("Não encontrada: " .. nome) end
+					local ok = pcall(delfile, cam)
+					if ok then atualizarParticulaPredefinicoes() end
+					notificar(ok and ("Excluída: " .. nome) or "Falha ao excluir.")
+				end,
+			},
+			{
+				Text = "Atualizar", Icon = "refresh-cw",
+				Func = function() atualizarParticulaPredefinicoes(); notificar("Lista de presets atualizada.") end,
+			},
+		})
 
+		local DepPartSharing = AbaPartPresets:AddDependencyBox()
+		DepPartSharing:SetupDependencies({ { opcoes.ParticlePresetManage, "Sharing" } })
+
+		DepPartSharing:AddInput("ParticleShareJSON", { Text = "Código JSON", Placeholder = "Cole ou exporte o JSON das partículas", ClearTextOnFocus = false })
+		DepPartSharing:AddButtonRow({
+			{
+				Text = "Exportar JSON", Icon = "upload",
+				Func = function()
+					local j = codificarParticulaJSON()
+					if opcoes.ParticleShareJSON then opcoes.ParticleShareJSON:SetValue(j) end
+					if type(setclipboard) == "function" then pcall(setclipboard, j) end
+					notificar("Partículas exportadas!")
+				end,
+			},
+			{
+				Text = "Importar JSON", Icon = "download",
+				Func = function()
+					local txt = opcoes.ParticleShareJSON and opcoes.ParticleShareJSON.Value or ""
+					if txt == "" then return notificar("Cole um código JSON primeiro!") end
+					local ok, tbl = pcall(HttpService.JSONDecode, HttpService, txt)
+					if not ok or type(tbl) ~= "table" then return notificar("JSON inválido!") end
+					aplicarParticulaTabela(tbl)
+					notificar("Partículas importadas!")
+				end,
+			},
+		})
+
+		AbaPartPresets:AddDivider()
+		AbaPartPresets:AddButton({
+			Text = "Limpar Partículas",
+			Icon = "trash-2",
+			Func = function()
+				api.LimparParticulas()
+			end,
+		})
 	end
 
 	do
 		local Personagem = abas.Visual:AddRightGroupbox("Personagem", "person-standing")
 
 		Personagem:AddToggle("ForcefieldChar", {
-			Text = "Destacar Seu Personagem",
+			Text = "Brilho no Personagem",
 			Default = false,
 			Callback = api.DefinirDestaquePersonagem,
 		}):AddColorPicker("ForcefieldColor", {
@@ -34323,7 +34856,7 @@ Tempo p/ Escapar: %*]]
 		valor21:AddDivider()
 
 		valor21:AddToggle("GObjectInfo", {
-			Text = "Informações do Objeto Segurado",
+			Text = "Info do Objeto Segurado",
 			Default = false,
 			Tooltip = "Mostra informações sobre o objeto ou jogador que você está segurando",
 			Callback = function(goi)
@@ -34851,7 +35384,10 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Config = abas.AutoClique:AddLeftGroupbox("Configuração de Pose", "settings")
+		local ACPoseTabs = abas.AutoClique:AddLeftTabbox("Config. de Pose", "settings")
+		local TabACGeral = ACPoseTabs:AddTab("Geral", "sliders-horizontal")
+		local TabACPos = ACPoseTabs:AddTab("Posição & Física", "move")
+		local Config = TabACGeral
 
 		Config:AddToggle("AutoClicker", {
 			Text = "Ativado",
@@ -34982,12 +35518,13 @@ Tempo p/ Escapar: %*]]
 
 		api.CriarSeletorJogadores(valor21, "ACPoseCenter", estadoCompartilhado.SelectedACPoseCenters, false, false, function(selecionadoACPoseCentro)
 			valoresConfig.SelectedACPoseCenter = selecionadoACPoseCentro
-		end, "Pose Center")
+		end, "Centro da Pose")
 
+		Config = TabACPos
 		Config:AddDivider("Posição")
 
 		Config:AddSlider("ACCSecXO", {
-			Text = "Deslocamento X",
+			Text = "Offset X",
 			Default = 0,
 			Min = -10,
 			Max = 10,
@@ -35000,7 +35537,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Config:AddSlider("ACCSecYO", {
-			Text = "Deslocamento Y",
+			Text = "Offset Y",
 			Default = 0,
 			Min = -5,
 			Max = 20,
@@ -35013,7 +35550,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Config:AddSlider("ACCSecZO", {
-			Text = "Deslocamento Z",
+			Text = "Offset Z",
 			Default = -5,
 			Min = -10,
 			Max = 10,
@@ -35197,7 +35734,7 @@ Tempo p/ Escapar: %*]]
 				valor23:SetupDependencies({ { opcoes.ACLimbO, valor21 } })
 
 				valor23:AddSlider("ACOSecXO" .. valor21, {
-					Text = "Deslocamento X",
+					Text = "Offset X",
 					Default = estadoCompartilhado.ACOffset[valor21].X,
 					Min = -5,
 					Max = 5,
@@ -35210,7 +35747,7 @@ Tempo p/ Escapar: %*]]
 				})
 
 				valor23:AddSlider("ACOSecYO" .. valor21, {
-					Text = "Deslocamento Y",
+					Text = "Offset Y",
 					Default = estadoCompartilhado.ACOffset[valor21].Y,
 					Min = -5,
 					Max = 5,
@@ -35223,7 +35760,7 @@ Tempo p/ Escapar: %*]]
 				})
 
 				valor23:AddSlider("ACOSecZO" .. valor21, {
-					Text = "Deslocamento Z",
+					Text = "Offset Z",
 					Default = estadoCompartilhado.ACOffset[valor21].Z,
 					Min = -5,
 					Max = 5,
@@ -35239,7 +35776,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local Predefinicoes = abas.AutoClique:AddRightGroupbox("Predefinições", "settings-2")
+		local Predefinicoes = abas.AutoClique:AddRightGroupbox("Presets", "settings-2")
 		local tabela16 = {}
 
 		for k in estadoCompartilhado.AutoClickerPoses, nil, nil do
@@ -35301,7 +35838,7 @@ Tempo p/ Escapar: %*]]
 			if sucesso then
 				texto6 = nil
 			else
-				texto6 = "Não foi possível salvar o arquivo da predefinição."
+				texto6 = "Não foi possível salvar o preset em arquivo."
 			end
 
 			return sucesso, texto6
@@ -35340,14 +35877,14 @@ Tempo p/ Escapar: %*]]
 			Default = 2,
 			Multi = false,
 			Searchable = true,
-			Text = "Escolher Predefinição",
+			Text = "Escolher Preset",
 			Callback = function(selecionadoACPose)
 				valoresConfig.SelectedACPose = selecionadoACPose
 			end,
 		})
 
 		Predefinicoes:AddButton({
-			Text = "Carregar Predefinição",
+			Text = "Carregar Preset",
 			Func = function()
 				local valor21 = estadoCompartilhado.AutoClickerPoses[valoresConfig.SelectedACPose]
 				if not valor21 then
@@ -35355,7 +35892,7 @@ Tempo p/ Escapar: %*]]
 				end
 
 				if api.CarregarPredefinicaoAC(valor21) then
-					notificar("Predefinição carregada com sucesso!")
+					notificar("Preset carregado com sucesso!")
 				end
 			end,
 		})
@@ -35363,8 +35900,8 @@ Tempo p/ Escapar: %*]]
 		Predefinicoes:AddDivider("Personalizado")
 
 		Predefinicoes:AddInput("ACCustomPresetName", {
-			Text = "Nome da Predefinição",
-			Placeholder = "Digite um nome para a predefinição",
+			Text = "Nome do Preset",
+			Placeholder = "Nome do preset",
 			Default = "",
 			Callback = function(arg)
 				valoresConfig.CustomACPresetName = tostring(arg or "")
@@ -35377,7 +35914,7 @@ Tempo p/ Escapar: %*]]
 			Multi = false,
 			Searchable = true,
 			AllowNull = true,
-			Text = "Predefinição Personalizada",
+			Text = "Preset Personalizado",
 			Callback = function(selecionadoPersonalizadoACPose)
 				valoresConfig.SelectedCustomACPose = selecionadoPersonalizadoACPose
 			end,
@@ -35392,13 +35929,13 @@ Tempo p/ Escapar: %*]]
 		end
 
 		Predefinicoes:AddButton({
-			Text = "Salvar Predefinição Atual",
+			Text = "Salvar Preset Atual",
 			Disabled = estado12,
 			DisabledTooltip = "Seu executor não possui suporte a readfile/writefile.",
 			Func = function()
 				local texto6 = tostring(valoresConfig.CustomACPresetName or ""):gsub("^%s+", ""):gsub("%s+$", ""):gsub("[%c<>:\"/\\|%?%*]", "")
 				if texto6 == "" then
-					notificar("Digite um nome para a predefinição primeiro.")
+					notificar("Digite um nome para o preset primeiro.")
 					return
 				end
 				local valor21 = estadoCompartilhado.CustomACPresets[texto6]
@@ -35482,12 +36019,12 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Predefinicoes:AddButton({
-			Text = "Carregar Predefinição",
+			Text = "Carregar Preset",
 			Disabled = estado12,
 			DisabledTooltip = "Seu executor não possui suporte a readfile/writefile.",
 			Func = function()
 				if not valoresConfig.SelectedCustomACPose then
-					notificar("Selecione uma predefinição personalizada primeiro.")
+					notificar("Selecione um preset personalizado primeiro.")
 					return
 				end
 				local valor21 = estadoCompartilhado.CustomACPresets[valoresConfig.SelectedCustomACPose]
@@ -35500,20 +36037,20 @@ Tempo p/ Escapar: %*]]
 
 				if api.CarregarPredefinicaoAC(valor21) then
 					opcoes.ACCustomPresetName:SetValue(valoresConfig.SelectedCustomACPose)
-					notificar("Predefinição personalizada carregada com sucesso!")
+					notificar("Preset personalizado carregado!")
 				end
 			end,
 		})
 
 		Predefinicoes:AddButton({
-			Text = "Excluir Predefinição",
+			Text = "Excluir Preset",
 			Disabled = estado12,
 			DisabledTooltip = "Seu executor não possui suporte a readfile/writefile.",
 			DoubleClick = true,
 			Risky = true,
 			Func = function()
 				if not valoresConfig.SelectedCustomACPose then
-					notificar("Selecione uma predefinição personalizada primeiro.")
+					notificar("Selecione um preset personalizado primeiro.")
 					return
 				end
 				local valor21 = estadoCompartilhado.CustomACPresets[valoresConfig.SelectedCustomACPose]
@@ -35530,12 +36067,12 @@ Tempo p/ Escapar: %*]]
 				valoresConfig.SelectedCustomACPose = nil
 				opcoes.ACCustomPresetName:SetValue("")
 				api.SincronizarPredefinicoesAC()
-				notificar("Predefinição personalizada excluída!")
+				notificar("Preset personalizado excluído!")
 			end,
 		})
 
 		if estado12 then
-			Predefinicoes:AddLabel("Predefinições personalizadas exigem suporte a readfile/writefile.", true)
+			Predefinicoes:AddLabel("Presets personalizados exigem suporte a readfile/writefile.", true)
 		end
 	end
 
@@ -35607,6 +36144,7 @@ Tempo p/ Escapar: %*]]
 		AutoClicker = "mouse-pointer-click",
 		ControlObject = "move",
 		ExpOnMouse = "bomb",
+		JerkOffKey = "flame",
 	}
 
 	estadoCompartilhado.MobileButtonConfigs = estadoCompartilhado.MobileButtonConfigs or {}
@@ -35711,6 +36249,40 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
+		local nomeBotaoAnim = "Animação Especial"
+		local iconeAnim = ICONES_BOTOES_MOBILE.JerkOffKey or "flame"
+		estadoCompartilhado.ToggleStates[nomeBotaoAnim] = estadoFuncoes.JerkOff == true
+		local entryAnim = {
+			id = "JerkOffKey",
+			name = nomeBotaoAnim,
+			mode = "Toggle",
+			icon = iconeAnim,
+			defaultPos = nil,
+			customPos = nil,
+			created = false,
+			instance = nil,
+			callback = function()
+				if alternadores.JerkOffT then
+					alternadores.JerkOffT:SetValue(not (alternadores.JerkOffT.Value == true))
+				end
+			end,
+		}
+		estadoCompartilhado.MobileButtonConfigs.JerkOffKey = entryAnim
+		estadoCompartilhado.MobileButtonByName[nomeBotaoAnim] = entryAnim
+		estadoCompartilhado.MobileButtonIconImages[nomeBotaoAnim] = iconeAnim
+		estadoCompartilhado.RegisteredKeybinds[nomeBotaoAnim] = entryAnim.callback
+		table.insert(estadoCompartilhado.KeybindNames, nomeBotaoAnim)
+		if alternadores.JerkOffT and alternadores.JerkOffT.OnChanged then
+			alternadores.JerkOffT:OnChanged(function(ativo)
+				estadoCompartilhado.ToggleStates[nomeBotaoAnim] = ativo == true
+				if entryAnim.instance and entryAnim.instance.SetActive then
+					entryAnim.instance:SetActive(ativo == true)
+				end
+			end)
+		end
+	end
+
+	do
 		local JogadorLocal = abas.Atalhos:AddLeftGroupbox("Jogador Local", "user")
 
 		JogadorLocal:AddToggle("SmoothClickTP", {
@@ -35725,7 +36297,7 @@ Tempo p/ Escapar: %*]]
 		local cliqueTPDeslizando = false
 		local cliqueTPAlvo = nil
 
-		api.AdicionarAtalho(JogadorLocal, "ClickTPKey", "Teleporte no Clique", "Z", "Press", function()
+		api.AdicionarAtalho(JogadorLocal, "ClickTPKey", "TP no Clique", "Z", "Press", function()
 			if not api.ObterAlvo() then
 				return
 			end
@@ -35760,7 +36332,11 @@ Tempo p/ Escapar: %*]]
 
 					local numero39 = math.min((tick() - agora2) / 0.3, 1)
 					local numero40 = numero39 * (2 - numero39)
-					api.Teleportar(conjuntoRaizParte, CFrame.new(posicao:Lerp(cliqueTPAlvo, numero40)) * numero38)
+					local _, _, humTP = api.ObterPersonagem()
+					local rotAtual = conjuntoRaizParte.CFrame.Rotation
+					conjuntoRaizParte.CFrame = CFrame.new(posicao:Lerp(cliqueTPAlvo, numero40)) * rotAtual
+					api.ZerarVelocidade(conjuntoRaizParte)
+					if humTP then humTP.AutoRotate = true end
 					task.wait()
 
 					if numero40 >= 1 then
@@ -35812,7 +36388,7 @@ Tempo p/ Escapar: %*]]
 			end
 		end)
 
-		api.AdicionarAtalho(JogadorLocal, "OwnSelfKey", "Escapar de Qualquer Agarrão", nil, "Press", api.EscaparForcado)
+		api.AdicionarAtalho(JogadorLocal, "OwnSelfKey", "Escapar de Agarrão", nil, "Press", api.EscaparForcado)
 		JogadorLocal:AddDivider()
 
 		api.AdicionarAtalho(JogadorLocal, "RemoveLegsKey1", "Remover Pernas", nil, "Press", function()
@@ -35829,7 +36405,7 @@ Tempo p/ Escapar: %*]]
 
 		JogadorLocal:AddDivider()
 
-		api.AdicionarAtalho(JogadorLocal, "FrontflipKey", "Mortal p/ Frente", nil, "Press", function()
+		api.AdicionarAtalho(JogadorLocal, "FrontflipKey", "Mortal Frontal", nil, "Press", function()
 			local valor20, valor21, valor22 = api.ObterPersonagem()
 
 			if valor20 and valor21 and valor22 and valor22.Health ~= 0 and not estadoFuncoes.GucciAntiGrab and not estadoFuncoes.Invisibility then
@@ -35849,7 +36425,7 @@ Tempo p/ Escapar: %*]]
 			end
 		end)
 
-		api.AdicionarAtalho(JogadorLocal, "BackflipKey", "Mortal p/ Trás", nil, "Press", function()
+		api.AdicionarAtalho(JogadorLocal, "BackflipKey", "Mortal de Costas", nil, "Press", function()
 			local valor20, valor21, valor22 = api.ObterPersonagem()
 
 			if valor20 and valor21 and valor22 and valor22.Health ~= 0 and not estadoFuncoes.GucciAntiGrab and not estadoFuncoes.Invisibility then
@@ -36423,7 +36999,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local valor20 = abas.Diversos:AddRightGroupbox("Spam de Sons", "volume-2")
+		local valor20 = abas.Diversos:AddRightGroupbox("Spam de Áudio", "volume-2")
 
 		valor20:AddDropdown("SoundsToSpam", {
 			Values = {
@@ -36612,11 +37188,13 @@ Tempo p/ Escapar: %*]]
 		})
 	end
 
+	local MundoAutoTabs = abas.Diversos:AddLeftTabbox("Mundo & Auto", "globe")
+	local MiraTabs = abas.Diversos:AddRightTabbox("Mira", "crosshair")
 	do
-		local Auto = abas.Diversos:AddLeftGroupbox("Automático", "bot")
+		local Auto = MundoAutoTabs:AddTab("Automático", "bot")
 
 		Auto:AddToggle("autohouse", {
-			Text = "Teleporte Automático p/ Casa",
+			Text = "Auto-TP para Casa",
 			Default = false,
 			Tooltip = "Teleporta para sua casa automaticamente quando o tempo dela estiver acabando",
 			Callback = function(arg)
@@ -36625,7 +37203,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Auto:AddToggle("AutoSlotsT", {
-			Text = "Cassino Automático (Auto-Slots)",
+			Text = "Auto-Cassino (Slots)",
 			Default = false,
 			Tooltip = "Faz você girar o cassino automaticamente",
 			Callback = function(arg)
@@ -36635,10 +37213,10 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local valor20 = abas.Diversos:AddRightGroupbox("Assistência de Mira", "crosshair")
+		local valor20 = MiraTabs:AddTab("Aim Assist", "crosshair")
 
 		valor20:AddToggle("AimbotToggle", {
-			Text = "Alternador",
+			Text = "Ativar",
 			Default = false,
 			Tooltip = "Mira suavemente nos alvos para você",
 			Callback = function(miraAutoAtivado)
@@ -36733,10 +37311,10 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local GatilhoAuto = abas.Diversos:AddLeftGroupbox("Triggerbot (Auto-Disparo)", "mouse-left")
+		local GatilhoAuto = MiraTabs:AddTab("Triggerbot", "mouse-pointer-click")
 
 		GatilhoAuto:AddToggle("TriggerToggle", {
-			Text = "Alternador",
+			Text = "Ativar",
 			Default = false,
 			Tooltip = "Clica automaticamente quando você mira em um alvo",
 			Callback = function(gatilhoAutoAtivado)
@@ -36768,7 +37346,7 @@ Tempo p/ Escapar: %*]]
 			Default = 0.05,
 			Min = 0,
 			Max = 1,
-			Suffix = " segundos",
+			Suffix = " s",
 			Rounding = 2,
 			Compact = true,
 			Callback = function(gatilhoAtraso)
@@ -36796,7 +37374,7 @@ Tempo p/ Escapar: %*]]
 			Max = 2,
 			Rounding = 2,
 			Compact = true,
-			Suffix = " segundos",
+			Suffix = " s",
 			Callback = function(gatilhoRecarga)
 				estadoCompartilhado.AimSettings.TriggerCooldown = gatilhoRecarga
 			end,
@@ -36857,7 +37435,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	do
-		local valor20 = abas.Diversos:AddRightGroupbox("Mira Silenciosa", "crosshair")
+		local valor20 = MiraTabs:AddTab("Silent Aim", "crosshair")
 
 		valor20:AddToggle("SilentAim", {
 			Text = "Mira Silenciosa",
@@ -36873,7 +37451,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		valor20:AddToggle("SilentAimIgnoreWhitelist", {
-			Text = "Ignorar Lista Branca",
+			Text = "Ignorar Whitelist",
 			Default = true,
 			Callback = function(silenciosaMiraIgnorarListaBranca)
 				estadoFuncoes.SilentAimIgnoreWhitelist = silenciosaMiraIgnorarListaBranca
@@ -36940,7 +37518,7 @@ Tempo p/ Escapar: %*]]
 	api.DefinirMiraSilenciosa(estadoFuncoes.SilentAim)
 
 	do
-		local Lotes = abas.Diversos:AddLeftGroupbox("Casas / Lotes", "table")
+		local Lotes = MundoAutoTabs:AddTab("Casas", "house")
 
 		Lotes:AddDropdown("SelectedPlotDropdown", {
 			Values = { "Green House", "Yellow House", "Purple House", "Blue House", "Chinese House" },
@@ -36966,7 +37544,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Lotes:AddToggle("AutoClaimPlot", {
-			Text = "Reivindicar Casa Automaticamente",
+			Text = "Auto-Reivindicar Casa",
 			Default = false,
 			Tooltip = "Reivindica automaticamente a casa selecionada quando disponível",
 			Callback = function(autoReivindicarLote)
@@ -37011,7 +37589,7 @@ Tempo p/ Escapar: %*]]
 		})
 	end
 
-	local Trapaceiros = abas.Diversos:AddLeftGroupbox("Trapaceiros", "drama")
+	local Trapaceiros = MundoAutoTabs:AddTab("Detector", "shield-alert")
 
 	local function coletarTrapaceiros()
 		local tabela16 = {}
@@ -37103,9 +37681,9 @@ Tempo p/ Escapar: %*]]
 
 	local function relatarTrapaceiros(tabela16)
 		if not next(tabela16) then
-			return notificar("Nenhum trapaceiro encontrado!")
+			return notificar("Nenhum exploiter encontrado!")
 		end
-		local texto5 = "Cheaters Found\n\n"
+		local texto5 = "Exploiters Encontrados\n\n"
 
 		for k, valor20 in pairs(tabela16) do
 			texto5 ..= ("[%*]\n%*\n\n"):format(api.FormatarJogador(k), valor20)
@@ -37115,7 +37693,7 @@ Tempo p/ Escapar: %*]]
 	end
 
 	Trapaceiros:AddButton({
-		Text = "Procurar Trapaceiros",
+		Text = "Escanear Servidor",
 		Icon = "eye",
 		Func = function()
 			relatarTrapaceiros(coletarTrapaceiros())
@@ -37127,7 +37705,7 @@ Tempo p/ Escapar: %*]]
 	local autoEncontrarIntervalo = 15
 
 	Trapaceiros:AddToggle("AutoFindCheaters", {
-		Text = "Detectar Trapaceiros Auto",
+		Text = "Auto-Detectar Exploiters",
 		Default = false,
 		Tooltip = "Verifica jogadores automaticamente em busca de trapaças e avisa quando encontrar",
 		Callback = function(autoEncontrar)
@@ -37144,7 +37722,7 @@ Tempo p/ Escapar: %*]]
 		Max = 60,
 		Rounding = 0,
 		Compact = true,
-		Suffix = " segundos",
+		Suffix = " s",
 		Callback = function(verificarIntervalo)
 			autoEncontrarIntervalo = verificarIntervalo
 		end,
@@ -37170,7 +37748,7 @@ Tempo p/ Escapar: %*]]
 			for jogador, motivo in atualTrapaceiros do
 				if autoEncontrarUltimo[jogador] ~= motivo then
 					autoEncontrarUltimo[jogador] = motivo
-					notificarSistema(("Trapaceiro detectado: %s (%s)"):format(api.FormatarJogador(jogador), motivo))
+					notificarSistema(("Exploiter detectado: %s (%s)"):format(api.FormatarJogador(jogador), motivo))
 				end
 			end
 
@@ -37183,7 +37761,7 @@ Tempo p/ Escapar: %*]]
 	end)
 
 	do
-		local ListaBranca = abas.Listas:AddLeftGroupbox("Lista Branca (Amigos)", "shield-check")
+		local ListaBranca = abas.Listas:AddLeftGroupbox("Whitelist (Amigos)", "shield-check")
 		local valor20 = api.CriarSeletorJogadores(ListaBranca, "Whitelist", estadoCompartilhado.Whitelisted)
 
 		valor20:OnChanged(function()
@@ -37249,7 +37827,7 @@ Tempo p/ Escapar: %*]]
 		ListaBranca:AddDivider("Configurações")
 
 		ListaBranca:AddToggle("AutoWhitelistFriends", {
-			Text = "Adicionar Amigos à Lista Branca",
+			Text = "Auto-Whitelist Amigos",
 			Default = false,
 			Tooltip = "Adiciona seus amigos automaticamente à lista branca",
 			Callback = function(autoListaBrancaAmigos)
@@ -37297,7 +37875,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		ListaBranca:AddToggle("WhitelistToggle", {
-			Text = "Ativar Lista Branca",
+			Text = "Ativar Whitelist",
 			Default = false,
 			Tooltip = "Impede que funções globais afetem os jogadores da lista acima",
 			Callback = function(naListaBrancaIgnorar)
@@ -37319,7 +37897,7 @@ Tempo p/ Escapar: %*]]
 		Imunidade:AddDivider("Modos")
 
 		Imunidade:AddToggle("ImmunityAGToggle", {
-			Text = "Dar Anti-Agarrão",
+			Text = "Dar Anti-Grab",
 			Default = false,
 			Tooltip = "Garante que os jogadores selecionados não sejam agarrados",
 			Callback = function(arg)
@@ -37329,7 +37907,7 @@ Tempo p/ Escapar: %*]]
 		})
 
 		Imunidade:AddToggle("ImmunityAKToggle", {
-			Text = "Dar Anti-Expulsão",
+			Text = "Dar Anti-Kick",
 			Default = false,
 			Tooltip = "Garante que os jogadores selecionados não sejam expulsos",
 			Callback = function(arg)
@@ -37511,7 +38089,7 @@ Tempo p/ Escapar: %*]]
 			Max = 5,
 			Rounding = 1,
 			Compact = true,
-			Suffix = " segundos",
+			Suffix = " s",
 			Callback = function(marcaDaguaAtualizarVelocidade)
 				valoresConfig.WatermarkUpdateSpeed = marcaDaguaAtualizarVelocidade
 			end,
@@ -37708,7 +38286,7 @@ Tempo p/ Escapar: %*]]
 		}
 
 		SomPosAba:AddToggle("NotificationMaster", {
-			Text = "Chave Geral",
+			Text = "Ativar Notificações",
 			Default = true,
 			Tooltip = "Ativa ou desativa todas as notificações do Brazuka",
 			Callback = function(ativado)
@@ -37737,7 +38315,7 @@ Tempo p/ Escapar: %*]]
 		SomPosAba:AddDivider("Aparência")
 
 		SomPosAba:AddDropdown("NotifDropdown", {
-			Text = "Predefinições",
+			Text = "Presets",
 			Values = { "Default", "Pop", "Steam", "Bubble Pop", "Loaded" },
 			ValueImages = {
 				["Default"] = "bell",
